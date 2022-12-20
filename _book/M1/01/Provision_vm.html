@@ -1,0 +1,864 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Provision virtual machines in Azure · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Create_arm.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    AZURE JOURNEY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Develop Azure Compute Solutions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Implement IaaS solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1.1" data-path="Provision_vm.html">
+            
+                <a href="Provision_vm.html">
+            
+                    
+                    Provision virtual machines in Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="Create_arm.html">
+            
+                <a href="Create_arm.html">
+            
+                    
+                    Create and deploy Azure Resource Manager templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="Manage_container.html">
+            
+                <a href="Manage_container.html">
+            
+                    
+                    Manage container images in Azure Container Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="Run_container.html">
+            
+                <a href="Run_container.html">
+            
+                    
+                    Run container images in Azure Container Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on LABS</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="lab01.html">
+            
+                <a href="lab01.html">
+            
+                    
+                    Lab 01 - Create a VM by using the Azure Command-Line Interface (CLI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="lab02.html">
+            
+                <a href="lab02.html">
+            
+                    
+                    Lab 02 - Create a Docker container image and deploy it to Azure Container Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="lab03.html">
+            
+                <a href="lab03.html">
+            
+                    
+                    Lab 03 - Deploy an Azure container instance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../02/">
+            
+                <a href="../02/">
+            
+                    
+                    Create Azure App Service Web Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../02/Azure_app_service.html">
+            
+                <a href="../02/Azure_app_service.html">
+            
+                    
+                    Explore Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../02/Config_app_service.html">
+            
+                <a href="../02/Config_app_service.html">
+            
+                    
+                    Configure web app settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../02/Scaling_app_service.html">
+            
+                <a href="../02/Scaling_app_service.html">
+            
+                    
+                    Scale apps in Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../02/Azure_app_service_deploy.html">
+            
+                <a href="../02/Azure_app_service_deploy.html">
+            
+                    
+                    Explore Azure App Service deployment slots
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../02/lab01.html">
+            
+                <a href="../02/lab01.html">
+            
+                    
+                    LAB 01 - Build a backend API by using Azure Storage and the Web Apps feature of Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../02/lab02.html">
+            
+                <a href="../02/lab02.html">
+            
+                    
+                    LAB 02 - Build a front-end web application by using Azure Web Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../02/lab03.html">
+            
+                <a href="../02/lab03.html">
+            
+                    
+                    LAB 03 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../03/">
+            
+                <a href="../03/">
+            
+                    
+                    Implemente Azure functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../03/Azure_functions.html">
+            
+                <a href="../03/Azure_functions.html">
+            
+                    
+                    Explore Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../03/Develop_azure_functions.html">
+            
+                <a href="../03/Develop_azure_functions.html">
+            
+                    
+                    Develop Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../03/Implement_functions.html">
+            
+                <a href="../03/Implement_functions.html">
+            
+                    
+                    Implement Durable Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../03/lab01.html">
+            
+                <a href="../03/lab01.html">
+            
+                    
+                    LAB 01 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../03/lab02.html">
+            
+                <a href="../03/lab02.html">
+            
+                    
+                    LAB 02 - Configure a local Azure Functions project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../03/lab03.html">
+            
+                <a href="../03/lab03.html">
+            
+                    
+                    LAB 03 - Create a function that’s triggered by an HTTP request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../03/lab04.html">
+            
+                <a href="../03/lab04.html">
+            
+                    
+                    LAB 04 - Create a function that triggers on a schedule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../03/lab05.html">
+            
+                <a href="../03/lab05.html">
+            
+                    
+                    LAB 05 - Create a function that integrates with other services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../03/lab06.html">
+            
+                <a href="../03/lab06.html">
+            
+                    
+                    LAB 06 - Deploy a local function project to an Azure Functions app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../03/lab07.html">
+            
+                <a href="../03/lab07.html">
+            
+                    
+                    LAB 07 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Develop for Azure storage</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../M2/01/">
+            
+                <a href="../../M2/01/">
+            
+                    
+                    Develop solutions that use Cosmos DB storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../M2/02/">
+            
+                <a href="../../M2/02/">
+            
+                    
+                    Develop solutions that use blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Provision virtual machines in Azure</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="azure-virtual-machines">Azure virtual machines</h2>
+<p>An Azure virtual machine gives you the flexibility of virtualization without having to buy and maintain the physical hardware that runs it. However, you still need to maintain the VM by performing tasks, such as configuring, patching, and installing the software that runs on it. This unit gives you information about what you should consider before you create a VM, how you create it, and how you manage it.</p>
+<h3 id="azure-virtual-machines-can-be-used-in-various-ways-some-examples-are">Azure virtual machines can be used in various ways. Some examples are:</h3>
+<ul>
+<li><strong>Development and test</strong> – Azure VMs offer a quick and easy way to create a computer with specific configurations required to code and test an application.</li>
+<li><strong>Applications in the cloud</strong> – Because demand for your application can fluctuate, it might make economic sense to run it on a VM in Azure.</li>
+<li><strong>Extended datacenter</strong> – Virtual machines in an Azure virtual network can easily be connected to your organization’s network.</li>
+</ul>
+<h3 id="design-considerations-for-virtual-machine-creation">Design considerations for virtual machine creation:</h3>
+<ul>
+<li><strong>Availability:</strong> Azure supports a single instance virtual machine Service Level Agreement of 99.9% provided you deploy the VM with premium storage for all disks.</li>
+<li><strong>VM size:</strong> The size of the VM that you use is determined by the workload that you want to run. The size that you choose then determines factors such as processing power, memory, and storage capacity.</li>
+<li><strong>VM limits:</strong> Your subscription has default quota limits in place that could impact the deployment of many VMs for your project.</li>
+<li><strong>VM image:</strong> You can either use your own image, or you can use one of the images in the Azure Marketplace.</li>
+<li><p><strong>VM disks:</strong> There are two components that make up this area. The type of disks which determines the performance level and the storage account type that contains the disks. Azure provides two types of disks:</p>
+<ul>
+<li><strong>Standard disks:</strong> Backed by HDDs, and delivers cost-effective storage while still being performant. Standard disks are ideal for a cost effective dev and test workload.</li>
+<li><p><strong>Premium disks:</strong> Backed by SSD-based, high-performance, low-latency disk. Perfect for VMs running production workload.</p>
+<p>And, there are two options for the disk storage:</p>
+<ul>
+<li><strong>Managed disks:</strong> Managed disks are the newer and recommended disk storage model and they are managed by Azure.</li>
+<li><strong>Unmanaged disks:</strong> With unmanaged disks, you’re responsible for the storage accounts that hold the virtual hard disks (VHDs) that correspond to your VM disks.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="virtual-machine-extensions">Virtual machine extensions</h3>
+<p>Windows VMs have extensions which give your VM additional capabilities through post deployment configuration and automated tasks.</p>
+<ul>
+<li><strong>Run custom scripts:</strong> The Custom Script Extension helps you configure workloads on the VM by running your script when the VM is provisioned.</li>
+<li><strong>Deploy and manage configurations:</strong> The PowerShell Desired State Configuration (DSC) Extension helps you set up DSC on a VM to manage configurations and environments.</li>
+<li><strong>Collect diagnostics data:</strong> The Azure Diagnostics Extension helps you configure the VM to collect diagnostics data that can be used to monitor the health of your application.</li>
+</ul>
+<p>For Linux VMs, Azure supports cloud-init across most Linux distributions that support it and works with all the major automation tooling like Ansible, Chef, SaltStack, and Puppet.</p>
+<p><br></p>
+<h2 id="compare-virtual-machine-availability-options">Compare virtual machine availability options</h2>
+<p>Azure offers several options for ensuring the availability of the virtual machines, and applications, you have deployed.</p>
+<h3 id="availability-zones">Availability zones</h3>
+<ul>
+<li>A physically separate zone, within an Azure region. There are three Availability Zones per supported Azure region.</li>
+<li>Azure services that support Availability Zones fall into two categories:<ul>
+<li>Zonal services: Where a resource is pinned to a specific zone (for example, virtual machines, managed disks, Standard IP addresses), or</li>
+<li>Zone-redundant services: When the Azure platform replicates automatically across zones (for example, zone-redundant storage, SQL Database).</li>
+</ul>
+</li>
+</ul>
+<h3 id="availability-sets">Availability sets</h3>
+<ul>
+<li>Composed of two additional groupings that protect against hardware failures and allow updates to safely be applied - fault domains (FDs) and update domains (UDs).</li>
+</ul>
+<h3 id="vm-scale-sets">VM scale sets</h3>
+<ul>
+<li>Visit <a href="https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview?context=/azure/virtual-machines/context/context" target="_blank">https://docs.microsoft.com/azure/virtual-machine-scale-sets/overview?context=/azure/virtual-machines/context/context</a></li>
+</ul>
+<h3 id="load-balancer">Load balancer</h3>
+<ul>
+<li>Combine the Azure Load Balancer with an availability zone or availability set to get the most application resiliency.</li>
+<li>Define a front-end IP configuration that contains one or more public IP addresses.</li>
+<li>Virtual machines connect to a load balancer using their virtual network interface card (NIC).</li>
+<li>Define load balancer rules for specific ports and protocols that map to your VMs to control traffic flow.</li>
+</ul>
+<h3 id="what-is-a-fault-domain">What is a fault domain?</h3>
+<p>A fault domain is a logical group of underlying hardware that share a common power source and network switch, similar to a rack within an on-premises datacenter. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these fault domains. This approach limits the impact of potential physical hardware failures, network outages, or power interruptions.</p>
+<p><img src="images/provision_vm_01.png" alt="alt text"> </p>
+<h3 id="update-domains">Update domains</h3>
+<p>An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these update domains. This approach ensures that at least one instance of your application always remains running as the Azure platform undergoes periodic maintenance. The order of update domains being rebooted may not proceed sequentially during planned maintenance, but only one update domain is rebooted at a time.</p>
+<p><img src="images/provision_vm_02.png" alt="alt text"></p>
+<p>Each virtual machine in your availability set is assigned an update domain and a fault domain by the underlying Azure platform.</p>
+<p>For a given availability set, five non-user-configurable update domains are assigned by to indicate groups of virtual machines and underlying physical hardware that can be rebooted at the same time.</p>
+<p><img src="images/provision_vm_03.png" alt="alt text"></p>
+<h3 id="what-if-my-size-needs-change">What if my size needs change?</h3>
+<p>Azure allows you to change the VM size when the existing size no longer meets your needs. You can resize the VM - as long as your current hardware configuration is allowed in the new size. This provides a fully agile and elastic approach to VM management.
+If you stop and deallocate the VM, you can then select any size available in your region since this removes your VM from the cluster it was running on.</p>
+<p><strong>Caution:</strong> Be cautious when resizing production VMs - they will be rebooted automatically which can cause a temporary outage and change some configuration settings such as the IP address.</p>
+<p><br></p>
+<h2 id="exercise-create-a-virtual-machine-by-using-the-azure-cli">Exercise: Create a virtual machine by using the Azure CLI</h2>
+<p><img src="images/provision_vm_04.png" alt="alt text"></p>
+<p>In this exercise you&apos;ll create a Linux virtual machine by performing the following operations using Azure CLI commands:</p>
+<ul>
+<li>Create a resource group and a virtual machine</li>
+<li>Install a web server</li>
+<li>View the web server in action</li>
+<li>Clean up resources</li>
+</ul>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>An Azure account with an active subscription. If you don&apos;t already have one, <a href="https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit#heading=h.c96x7dxoz6ej" target="_blank">follow this instructions</a>.</li>
+</ul>
+<h3 id="login-to-azure-and-start-the-cloud-shell">Login to Azure and start the Cloud Shell</h3>
+<ol>
+<li>Login to the <a href="https://portal.azure.com/" target="_blank">Azure Portal</a> and open the Cloud Shell.</li>
+</ol>
+<p><img src="images/provision_vm_05.png" alt="alt text"></p>
+<ol>
+<li>After the shell opens be sure to select the Bash environment.</li>
+</ol>
+<p><img src="images/provision_vm_06.png" alt="alt text"></p>
+<h3 id="create-a-resource-group-and-virtual-machine">Create a resource group and virtual machine</h3>
+<ol>
+<li>Create a resource group with the <code>az group create</code> command. The command below creates a resource group named az204-vm-rg. </li>
+</ol>
+<pre><code class="lang-azurecli-interactive">az group create --name az204-vm-rg --location eastus
+</code></pre>
+<ol>
+<li>Create a VM with the <code>az vm create</code> command. The command below creates a Linux VM named az204vm with an admin user named azureuser.</li>
+</ol>
+<h3 id="create-virtual-machine">Create virtual machine</h3>
+<pre><code class="lang-azurecli-interactive">az vm create \
+    --resource-group az204-vm-rg \
+    --name az204vm \
+    --image UbuntuLTS \
+    --generate-ssh-keys \
+    --admin-username azureuser \
+    --public-ip-sku Standard
+</code></pre>
+<p>It will take a few minutes for the operation to complete. When it is finished note the <code>publicIpAddress</code> in the output, you&apos;ll use it in the next step.
+<br> </p>
+<h3 id="install-web-server">Install web server</h3>
+<ol>
+<li>By default, only SSH connections are opened when you create a Linux VM in Azure. Use <code>az vm open-port</code> to open TCP port 80 for use with the NGINX web server:</li>
+</ol>
+<pre><code class="lang-azurecli-interactive">az vm open-port --port 80 \
+--resource-group az204-vm-rg \
+--name az204vm
+</code></pre>
+<ol>
+<li>Connect to your VM by using SSH. Replace <code>&lt;publicIPAddress&gt;</code> in the example with the public IP address of your VM as noted in the previous output:</li>
+</ol>
+<pre><code class="lang-azurecli-interactive">ssh azureuser@&lt;publicIPAddress&gt;
+</code></pre>
+<ol>
+<li>To see your VM in action, install the NGINX web server. Update your package sources and then install the latest NGINX package.</li>
+</ol>
+<pre><code class="lang-azurecli-interactive">sudo apt-get -y update
+sudo apt-get -y install nginx
+</code></pre>
+<ol>
+<li>When done type <code>exit</code> to leave the SSH session.</li>
+</ol>
+<h3 id="view-the-web-server-in-action">View the web server in action</h3>
+<p>Use a web browser of your choice to view the default NGINX welcome page. Use the public IP address of your VM as the web address. The following example shows the default NGINX web site:</p>
+<p><img src="images/provision_vm_07.png" alt="alt text"></p>
+<h3 id="clean-up-resources">Clean up resources</h3>
+<p>You can now safely delete the <code>az204-vm-rg</code> resource group from your account by running the command below.</p>
+<pre><code class="lang-azurecli-interactive">az group delete --name az204-vm-rg --no-wait
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: This operation takes on average 5 - 10 minutes</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Implement IaaS solutions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Create_arm.html" class="navigation navigation-next " aria-label="Next page: Create and deploy Azure Resource Manager templates">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Provision virtual machines in Azure","level":"2.1.1","depth":2,"next":{"title":"Create and deploy Azure Resource Manager templates","level":"2.1.2","depth":2,"path":"M1/01/Create_arm.md","ref":"M1/01/Create_arm.md","articles":[]},"previous":{"title":"Implement IaaS solutions","level":"2.1","depth":1,"path":"M1/01/README.md","ref":"M1/01/README.md","articles":[{"title":"Provision virtual machines in Azure","level":"2.1.1","depth":2,"path":"M1/01/Provision_vm.md","ref":"M1/01/Provision_vm.md","articles":[]},{"title":"Create and deploy Azure Resource Manager templates","level":"2.1.2","depth":2,"path":"M1/01/Create_arm.md","ref":"M1/01/Create_arm.md","articles":[]},{"title":"Manage container images in Azure Container Registry","level":"2.1.3","depth":2,"path":"M1/01/Manage_container.md","ref":"M1/01/Manage_container.md","articles":[]},{"title":"Run container images in Azure Container Instances","level":"2.1.4","depth":2,"path":"M1/01/Run_container.md","ref":"M1/01/Run_container.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"M1/01/Provision_vm.md","mtime":"2022-12-19T22:08:56.000Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-12-20T16:54:16.340Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
