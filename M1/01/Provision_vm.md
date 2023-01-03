@@ -32,8 +32,6 @@ Windows VMs have extensions which give your VM additional capabilities through p
 
 For Linux VMs, Azure supports cloud-init across most Linux distributions that support it and works with all the major automation tooling like Ansible, Chef, SaltStack, and Puppet.
 
-<br>
-
 ## Compare virtual machine availability options
 
 Azure offers several options for ensuring the availability of the virtual machines, and applications, you have deployed.
@@ -85,8 +83,6 @@ If you stop and deallocate the VM, you can then select any size available in you
 
 **Caution:** Be cautious when resizing production VMs - they will be rebooted automatically which can cause a temporary outage and change some configuration settings such as the IP address.
 
-<br>
-
 ## Exercise: Create a virtual machine by using the Azure CLI
 
 ![alt text](images/provision_vm_04.png)
@@ -97,36 +93,33 @@ In this exercise you'll create a Linux virtual machine by performing the followi
   * View the web server in action
   * Clean up resources
 
-
 ### Prerequisites
 
   * An Azure account with an active subscription. If you don't already have one, [follow this instructions](https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit#heading=h.c96x7dxoz6ej).
    
-
 ### Login to Azure and start the Cloud Shell
 
 1. Login to the [Azure Portal](https://portal.azure.com/) and open the Cloud Shell.
 
-![alt text](images/provision_vm_05.png)
+  ![alt text](images/provision_vm_05.png)
 
 2. After the shell opens be sure to select the Bash environment.
 
-![alt text](images/provision_vm_06.png)
-
+  ![alt text](images/provision_vm_06.png)
 
 ### Create a resource group and virtual machine
 
 1. Create a resource group with the `az group create` command. The command below creates a resource group named az204-vm-rg. 
 
-```azurecli-interactive
-az group create --name az204-vm-rg --location eastus
-```
+  ```
+  az group create --name az204-vm-rg --location eastus
+  ```
 
 2. Create a VM with the `az vm create` command. The command below creates a Linux VM named az204vm with an admin user named azureuser.
 
 ### Create virtual machine
 
-```azurecli-interactive
+```
 az vm create \
     --resource-group az204-vm-rg \
     --name az204vm \
@@ -137,30 +130,29 @@ az vm create \
 ```
 
 It will take a few minutes for the operation to complete. When it is finished note the `publicIpAddress` in the output, you'll use it in the next step.
-<br> 
 
 ### Install web server
 
 1. By default, only SSH connections are opened when you create a Linux VM in Azure. Use `az vm open-port` to open TCP port 80 for use with the NGINX web server:
 
-```azurecli-interactive
-az vm open-port --port 80 \
---resource-group az204-vm-rg \
---name az204vm
-```
+  ```
+  az vm open-port --port 80 \
+  --resource-group az204-vm-rg \
+  --name az204vm
+  ```
 
 2. Connect to your VM by using SSH. Replace `<publicIPAddress>` in the example with the public IP address of your VM as noted in the previous output:
 
-```azurecli-interactive
-ssh azureuser@<publicIPAddress>
-```
+  ```
+  ssh azureuser@<publicIPAddress>
+  ```
 
 3. To see your VM in action, install the NGINX web server. Update your package sources and then install the latest NGINX package.
 
-```azurecli-interactive
-sudo apt-get -y update
-sudo apt-get -y install nginx
-```
+  ```
+  sudo apt-get -y update
+  sudo apt-get -y install nginx
+  ```
 
 4. When done type `exit` to leave the SSH session.
 
@@ -174,7 +166,7 @@ Use a web browser of your choice to view the default NGINX welcome page. Use the
 
 You can now safely delete the `az204-vm-rg` resource group from your account by running the command below.
 
-```azurecli-interactive
+```
 az group delete --name az204-vm-rg --no-wait
 ```
 

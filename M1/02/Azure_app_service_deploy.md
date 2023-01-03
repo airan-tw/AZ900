@@ -8,8 +8,6 @@ Deploying your application to a non-production slot has the following benefits:
  * Deploying an app to a slot first and swapping it into production makes sure that all instances of the slot are warmed up before being swapped into production. This eliminates downtime when you deploy your app. The traffic redirection is seamless, and no requests are dropped because of swap operations. You can automate this entire workflow by configuring auto swap when pre-swap validation isn't needed.
  * After a swap, the slot with previously staged app now has the previous production app. If the changes swapped into the production slot aren't as you expect, you can perform the same swap immediately to get your "last known good site" back.
 
-<br>
-
 ## Slot swapping
 
 When you swap slots (for example, from a staging slot to the production slot), App Service does the following to ensure that the target slot doesn't experience downtime:
@@ -25,8 +23,6 @@ When you clone configuration from another deployment slot, the cloned configurat
 Features marked with an asterisk (*) are planned to be unswapped.
 
 To configure an app setting or connection string to stick to a specific slot (not swapped), go to the Configuration page for that slot. Add or edit a setting, and then select **Deployment slot setting**. Selecting this check box tells App Service that the setting is not swappable.
-
-<br>
 
 ## Swap deployment slots
 
@@ -55,8 +51,6 @@ To configure auto swap:
 2. Set Auto swap enabled to On. Then select the desired target slot for Auto swap deployment slot, and select Save on the command bar.
 
 3. Execute a code push to the source slot. Auto swap happens after a short time, and the update is reflected at your target slot's URL.
-
-<br>
 
 ## Route traffic in App Service
 

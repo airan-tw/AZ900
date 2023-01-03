@@ -21,6 +21,6 @@ Learn how Azure App Service functions and how to create and update an app. Explo
 
 <br>
 
-* [Lab 01: Build a backend API by using Azure Storage and the Web Apps feature of Azure App Service](/M1/02/lab01.md)
-* [Lab 02: Build a front-end web application by using Azure Web Apps](/M1/02/lab02.md)
-* [Lab 03: Clean up your subscription](/M1/02/lab03.md)
+* [Lab 1: Build a backend API by using Azure Storage and the Web Apps feature of Azure App Service](/M1/02/lab01.md)
+* [Lab 2: Build a front-end web application by using Azure Web Apps](/M1/02/lab02.md)
+* [Lab 3: Clean up your subscription](/M1/02/lab03.md)

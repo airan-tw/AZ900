@@ -64,8 +64,6 @@ Adding and editing connection strings follow the same principles as other app se
 ]
 ```
 
-<br>
-
 ## Configure general settings
 
 In the **Configuration > General settings** section you can configure some common settings for your app. Some settings require you to scale up to higher pricing tiers.
@@ -74,15 +72,11 @@ Below is a list of the currently available settings:
 
 ![alt text](images/Config_app_service_03.png)
 
-<br>
-
 ## Configure path mappings
 
 In the **Configuration > Path mappings** section you can configure handler mappings, and virtual application and directory mappings. **The Path mappings** page will display different options based on the OS type.
 
 ![alt text](images/Config_app_service_04.png)
-
-<br>
 
 ## Enable diagnostic logging
 
@@ -156,8 +150,6 @@ For logs stored in the App Service file system, the easiest way is to download t
 
 For Linux/container apps, the ZIP file contains console output logs for both the docker host and the docker container. For a scaled-out app, the ZIP file contains one set of logs for each instance. In the App Service file system, these log files are the contents of the /home/LogFiles directory.
 
-<br>
-
 ## Configure security certificates
 
 You have been asked to help secure information being transmitted between your companies app and the customer. Azure App Service has tools that let you create, upload, or import a private certificate or a public certificate into App Service.
@@ -173,8 +165,6 @@ The table below details the options you have for adding certificates in App Serv
 By default, anyone can still access your app using HTTP. You can redirect all HTTP requests to the HTTPS port by navigating to your app page and, in the left navigation, select **TLS/SSL settings**. Then, in **HTTPS Only**, select **On**.
 
 ![alt text](images/Config_app_service_07.png)
-
-<br>
 
 ## Manage app features
 

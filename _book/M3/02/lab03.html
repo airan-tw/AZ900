@@ -1,0 +1,2043 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>LAB 3 - Build an Azure Functions app · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lab04.html" />
+    
+    
+    <link rel="prev" href="lab02.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    AZURE JOURNEY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Develop Azure Compute Solutions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../M1/01/">
+            
+                <a href="../../M1/01/">
+            
+                    
+                    1. Implement IaaS solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../M1/01/Provision_vm.html">
+            
+                <a href="../../M1/01/Provision_vm.html">
+            
+                    
+                    1.1. Provision virtual machines in Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../M1/01/Create_arm.html">
+            
+                <a href="../../M1/01/Create_arm.html">
+            
+                    
+                    1.2. Create and deploy Azure Resource Manager templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../M1/01/Manage_container.html">
+            
+                <a href="../../M1/01/Manage_container.html">
+            
+                    
+                    1.3. Manage container images in Azure Container Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../M1/01/Run_container.html">
+            
+                <a href="../../M1/01/Run_container.html">
+            
+                    
+                    1.4 Run container images in Azure Container Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on LABS</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../M1/01/lab01.html">
+            
+                <a href="../../M1/01/lab01.html">
+            
+                    
+                    Lab 1 - Create a VM by using the Azure Command-Line Interface (CLI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../M1/01/lab02.html">
+            
+                <a href="../../M1/01/lab02.html">
+            
+                    
+                    Lab 2 - Create a Docker container image and deploy it to Azure Container Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../M1/01/lab03.html">
+            
+                <a href="../../M1/01/lab03.html">
+            
+                    
+                    Lab 3 - Deploy an Azure container instance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../M1/02/">
+            
+                <a href="../../M1/02/">
+            
+                    
+                    2. Create Azure App Service Web Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../M1/02/Azure_app_service.html">
+            
+                <a href="../../M1/02/Azure_app_service.html">
+            
+                    
+                    2.1. Explore Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../M1/02/Config_app_service.html">
+            
+                <a href="../../M1/02/Config_app_service.html">
+            
+                    
+                    2.2. Configure web app settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../M1/02/Scaling_app_service.html">
+            
+                <a href="../../M1/02/Scaling_app_service.html">
+            
+                    
+                    2.3. Scale apps in Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../M1/02/Azure_app_service_deploy.html">
+            
+                <a href="../../M1/02/Azure_app_service_deploy.html">
+            
+                    
+                    2.4. Explore Azure App Service deployment slots
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../M1/02/lab01.html">
+            
+                <a href="../../M1/02/lab01.html">
+            
+                    
+                    LAB 1 - Build a backend API by using Azure Storage and the Web Apps feature of Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../M1/02/lab02.html">
+            
+                <a href="../../M1/02/lab02.html">
+            
+                    
+                    LAB 2 - Build a front-end web application by using Azure Web Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../M1/02/lab03.html">
+            
+                <a href="../../M1/02/lab03.html">
+            
+                    
+                    LAB 3 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../M1/03/">
+            
+                <a href="../../M1/03/">
+            
+                    
+                    3. Implemente Azure functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../M1/03/Azure_functions.html">
+            
+                <a href="../../M1/03/Azure_functions.html">
+            
+                    
+                    3.1. Explore Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../M1/03/Develop_azure_functions.html">
+            
+                <a href="../../M1/03/Develop_azure_functions.html">
+            
+                    
+                    3.2. Develop Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../M1/03/Implement_functions.html">
+            
+                <a href="../../M1/03/Implement_functions.html">
+            
+                    
+                    3.3. Implement Durable Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../M1/03/lab01.html">
+            
+                <a href="../../M1/03/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../M1/03/lab02.html">
+            
+                <a href="../../M1/03/lab02.html">
+            
+                    
+                    LAB 2 - Configure a local Azure Functions project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../../M1/03/lab03.html">
+            
+                <a href="../../M1/03/lab03.html">
+            
+                    
+                    LAB 3 - Create a function that’s triggered by an HTTP request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../../M1/03/lab04.html">
+            
+                <a href="../../M1/03/lab04.html">
+            
+                    
+                    LAB 4 - Create a function that triggers on a schedule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../../M1/03/lab05.html">
+            
+                <a href="../../M1/03/lab05.html">
+            
+                    
+                    LAB 5 - Create a function that integrates with other services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../../M1/03/lab06.html">
+            
+                <a href="../../M1/03/lab06.html">
+            
+                    
+                    LAB 6 - Deploy a local function project to an Azure Functions app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../../M1/03/lab07.html">
+            
+                <a href="../../M1/03/lab07.html">
+            
+                    
+                    LAB 7 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Develop for Azure storage</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../M2/01/">
+            
+                <a href="../../M2/01/">
+            
+                    
+                    4. Develop solutions that use Cosmos DB storage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../M2/01/Cosmosdb_overview.html">
+            
+                <a href="../../M2/01/Cosmosdb_overview.html">
+            
+                    
+                    4.1. Explore Azure Cosmos DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../M2/01/Cosmosdb_structure.html">
+            
+                <a href="../../M2/01/Cosmosdb_structure.html">
+            
+                    
+                    4.2. Implement partitioning in Azure Cosmos DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../M2/01/Working_cosmosdb.html">
+            
+                <a href="../../M2/01/Working_cosmosdb.html">
+            
+                    
+                    4.3. Work with Azure Cosmos DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../M2/01/lab01.html">
+            
+                <a href="../../M2/01/lab01.html">
+            
+                    
+                    LAB 1 - Creating data store resources in Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../M2/01/lab02.html">
+            
+                <a href="../../M2/01/lab02.html">
+            
+                    
+                    LAB 2 - Review and upload data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../../M2/01/lab03.html">
+            
+                <a href="../../M2/01/lab03.html">
+            
+                    
+                    LAB 3 - Configure a .NET web application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../../M2/01/lab04.html">
+            
+                <a href="../../M2/01/lab04.html">
+            
+                    
+                    LAB 4 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../M2/02/">
+            
+                <a href="../../M2/02/">
+            
+                    
+                    5. Develop solutions that use blob storage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../M2/02/Blob_storage_concepts.html">
+            
+                <a href="../../M2/02/Blob_storage_concepts.html">
+            
+                    
+                    5.1. Explore Azure Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../M2/02/Blob_storage_lifecycle.html">
+            
+                <a href="../../M2/02/Blob_storage_lifecycle.html">
+            
+                    
+                    5.2. Manage the Azure Blob storage lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../M2/02/Working_blob_storage.html">
+            
+                <a href="../../M2/02/Working_blob_storage.html">
+            
+                    
+                    5.3. Work with Azure Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../M2/02/lab01.html">
+            
+                <a href="../../M2/02/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../M2/02/lab02.html">
+            
+                <a href="../../M2/02/lab02.html">
+            
+                    
+                    LAB 2 - Upload a blob into a container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../M2/02/lab03.html">
+            
+                <a href="../../M2/02/lab03.html">
+            
+                    
+                    LAB 3 - Access containers by using the .NET SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../../M2/02/lab04.html">
+            
+                <a href="../../M2/02/lab04.html">
+            
+                    
+                    LAB 4 - Retrieve blob Uniform Resource Identifiers (URIs) by using the .NET SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="../../M2/02/lab05.html">
+            
+                <a href="../../M2/02/lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Implement Azure security</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../01/">
+            
+                <a href="../01/">
+            
+                    
+                    6. Implement use authentication and authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="../01/Implement_auth.html">
+            
+                <a href="../01/Implement_auth.html">
+            
+                    
+                    6.1. Explore the Microsoft identity platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.2" data-path="../01/Microsoft_id_platform.html">
+            
+                <a href="../01/Microsoft_id_platform.html">
+            
+                    
+                    6.2. Implement authentication by using the Microsoft Authentication Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.3" data-path="../01/Implement_shared_access.html">
+            
+                <a href="../01/Implement_shared_access.html">
+            
+                    
+                    6.3. Implement shared access signatures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.4" data-path="../01/Microsoft_graph.html">
+            
+                <a href="../01/Microsoft_graph.html">
+            
+                    
+                    6.4. Explore Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../01/lab01.html">
+            
+                <a href="../01/lab01.html">
+            
+                    
+                    LAB 1 - Configure a single-tenant Azure AD environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../01/lab02.html">
+            
+                <a href="../01/lab02.html">
+            
+                    
+                    LAB 2 - Create a single-tenant ASP.NET web app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../01/lab03.html">
+            
+                <a href="../01/lab03.html">
+            
+                    
+                    LAB 3 - Clean up your lab environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    7. Implement secure cloud solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1.1" data-path="Implement_key_vault.html">
+            
+                <a href="Implement_key_vault.html">
+            
+                    
+                    7.1. Implement Azure Key Vault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.2" data-path="Implement_identities.html">
+            
+                <a href="Implement_identities.html">
+            
+                    
+                    7.2. Implement managed identities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.3" data-path="Implement_app_config.html">
+            
+                <a href="Implement_app_config.html">
+            
+                    
+                    7.3. Implement Azure App Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="lab01.html">
+            
+                <a href="lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="lab02.html">
+            
+                <a href="lab02.html">
+            
+                    
+                    LAB 2 - Configure secrets and identities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="15.3" data-path="lab03.html">
+            
+                <a href="lab03.html">
+            
+                    
+                    LAB 3 - Build an Azure Functions app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.4" data-path="lab04.html">
+            
+                <a href="lab04.html">
+            
+                    
+                    LAB 4 - Access Azure Blob Storage data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.5" data-path="lab05.html">
+            
+                <a href="lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Monitor, troubleshoot, and optimize Azure solutions</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../../M4/01/">
+            
+                <a href="../../M4/01/">
+            
+                    
+                    8. Integrate caching and content delivery within solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.1.1" data-path="../../M4/01/Develop_cache_redis.html">
+            
+                <a href="../../M4/01/Develop_cache_redis.html">
+            
+                    
+                    8.1. Develop for Azure Cache for Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.1.2" data-path="../../M4/01/Develop_storage_cdn.html">
+            
+                <a href="../../M4/01/Develop_storage_cdn.html">
+            
+                    
+                    8.2. Develop for storage on CDNs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="17.1" data-path="../../M4/01/lab01.html">
+            
+                <a href="../../M4/01/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.2" data-path="../../M4/01/lab02.html">
+            
+                <a href="../../M4/01/lab02.html">
+            
+                    
+                    LAB 2 - Configure Content Delivery Network and endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.3" data-path="../../M4/01/lab03.html">
+            
+                <a href="../../M4/01/lab03.html">
+            
+                    
+                    LAB 3 - Upload and configure static web content
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.4" data-path="../../M4/01/lab04.html">
+            
+                <a href="../../M4/01/lab04.html">
+            
+                    
+                    LAB 4 - Use Content Delivery Network endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.5" data-path="../../M4/01/lab05.html">
+            
+                <a href="../../M4/01/lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="18.1" data-path="../../M4/02/">
+            
+                <a href="../../M4/02/">
+            
+                    
+                    9. Instrument solutions to support monitoring and logging
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="18.1.1" data-path="../../M4/02/Monitor_app.html">
+            
+                <a href="../../M4/02/Monitor_app.html">
+            
+                    
+                    9.1. Monitor app performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="19.1" data-path="../../M4/02/lab01.html">
+            
+                <a href="../../M4/02/lab01.html">
+            
+                    
+                    LAB 1 - Create and configure Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.2" data-path="../../M4/02/lab02.html">
+            
+                <a href="../../M4/02/lab02.html">
+            
+                    
+                    LAB 2 - Monitor a local web API by using Application Insights
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.3" data-path="../../M4/02/lab03.html">
+            
+                <a href="../../M4/02/lab03.html">
+            
+                    
+                    LAB 3 - Monitor a web API using Application Insights
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.4" data-path="../../M4/02/lab04.html">
+            
+                <a href="../../M4/02/lab04.html">
+            
+                    
+                    LAB 4 - Application Insights logging with .NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.5" data-path="../../M4/02/lab05.html">
+            
+                <a href="../../M4/02/lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Connect to and consume Azure services and third-party services</li>
+        
+        
+    
+        <li class="chapter " data-level="20.1" data-path="../../M5/02/">
+            
+                <a href="../../M5/02/">
+            
+                    
+                    10. Implement API Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="20.1.1" data-path="../../M5/02/API_Management.html">
+            
+                <a href="../../M5/02/API_Management.html">
+            
+                    
+                    10.1. Explore API Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="21.1" data-path="../../M5/02/lab01.html">
+            
+                <a href="../../M5/02/lab01.html">
+            
+                    
+                    LAB 1 - Create an Azure App Service resource by using a Docker container image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="21.2" data-path="../../M5/02/lab02.html">
+            
+                <a href="../../M5/02/lab02.html">
+            
+                    
+                    LAB 2 - Build an API proxy tier by using Azure API Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="21.3" data-path="../../M5/02/lab03.html">
+            
+                <a href="../../M5/02/lab03.html">
+            
+                    
+                    LAB 3 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="22.1" data-path="../../M5/03/">
+            
+                <a href="../../M5/03/">
+            
+                    
+                    11. Develop event-based solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="22.1.1" data-path="../../M5/03/Event_grid.html">
+            
+                <a href="../../M5/03/Event_grid.html">
+            
+                    
+                    11.1. Explore Azure Event Grid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="22.1.2" data-path="../../M5/03/Event_hubs.html">
+            
+                <a href="../../M5/03/Event_hubs.html">
+            
+                    
+                    11.2. Explore Azure Event Hubs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="23.1" data-path="../../M5/03/lab01.html">
+            
+                <a href="../../M5/03/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="23.2" data-path="../../M5/03/lab02.html">
+            
+                <a href="../../M5/03/lab02.html">
+            
+                    
+                    LAB 2 - Create an Event Grid subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="23.3" data-path="../../M5/03/lab03.html">
+            
+                <a href="../../M5/03/lab03.html">
+            
+                    
+                    LAB 3 - Publish Event Grid events from .NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="23.4" data-path="../../M5/03/lab04.html">
+            
+                <a href="../../M5/03/lab04.html">
+            
+                    
+                    LAB 4 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="24.1" data-path="../../M5/04/">
+            
+                <a href="../../M5/04/">
+            
+                    
+                    12. Develop message-based solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="24.1.1" data-path="../../M5/04/Message_queues.html">
+            
+                <a href="../../M5/04/Message_queues.html">
+            
+                    
+                    12.1. Discover Azure message queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="25.1" data-path="../../M5/04/lab01.html">
+            
+                <a href="../../M5/04/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="25.2" data-path="../../M5/04/lab0.md">
+            
+                <span>
+            
+                    
+                    LAB 2 - Create a .NET Core project to publish messages to a Service Bus queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="25.3" data-path="../../M5/04/lab03.html">
+            
+                <a href="../../M5/04/lab03.html">
+            
+                    
+                    LAB 3 - Create a .NET Core project to read messages from a Service Bus queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="25.4" data-path="../../M5/04/lab04.html">
+            
+                <a href="../../M5/04/lab04.html">
+            
+                    
+                    LAB 4 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >LAB 3 - Build an Azure Functions app</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="lab-3-build-an-azure-functions-app">Lab 3: Build an Azure Functions app</h2>
+<h3 id="task-1-initialize-a-function-project">Task 1: Initialize a function project</h3>
+<ol>
+<li><p>On the taskbar, select the <strong>Windows Terminal</strong> icon.</p>
+</li>
+<li><p>Run the following command to change the current directory to the <strong>$HOME\training-az204\\Allfiles\Labs\07\Starter\func</strong> empty directory:</p>
+<pre><code class="lang-powershell"> <span class="hljs-variable">$HOME</span>\training<span class="hljs-literal">-az204</span>\Allfiles\Labs\<span class="hljs-number">07</span>\Starter\func
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: In Windows Explorer remove the Read-only attribute from $HOME\training-az204\Allfiles\Labs\07\Starter\func.gitignore file.</p>
+</blockquote>
+</li>
+<li><p>Run the following command to use the <strong>Azure Functions Core Tools</strong> to create a new local Functions project in the current directory using the <strong>dotnet</strong> runtime:</p>
+<pre><code class="lang-powershell"> func init -<span class="hljs-literal">-worker</span><span class="hljs-literal">-runtime</span> dotnet -<span class="hljs-literal">-force</span>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: You can review the documentation to [create a new project][azure-functions-core-tools-new-project] using the <strong>Azure Functions Core Tools</strong>.</p>
+</blockquote>
+</li>
+<li><p>Run the following command to <strong>build</strong> the .NET 6 project:</p>
+<pre><code class="lang-powershell"> dotnet build
+</code></pre>
+</li>
+</ol>
+<h3 id="task-2-create-an-http-triggered-function">Task 2: Create an HTTP-triggered function</h3>
+<ol>
+<li><p>Run the following command to use the <strong>Azure Functions Core Tools</strong> to create a new function named <strong>FileParser</strong> using the <strong>HTTP trigger</strong> template:</p>
+<pre><code class="lang-powershell"> func new -<span class="hljs-literal">-template</span> <span class="hljs-string">&quot;HTTP trigger&quot;</span> -<span class="hljs-literal">-name</span> <span class="hljs-string">&quot;FileParser&quot;</span>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: You can review the documentation to [create a new function][azure-functions-core-tools-new-function] using the <strong>Azure Functions Core Tools</strong>.</p>
+</blockquote>
+</li>
+<li><p>Close the currently running <strong>Windows Terminal</strong> application.</p>
+</li>
+</ol>
+<h3 id="task-3-configure-and-read-an-application-setting">Task 3: Configure and read an application setting</h3>
+<ol>
+<li><p>On the <strong>Start</strong> screen, select the <strong>Visual Studio Code</strong> tile.</p>
+</li>
+<li><p>On the <strong>File</strong> menu, select <strong>Open Folder</strong>.</p>
+</li>
+<li><p>In the <strong>File Explorer</strong> window that opens, browse to <strong>$HOME\training-az204\Allfiles\Labs\07\Starter\func</strong>, and then select <strong>Select Folder</strong>.</p>
+</li>
+<li><p>On the <strong>Explorer</strong> pane of the <strong>Visual Studio Code</strong> window, open the <strong>local.settings.json</strong> file.</p>
+</li>
+<li><p>Note the current value of the <strong>Values</strong> object:</p>
+<pre><code class="lang-json"> <span class="hljs-string">&quot;Values&quot;</span>: {
+     <span class="hljs-string">&quot;AzureWebJobsStorage&quot;</span>: <span class="hljs-string">&quot;UseDevelopmentStorage=true&quot;</span>,
+     <span class="hljs-string">&quot;FUNCTIONS_WORKER_RUNTIME&quot;</span>: <span class="hljs-string">&quot;dotnet&quot;</span>
+ }
+</code></pre>
+</li>
+<li><p>Update the value of the <strong>Values</strong> object by adding a new setting named <strong>StorageConnectionString</strong>, and then assigning it a string value of <strong>[TEST VALUE]</strong>:</p>
+<pre><code class="lang-json"> <span class="hljs-string">&quot;Values&quot;</span>: {
+     <span class="hljs-string">&quot;AzureWebJobsStorage&quot;</span>: <span class="hljs-string">&quot;UseDevelopmentStorage=true&quot;</span>,
+     <span class="hljs-string">&quot;FUNCTIONS_WORKER_RUNTIME&quot;</span>: <span class="hljs-string">&quot;dotnet&quot;</span>,
+     <span class="hljs-string">&quot;StorageConnectionString&quot;</span>: <span class="hljs-string">&quot;[TEST VALUE]&quot;</span>
+ }
+</code></pre>
+</li>
+<li><p>The <strong>local.settings.json</strong> file should now include:</p>
+<pre><code class="lang-json"> {
+     <span class="hljs-string">&quot;IsEncrypted&quot;</span>: <span class="hljs-literal">false</span>,
+     <span class="hljs-string">&quot;Values&quot;</span>: {
+         <span class="hljs-string">&quot;AzureWebJobsStorage&quot;</span>: <span class="hljs-string">&quot;UseDevelopmentStorage=true&quot;</span>,
+         <span class="hljs-string">&quot;FUNCTIONS_WORKER_RUNTIME&quot;</span>: <span class="hljs-string">&quot;dotnet&quot;</span>,
+         <span class="hljs-string">&quot;StorageConnectionString&quot;</span>: <span class="hljs-string">&quot;[TEST VALUE]&quot;</span>
+     }
+ }
+</code></pre>
+</li>
+<li><p>Select <strong>Save</strong> to save your changes to the <strong>local.settings.json</strong> file.</p>
+</li>
+<li><p>On the <strong>Explorer</strong> pane of the <strong>Visual Studio Code</strong> window, open the <strong>FileParser.cs</strong> file.</p>
+</li>
+<li><p>In the code editor, review the example implementation:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.IO;
+<span class="hljs-keyword">using</span> System.Threading.Tasks;
+<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Mvc;
+<span class="hljs-keyword">using</span> Microsoft.Azure.WebJobs;
+<span class="hljs-keyword">using</span> Microsoft.Azure.WebJobs.Extensions.Http;
+<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Http;
+<span class="hljs-keyword">using</span> Microsoft.Extensions.Logging;
+<span class="hljs-keyword">using</span> Newtonsoft.Json;
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">func</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">FileParser</span>
+    {
+        [<span class="hljs-meta">FunctionName(<span class="hljs-meta-string">&quot;FileParser&quot;</span>)</span>]
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Run</span>(<span class="hljs-params">
+            [HttpTrigger(AuthorizationLevel.Function, <span class="hljs-string">&quot;get&quot;</span>, <span class="hljs-string">&quot;post&quot;</span>, Route = <span class="hljs-literal">null</span></span>)] HttpRequest req,
+            ILogger log)</span>
+        {
+            log.LogInformation(<span class="hljs-string">&quot;C# HTTP trigger function processed a request.&quot;</span>);
+            <span class="hljs-built_in">string</span> name = req.Query[<span class="hljs-string">&quot;name&quot;</span>];
+            <span class="hljs-built_in">string</span> requestBody = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> StreamReader(req.Body).ReadToEndAsync();
+            <span class="hljs-built_in">dynamic</span> data = JsonConvert.DeserializeObject(requestBody);
+            name = name ?? data?.name;
+            <span class="hljs-built_in">string</span> responseMessage = <span class="hljs-built_in">string</span>.IsNullOrEmpty(name)
+                ? <span class="hljs-string">&quot;This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.&quot;</span>
+                : <span class="hljs-string">$&quot;Hello, <span class="hljs-subst">{name}</span>. This HTTP triggered function executed successfully.&quot;</span>;
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> OkObjectResult(responseMessage);
+        }
+    }
+}
+</code></pre>
+</li>
+<li><p>Delete all of the content within the <strong>FileParser.cs</strong> file.</p>
+</li>
+<li><p>Add the following lines of code to add <strong>using directives</strong> for the <strong>Microsoft.AspNetCore.Mvc</strong>, <strong>Microsoft.Azure.WebJobs</strong>, <strong>Microsoft.AspNetCore.Http</strong>, <strong>System</strong>, and <strong>System.Threading.Tasks</strong> namespaces:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> Microsoft.AspNetCore.Mvc;
+<span class="hljs-keyword">using</span> Microsoft.Azure.WebJobs;
+<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Http;
+<span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading.Tasks;
+</code></pre>
+</li>
+<li><p>Create a new <strong>public static</strong> class named <strong>FileParser</strong>:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">FileParser</span>
+{ }
+</code></pre>
+</li>
+<li><p>Observe the <strong>FileParser.cs</strong> file again, which should now include:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> Microsoft.AspNetCore.Mvc;
+<span class="hljs-keyword">using</span> Microsoft.Azure.WebJobs;
+<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Http;
+<span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading.Tasks;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">FileParser</span>
+{ }
+</code></pre>
+</li>
+<li><p>Within the <strong>FileParser</strong> class, add the following code block to create a new <strong>public static</strong> <em>asynchronous</em> method named <strong>Run</strong>. This method returns a variable of type <strong>Task\<iactionresult\></iactionresult\></strong> and also takes in a variable of type <strong>HttpRequest</strong> named <em>request</em>:</p>
+<pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Run</span>(<span class="hljs-params">
+    HttpRequest request</span>)</span>
+{ }
+</code></pre>
+</li>
+<li><p>Add the following code to append an attribute to the <strong>Run</strong> method of type <strong>FunctionNameAttribute</strong> that has its <strong>name</strong> parameter set to a value of <strong>FileParser</strong>:</p>
+<pre><code class="lang-csharp">[<span class="hljs-meta">FunctionName(<span class="hljs-meta-string">&quot;FileParser&quot;</span>)</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Run</span>(<span class="hljs-params">
+    HttpRequest request</span>)</span>
+{ }
+</code></pre>
+</li>
+<li><p>Add the following code to append an attribute to the <strong>request</strong> parameter of type <strong>HttpTriggerAttribute</strong> that has its <strong>methods</strong> parameter array set to a single value of <strong>GET</strong>:</p>
+<pre><code class="lang-csharp">[<span class="hljs-meta">FunctionName(<span class="hljs-meta-string">&quot;FileParser&quot;</span>)</span>]
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Run</span>(<span class="hljs-params">
+    [HttpTrigger(<span class="hljs-string">&quot;GET&quot;</span></span>)] HttpRequest request)</span>
+{ }
+</code></pre>
+</li>
+<li><p>Review the content of the <strong>FileParser.cs</strong> file again, which should now include:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> Microsoft.AspNetCore.Mvc;
+<span class="hljs-keyword">using</span> Microsoft.Azure.WebJobs;
+<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Http;
+<span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading.Tasks;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">FileParser</span>
+{
+    [<span class="hljs-meta">FunctionName(<span class="hljs-meta-string">&quot;FileParser&quot;</span>)</span>]
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Run</span>(<span class="hljs-params">
+        [HttpTrigger(<span class="hljs-string">&quot;GET&quot;</span></span>)] HttpRequest request)</span>
+    { }
+}
+</code></pre>
+</li>
+<li><p>In the <strong>Run</strong> method, enter the following line of code to retrieve the value of the <strong>StorageConnectionString</strong> application setting by using the <strong>Environment.GetEnvironmentVariable</strong> method and to store the result in a <strong>string</strong> variable named <strong>connectionString</strong>:</p>
+<pre><code class="lang-csharp"><span class="hljs-built_in">string</span> connectionString = Environment.GetEnvironmentVariable(<span class="hljs-string">&quot;StorageConnectionString&quot;</span>);
+</code></pre>
+</li>
+<li><p>Enter the following line of code to return the value of the <strong>connectionString</strong> variable as the HTTP response:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> OkObjectResult(connectionString);
+</code></pre>
+</li>
+<li><p>Review the content of the <strong>FileParser.cs</strong> file again, which should now include:</p>
+<pre><code class="lang-csharp"><span class="hljs-keyword">using</span> Microsoft.AspNetCore.Mvc;
+<span class="hljs-keyword">using</span> Microsoft.Azure.WebJobs;
+<span class="hljs-keyword">using</span> Microsoft.AspNetCore.Http;
+<span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading.Tasks;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">FileParser</span>
+{
+    [<span class="hljs-meta">FunctionName(<span class="hljs-meta-string">&quot;FileParser&quot;</span>)</span>]
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">Run</span>(<span class="hljs-params">
+        [HttpTrigger(<span class="hljs-string">&quot;GET&quot;</span></span>)] HttpRequest request)</span>
+    {
+        <span class="hljs-built_in">string</span> connectionString = Environment.GetEnvironmentVariable(<span class="hljs-string">&quot;StorageConnectionString&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> OkObjectResult(connectionString);
+    }
+}
+</code></pre>
+</li>
+<li><p>Select <strong>Save</strong> to save your changes to the <strong>FileParser.cs</strong> file.</p>
+</li>
+</ol>
+<h3 id="task-4-validate-the-local-function">Task 4: Validate the local function</h3>
+<ol>
+<li><p>On the taskbar, select the <strong>Windows Terminal</strong> icon.</p>
+</li>
+<li><p>Run the following command to change the current directory to the <strong>$HOME\training-az204\Allfiles\Labs\07\Starter\func</strong> empty directory:</p>
+<pre><code class="lang-powershell"> <span class="hljs-built_in">cd</span> <span class="hljs-variable">$HOME</span>\training<span class="hljs-literal">-az204</span>\Allfiles\Labs\<span class="hljs-number">07</span>\Starter\func
+</code></pre>
+</li>
+<li><p>Run the following command to run the function app project:</p>
+<pre><code class="lang-powershell"> func <span class="hljs-built_in">start</span> -<span class="hljs-literal">-build</span>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: You can review the documentation to [start the function app project locally][azure-functions-core-tools-start-function] using the <strong>Azure Functions Core Tools</strong>.</p>
+</blockquote>
+</li>
+<li><p>On the taskbar, select the <strong>Windows Terminal</strong> icon again to open a new instance of the <strong>Windows Terminal</strong> application. Run the following command to change the current directory to the <strong>$HOME\training-az204\Allfiles\Labs\07\Starter\func</strong> empty directory:</p>
+<pre><code class="lang-powershell"> <span class="hljs-built_in">cd</span> <span class="hljs-variable">$HOME</span>\training<span class="hljs-literal">-az204</span>\Allfiles\Labs\<span class="hljs-number">07</span>\Starter\func
+</code></pre>
+</li>
+<li><p>When you receive the open command prompt, run the following command to start the <strong>httprepl</strong> tool, setting the base Uniform Resource Identifier (URI) to <code>http://localhost:7071</code>:</p>
+<pre><code class="lang-powershell"> httprepl http://localhost:<span class="hljs-number">7071</span>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: An error message is displayed by the <strong>httprepl</strong> tool. This message occurs because the tool is searching for a Swagger definition file to use to traverse the API. Because your function project doesn&apos;t produce a Swagger definition file, you&apos;ll need to traverse the API manually.</p>
+</blockquote>
+</li>
+<li><p>When you receive the tool prompt, run the following command to browse to the relative <strong>api</strong> directory:</p>
+<pre><code class="lang-powershell"> <span class="hljs-built_in">cd</span> api
+</code></pre>
+</li>
+<li><p>Run the following command to browse to the relative <strong>fileparser</strong> directory:</p>
+<pre><code class="lang-powershell"> <span class="hljs-built_in">cd</span> fileparser
+</code></pre>
+</li>
+<li><p>Run the following command to run the <strong>get</strong> command:</p>
+<pre><code class="lang-powershell"> get
+</code></pre>
+</li>
+<li><p>Observe the <strong>[TEST VALUE]</strong> value of the <strong>StorageConnectionString</strong> being returned as the result of the HTTP request:</p>
+<pre><code class="lang-powershell"> HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK
+ Content<span class="hljs-literal">-Type</span>: text/plain; charset=utf<span class="hljs-literal">-8</span>
+ Date: Tue, <span class="hljs-number">01</span> Sep <span class="hljs-number">2020</span> <span class="hljs-number">23</span>:<span class="hljs-number">35</span>:<span class="hljs-number">39</span> GMT
+ Server: Kestrel
+ Transfer<span class="hljs-literal">-Encoding</span>: chunked
+ [<span class="hljs-type">TEST</span> <span class="hljs-type">VALUE</span>]
+</code></pre>
+</li>
+<li><p>Run the following command to exit the <strong>httprepl</strong> tool:</p>
+<pre><code class="lang-powershell"><span class="hljs-keyword">exit</span>
+</code></pre>
+</li>
+<li><p>Close all currently running instances of the <strong>Windows Terminal</strong> application.</p>
+</li>
+</ol>
+<h3 id="task-5-deploy-the-function-using-the-azure-functions-core-tools">Task 5: Deploy the function using the Azure Functions Core Tools</h3>
+<ol>
+<li><p>On the taskbar, select the <strong>Windows Terminal</strong> icon.</p>
+</li>
+<li><p>Run the following command to change the current directory to the <strong>$HOME\training-az204\Allfiles\Labs\07\Starter\func</strong> empty directory:</p>
+<pre><code class="lang-powershell"> <span class="hljs-built_in">cd</span> <span class="hljs-variable">$HOME</span>\training<span class="hljs-literal">-az204</span>\Allfiles\Labs\<span class="hljs-number">07</span>\Starter\func
+</code></pre>
+</li>
+<li><p>Run the following command to sign in to the Azure Command-Line Interface (CLI):</p>
+<pre><code class="lang-powershell"> az login
+</code></pre>
+</li>
+<li><p>In the <strong>Microsoft Edge</strong> browser window, enter the email address and password for your Microsoft account, and then select <strong>Sign in</strong>.</p>
+</li>
+<li><p>Return to the currently open <strong>Windows Terminal</strong> window. Wait for the sign-in process to finish.</p>
+</li>
+<li><p>Run the following command to publish the function app project (replace the <code>&lt;function-app-name&gt;</code> placeholder with the name of the function app you created earlier in this lab):</p>
+<pre><code class="lang-powershell"> func azure functionapp publish &lt;function<span class="hljs-literal">-app</span><span class="hljs-literal">-name</span>&gt;
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: As an example, if your <strong>Function App name</strong> is <strong>securefuncstudent</strong>, your command would be <code>func azure functionapp publish securefuncstudent</code>. You can review the documentation to [publish the local function app project][azure-functions-core-tools-publish-azure] using the <strong>Azure Functions Core Tools</strong>.</p>
+</blockquote>
+</li>
+<li><p>Wait for the deployment to finalize before you move forward with the lab.</p>
+</li>
+<li><p>Close the currently running <strong>Windows Terminal</strong> application.</p>
+</li>
+</ol>
+<h3 id="task-6-test-the-key-vault-derived-application-setting">Task 6: Test the Key Vault-derived application setting</h3>
+<ol>
+<li><p>On the taskbar, select the <strong>Microsoft Edge</strong> icon, and then select the tab that contains the Azure portal (<a href="https://portal.azure.com" target="_blank">https://portal.azure.com</a>).</p>
+</li>
+<li><p>On the Azure portal&apos;s navigation pane, select the <strong>Resource groups</strong> link.</p>
+</li>
+<li><p>On the <strong>Resource groups</strong> blade, select the <strong>ConfidentialStack</strong> resource group.</p>
+</li>
+<li><p>On the <strong>ConfidentialStack</strong> blade, select the <strong>securefunc[yourname]</strong> function app.</p>
+</li>
+<li><p>On the <strong>Function App</strong> blade, select the <strong>Functions</strong> option in the <strong>Functions</strong> section.</p>
+</li>
+<li><p>On the <strong>Functions</strong> pane, select the existing <strong>FileParser</strong> function.</p>
+</li>
+<li><p>On the <strong>Function</strong> blade, select the <strong>Code + Test</strong> option in the <strong>Developer</strong> section.</p>
+</li>
+<li><p>In the function editor, select <strong>Test/Run</strong>.</p>
+</li>
+<li><p>In the automatically displayed pane, in the <strong>HTTP method</strong> list, select <strong>GET</strong>.</p>
+</li>
+<li><p>Select <strong>Run</strong> to test the function.</p>
+</li>
+<li><p>Review the results of the test run. The result should be your Azure Storage connection string.</p>
+</li>
+</ol>
+<h2 id="review">Review</h2>
+<p>In this exercise, you used a service identity to read the value of a secret stored in Key Vault and returned that value as the result of a function app.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lab02.html" class="navigation navigation-prev " aria-label="Previous page: LAB 2 - Configure secrets and identities">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lab04.html" class="navigation navigation-next " aria-label="Next page: LAB 4 - Access Azure Blob Storage data">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"LAB 3 - Build an Azure Functions app","level":"15.3","depth":1,"next":{"title":"LAB 4 - Access Azure Blob Storage data","level":"15.4","depth":1,"path":"M3/02/lab04.md","ref":"M3/02/lab04.md","articles":[]},"previous":{"title":"LAB 2 - Configure secrets and identities","level":"15.2","depth":1,"path":"M3/02/lab02.md","ref":"M3/02/lab02.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"M3/02/lab03.md","mtime":"2022-12-21T23:32:04.878Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-12-23T21:00:22.927Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -4,7 +4,7 @@
 
 1. On the taskbar, select the **Microsoft Edge** icon.
 
-1. In the open browser window, browse to the Azure portal (<https://portal.azure.com>), and then sign in with the account you'll be using for this lab.
+2. In the open browser window, browse to the Azure portal (<https://portal.azure.com>), and then sign in with the account you'll be using for this lab.
 
     > **Note**: If this is your first time signing in to the Azure portal, you'll be offered a tour of the portal. Select **Get Started** to skip the tour and begin using the portal.
 
@@ -12,9 +12,9 @@
 
 1. In the Azure portal, use the **Search resources, services, and docs** text box to search for **Storage Accounts**, and then in the list of results, select **Storage accounts**.
 
-1. On the **Storage accounts** blade, select **+ Create**.
+2. On the **Storage accounts** blade, select **+ Create**.
 
-1. On the **Create a storage account** blade, on the **Basics** tab, perform the following actions, and select **Review**:
+3. On the **Create a storage account** blade, on the **Basics** tab, perform the following actions, and select **Review**:
 
    | Setting | Action |
    | -- | -- |
@@ -29,19 +29,19 @@
 
    ![Screenshot displaying the configured settings on the Create a storage account blade](images/l07_create_a_storage_account.png)
 
-1. On the **Review** tab, review the options that you selected during the previous steps.
+4. On the **Review** tab, review the options that you selected during the previous steps.
 
-1. Select **Create** to create the storage account by using your specified configuration.
+5. Select **Create** to create the storage account by using your specified configuration.
 
     > **Note**: Wait for the creation task to complete before you move forward with this lab.
 
-1. On the **Deployment Overview** blade, select **Go to resource**.
+6. On the **Deployment Overview** blade, select **Go to resource**.
 
-1. On the **Storage account** blade, in the **Security + networking** section, select the **Access keys** link.
+7. On the **Storage account** blade, in the **Security + networking** section, select the **Access keys** link.
 
-1. In the **Access keys** section, select **Show keys**.
+8. In the **Access keys** section, select **Show keys**.
 
-1. Select any one of the keys and record the value in either of the **Connection string** boxes. You'll use this value later in this lab.
+9. Select any one of the keys and record the value in either of the **Connection string** boxes. You'll use this value later in this lab.
 
     > **Note**: It doesn't matter which connection string you choose. They're interchangeable.
 
@@ -49,9 +49,9 @@
 
 1. In the Azure portal, use the **Search resources, services, and docs** text box to search for **Key vaults**, and then in the list of results, select **Key vaults**.
 
-1. On the **Key vaults** blade, select **Create**.
+2. On the **Key vaults** blade, select **Create**.
 
-1.  On the **Create key vault** blade, on the **Basics** tab, perform the following actions, and then select **Review + create**:
+3.  On the **Create key vault** blade, on the **Basics** tab, perform the following actions, and then select **Review + create**:
 
    | Setting | Action |
    | -- | -- |
@@ -65,9 +65,9 @@
 
    ![Screenshot displaying the configured settings on the Create key vault blade](images/l07_create_key_vault.png)
 
-1. On the **Review + create** tab, review the options that you selected during the previous steps.
+4. On the **Review + create** tab, review the options that you selected during the previous steps.
 
-1. Select **Create** to create the key vault by using your specified configuration.
+5. Select **Create** to create the key vault by using your specified configuration.
 
     > **Note**: Wait for the creation task to complete before you move forward with this lab.
 
@@ -75,9 +75,9 @@
 
 1. In the Azure portal, use the **Search resources, services, and docs** text box to search for **Function App**, and then in the list of results, select **Function App**.
 
-1. On the **Function App** blade, select **Create**.
+2. On the **Function App** blade, select **Create**.
 
-1. On the **Create Function App** blade, on the **Basics** tab, perform the following actions, and then select **Next: Hosting**:
+3. On the **Create Function App** blade, on the **Basics** tab, perform the following actions, and then select **Next: Hosting**:
 
     | Setting | Action |
     | -- | -- |
@@ -95,15 +95,15 @@
 
     ![Screenshot displaying the configured settings on the Create Function App blade](images/l07_create_function_app.png)
 
-1. On the **Hosting** tab, perform the following actions, and then select **Review + create**:
+4. On the **Hosting** tab, perform the following actions, and then select **Review + create**:
 
     | Setting | Action |
     | -- | -- |
     | **Storage account** drop-down list | Select the **securestor**_[yourname]_ storage account |
 
-1. On the **Review + create** tab, review the options that you selected during the previous steps.
+5. On the **Review + create** tab, review the options that you selected during the previous steps.
 
-1. Select **Create** to create the function app by using your specified configuration.
+6. Select **Create** to create the function app by using your specified configuration.
 
     > **Note**: Wait for the creation task to complete before you move forward with this lab.
 

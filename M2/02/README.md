@@ -6,11 +6,9 @@ Learn how to create Azure Blob storage resources, manage data through the blob s
 
 ## Modules in this learning path:
 
-* [Explore Azure Blob storage](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/Blob_storage_concepts.md)
-* [Manage the Azure Blob storage lifecycle](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/Blob_storage_lifecycle.md)
-* [Work with Azure Blob storage](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/Working_blob_storage.md)
-
-<br>
+* [Explore Azure Blob storage](/M2/02/Blob_storage_concepts.md)
+* [Manage the Azure Blob storage lifecycle](/M2/02/Blob_storage_lifecycle.md)
+* [Work with Azure Blob storage](/M2/02/Working_blob_storage.md)
 
 ## Hands-on Labs 
 
@@ -18,10 +16,8 @@ Learn how to create Azure Blob storage resources, manage data through the blob s
 
 ![alt text](images/Lab03-Diagram.png)
 
-<br>
-
-* [Lab 01: Create Azure resources](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/lab01.md)
-* [Lab 02: Upload a blob into a container](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/lab02.md)
-* [Lab 03: Access containers by using the .NET SDK](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/lab03.md)
-* [Lab 04: Retrieve blob Uniform Resource Identifiers (URIs) by using the .NET SDK](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/lab04.md)
-* [Lab 05: Clean up your subscription](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20blob%20storage/lab05.md)
+* [Lab 01: Create Azure resources](/M2/02/lab01.md)
+* [Lab 02: Upload a blob into a container](/M2/02/lab02.md)
+* [Lab 03: Access containers by using the .NET SDK](/M2/02/lab03.md)
+* [Lab 04: Retrieve blob Uniform Resource Identifiers (URIs) by using the .NET SDK](/M2/02/lab04.md)
+* [Lab 05: Clean up your subscription](/M2/02/lab05.md)

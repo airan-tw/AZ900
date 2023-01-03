@@ -197,7 +197,7 @@ You can use the Data Explorer in the Azure portal to create a database and conta
 
 1. Select **Data Explorer** from the left navigation on your Azure Cosmos DB account page, and then select **New Container**.
 
-![alt text](images/cosmosdb_09.png)
+  ![alt text](images/cosmosdb_09.png)
 
 2. In the **New container** pane, enter the settings for the new container.
 
@@ -213,19 +213,19 @@ Add data to your new database using Data Explorer.
 
 1. In **Data Explorer**, expand the **ToDoList** database, and expand the **Items** container. Next, select **Items**, and then select **New Item**.
 
-![alt text](images/cosmosdb_10.png)
+  ![alt text](images/cosmosdb_10.png)
 
 2. Add the following structure to the item on the right side of the Items pane:
 
-```azurecli-interactive
-{
-    "id": "1",
-    "category": "personal",
-    "name": "groceries",
-    "description": "Pick up apples and strawberries.",
-    "isComplete": false
-}
-```
+  ```azurecli-interactive
+  {
+      "id": "1",
+      "category": "personal",
+      "name": "groceries",
+      "description": "Pick up apples and strawberries.",
+      "isComplete": false
+  }
+  ```
 
 3. Select Save.
 

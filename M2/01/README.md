@@ -6,11 +6,9 @@ Learn how to create Azure Cosmos DB resources with the appropriate consistency l
 
 ## Modules in this learning path:
 
-* [Explore Azure Cosmos DB](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20Cosmos%20DB%20storage/Cosmosdb_overview.md)
-* [Implement partitioning in Azure Cosmos DB](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20Cosmos%20DB%20storage/Cosmosdb_structure.md)
-* [Work with Azure Cosmos DB](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20Cosmos%20DB%20storage/Working_cosmosdb.md)
-
-<br>
+* [Explore Azure Cosmos DB](/M2/01/Cosmosdb_overview.md)
+* [Implement partitioning in Azure Cosmos DB](/M2/01/Cosmosdb_structure.md)
+* [Work with Azure Cosmos DB](/M2/01/Working_cosmosdb.md)
 
 ## Hands-on Labs 
 
@@ -18,9 +16,7 @@ Learn how to create Azure Cosmos DB resources with the appropriate consistency l
 
 ![alt text](images/Lab04-Diagram.png)
 
-<br>
-
-* [Lab 01: Creating data store resources in Azure](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20Cosmos%20DB%20storage/lab01.md)
-* [Lab 02: Review and upload data](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20Cosmos%20DB%20storage/lab02.md)
-* [Lab 03: Configure a .NET web application](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20Cosmos%20DB%20storage/lab03.md)
-* [Lab 04: Clean up your subscription](https://github.com/airan-tw/azure_training/blob/main/M2/Develop%20solutions%20that%20use%20Cosmos%20DB%20storage/lab04.md)
+* [Lab 01: Creating data store resources in Azure](/M2/01/lab01.md)
+* [Lab 02: Review and upload data](/M2/01/lab02.md)
+* [Lab 03: Configure a .NET web application](/M2/01/lab03.md)
+* [Lab 04: Clean up your subscription](/M2/01/lab04.md)

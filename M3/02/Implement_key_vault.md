@@ -30,7 +30,6 @@ Authentication with Key Vault works in conjunction with Azure Active Directory, 
 
 ![alt text](images/key_vault_04.png)
 
-
 Below is information on authenticating to Key Vault without using a managed identity.
 
 ![alt text](images/key_vault_05.png)
@@ -52,7 +51,6 @@ In this exercise you'll learn how to perform the following actions by using the 
 ### Prerequisites
 
   * An Azure account with an active subscription. If you don't already have one, [follow this instructions](https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit#heading=h.c96x7dxoz6ej).
-   
 
 ### Login to Azure and start the Cloud Shell
 1. Login to the [Azure Portal](https://portal.azure.com/) and open the Cloud Shell.
@@ -62,7 +60,6 @@ In this exercise you'll learn how to perform the following actions by using the 
 2. After the shell opens be sure to select the Bash environment.
 
 ![alt text](images/cloud_bash.png)
-
 
 ### Create a Key Vault
 

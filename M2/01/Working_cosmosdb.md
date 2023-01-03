@@ -145,17 +145,17 @@ az login
 
 1. Create a resource group for the resources needed for this exercise.
 
-```azurecli-interactive
-az group create --location eastus --name az204-cosmos-rg
-```
+    ```azurecli-interactive
+    az group create --location eastus --name az204-cosmos-rg
+    ```
 
 2. Create the Azure Cosmos DB account. Replace `<myCosmosDBacct>` with a unique name to identify your Azure Cosmos DB account. The name can only contain lowercase letters, numbers, and the hyphen (-) character. It must be between 3-31 characters in length. This command will take a few minutes to complete.
-  
-```azurecli-interactive
-az cosmosdb create --name <myCosmosDBacct> --resource-group az204-cosmos-rg
-```  
+    
+    ```azurecli-interactive
+    az cosmosdb create --name <myCosmosDBacct> --resource-group az204-cosmos-rg
+    ```  
 
-Record the `documentEndpoint` shown in the JSON response, it will be used below.
+    Record the `documentEndpoint` shown in the JSON response, it will be used below.
   
 3. Retrieve the primary key for the account by using the command below. Record the primaryMasterKey from the command results it will be used in the code below.
 
@@ -170,24 +170,24 @@ Now that the needed resources are deployed to Azure the next step is to set up t
 
 1. Create a folder for the project and change in to the folder.
 
-```azurecli-interactive
-md az204-cosmos
-cd az204-cosmos
-```
+    ```azurecli-interactive
+    md az204-cosmos
+    cd az204-cosmos
+    ```
 
 2. Create the .NET console app.
 
-```azurecli-interactive
-dotnet new console
-```
+    ```azurecli-interactive
+    dotnet new console
+    ```
 
 3. Open the current folder in VS Code using the command below. The -r option will open the folder without launching a new VS Code window.
 
-```azurecli-interactive
-code . -r
-```
+    ```azurecli-interactive
+    code . -r
+    ```
 
-Select the Program.cs file in the **Explorer** pane to open the file in the editor.
+    Select the Program.cs file in the **Explorer** pane to open the file in the editor.
 
 ## Build the console app
 
@@ -205,69 +205,69 @@ dotnet add package Microsoft.Azure.Cosmos
 
 1. Add the code snippet below after the `using` statement. The code snippet adds constants and variables into the class and adds some error checking. Be sure to replace the placeholder values for EndpointUri and PrimaryKey following the directions in the code comments.
 
-```azurecli-interactive
-dotnet add package Microsoft.Azure.Cosmos
-```
+    ```azurecli-interactive
+    dotnet add package Microsoft.Azure.Cosmos
+    ```
 
 2. Delete any existing code in the Program.cs file and add the using Microsoft.Azure statement.
 
-```azurecli-interactive
-using Microsoft.Azure.Cosmos;
-```
+    ```azurecli-interactive
+    using Microsoft.Azure.Cosmos;
+    ```
 
 ### Add code to connect to an Azure Cosmos DB account
 
 1. Add the code snippet below after the `using` statement. The code snippet adds constants and variables into the class and adds some error checking. Be sure to replace the placeholder values for `EndpointUri` and `PrimaryKey following the directions in the code comments.
 
-```azurecli-interactive
-public class Program
-{
-    // Replace <documentEndpoint> with the information created earlier
-    private static readonly string EndpointUri = "<documentEndpoint>";
-
-    // Set variable to the Primary Key from earlier.
-    private static readonly string PrimaryKey = "<your primary key>";
-
-    // The Cosmos client instance
-    private CosmosClient cosmosClient;
-
-    // The database we will create
-    private Database database;
-
-    // The container we will create.
-    private Container container;
-
-    // The names of the database and container we will create
-    private string databaseId = "az204Database";
-    private string containerId = "az204Container";
-
-    public static async Task Main(string[] args)
+    ```azurecli-interactive
+    public class Program
     {
-        try
-        {
-            Console.WriteLine("Beginning operations...\n");
-            Program p = new Program();
-            await p.CosmosAsync();
+        // Replace <documentEndpoint> with the information created earlier
+        private static readonly string EndpointUri = "<documentEndpoint>";
 
-        }
-        catch (CosmosException de)
+        // Set variable to the Primary Key from earlier.
+        private static readonly string PrimaryKey = "<your primary key>";
+
+        // The Cosmos client instance
+        private CosmosClient cosmosClient;
+
+        // The database we will create
+        private Database database;
+
+        // The container we will create.
+        private Container container;
+
+        // The names of the database and container we will create
+        private string databaseId = "az204Database";
+        private string containerId = "az204Container";
+
+        public static async Task Main(string[] args)
         {
-            Exception baseException = de.GetBaseException();
-            Console.WriteLine("{0} error occurred: {1}", de.StatusCode, de);
+            try
+            {
+                Console.WriteLine("Beginning operations...\n");
+                Program p = new Program();
+                await p.CosmosAsync();
+
+            }
+            catch (CosmosException de)
+            {
+                Exception baseException = de.GetBaseException();
+                Console.WriteLine("{0} error occurred: {1}", de.StatusCode, de);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e);
+            }
+            finally
+            {
+                Console.WriteLine("End of program, press any key to exit.");
+                Console.ReadKey();
+            }
         }
-        catch (Exception e)
-        {
-            Console.WriteLine("Error: {0}", e);
-        }
-        finally
-        {
-            Console.WriteLine("End of program, press any key to exit.");
-            Console.ReadKey();
-        }
+        //The sample code below gets added below this line
     }
-    //The sample code below gets added below this line
-}
-```
+    ```
 
 2. Below the `Main` method, add a new asynchronous task called `CosmosAsync`, which instantiates our new `CosmosClient` and adds code to call the methods you'll add later to create a database and a container.
 
@@ -301,17 +301,17 @@ private async Task CreateContainerAsync()
 ### Run the application
 
 1. Save your work and, in a terminal in VS Code, run the `dotnet run` command. The console will display the following messages.
-
-```azurecli-interactive
-Beginning operations...
-
-Created Database: az204Database
-
-Created Container: az204Container
-
-End of program, press any key to exit.
-```
-
+    
+    ```azurecli-interactive
+    Beginning operations...
+    
+    Created Database: az204Database
+    
+    Created Container: az204Container
+    
+    End of program, press any key to exit.
+    ```
+    
 2. Verify the results by opening the Azure portal, navigating to your Azure Cosmos DB resource, and use the Data Explorer to view the database and container.
 
 ### Clean up Azure resources

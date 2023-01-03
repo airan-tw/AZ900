@@ -79,13 +79,13 @@ In this exercise you'll learn how to perform the following actions:
 
 4. When the Register an application page appears, enter your application's registration information:
 
-|**Field** | **Value** |
-| -------- | --------- |
-|Name	| `az204appreg`|
-|Supported account types	| Select **Accounts in this organizational directory only**|
-|Redirect URI (optional)	|Select **Public client/native (mobile & desktop)** and enter `http://localhost` in the box to the right.|
+  |**Field** | **Value** |
+  | -------- | --------- |
+  |Name	| `az204appreg`|
+  |Supported account types	| Select **Accounts in this organizational directory only**|
+  |Redirect URI (optional)	|Select **Public client/native (mobile & desktop)** and enter `http://localhost` in the box to the right.|
 
-Below are more details on the Supported account types.
+  Below are more details on the Supported account types.
 
 5. Select **Register**.
 
@@ -97,20 +97,20 @@ Azure Active Directory assigns a unique application (client) ID to your app, and
 
 2. Create a folder for the project and change in to the folder.
 
-```azurecli-interactive
-md az204-auth
-cd az204-auth
-```
+  ```
+  md az204-auth
+  cd az204-auth
+  ```
 
 3. Create the .NET console app.
 
-```azurecli-interactive
-dotnet new console
-```
+  ```
+  dotnet new console
+  ```
 
 4. Open the az204-auth folder in VS Code.
 
-```azurecli-interactive
+```
 code . -r
 ```
 
@@ -122,20 +122,20 @@ In this section you will add the necessary packages and code to the project.
 
 1. Add the `Microsoft.Identity.Client` package to the project in a terminal in VS Code.
 
-```azurecli-interactive
-dotnet add package Microsoft.Identity.Client
-```
+  ```
+  dotnet add package Microsoft.Identity.Client
+  ```
 
 2. Open the Program.cs file and add `using` statements to include `Microsoft.Identity.Client` and to enable async operations.
 
-```azurecli-interactive
-using System.Threading.Tasks;
-using Microsoft.Identity.Client;
-```
+  ```
+  using System.Threading.Tasks;
+  using Microsoft.Identity.Client;
+  ```
 
 3. Change the Main method to enable async.
 
-```azurecli-interactive
+```
 public static async Task Main(string[] args)
 ```
 
@@ -143,14 +143,14 @@ public static async Task Main(string[] args)
 
 1. We'll need two variables to hold the Application (client) and Directory (tenant) IDs. You can copy those values from the portal. Add the code below and replace the string values with the appropriate values from the portal.
 
-```azurecli-interactive
-private const string _clientId = "APPLICATION_CLIENT_ID";
-private const string _tenantId = "DIRECTORY_TENANT_ID";
-```
+  ```
+  private const string _clientId = "APPLICATION_CLIENT_ID";
+  private const string _tenantId = "DIRECTORY_TENANT_ID";
+  ```
 
 2. Use the `PublicClientApplicationBuilder` class to build out the authorization context.
 
-```azurecli-interactive
+```
 var app = PublicClientApplicationBuilder
     .Create(_clientId)
     .WithAuthority(AzureCloudInstance.AzurePublic, _tenantId)
@@ -169,17 +169,17 @@ When you registered the az204appreg app it automatically generated an API permis
 
 1. Set the permission scope for the token request. Add the following code below the `PublicClientApplicationBuilder`.
 
-```azurecli-interactive
-string[] scopes = { "user.read" };
-```
+  ```
+  string[] scopes = { "user.read" };
+  ```
 
 2. Add code to request the token and write the result out to the console.
 
-```azurecli-interactive
-AuthenticationResult result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
+  ```
+  AuthenticationResult result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
 
-Console.WriteLine($"Token:\t{result.AccessToken}");
-```
+  Console.WriteLine($"Token:\t{result.AccessToken}");
+  ```
 
 ### Review completed application
 
@@ -221,10 +221,10 @@ namespace az204_auth
 
 3. If this is the first time you've authenticated to the registered app you will receive a **Permissions requested** notification asking you to approve the app to read data associated with your account. Select Accept.
 
-![alt text](images/auth_library_06.png)
+  ![alt text](images/auth_library_06.png)
 
 4. You should see the results similar to the example below in the console.
 
-```azurecli-interactive
+```
 Token:  eyJ0eXAiOiJKV1QiLCJub25jZSI6IlVhU.....
 ```

@@ -21,7 +21,7 @@
     | Setting | Action |
     | -- | -- |
     | **Files** section  | Select the **Folder** icon |
-    | **File Explorer** window  | Browse to **Allfiles (F):\\Allfiles\\Labs\\02\\Starter**, select the **settings.json** file, and then select **Open** |
+    | **File Explorer** window  | Browse to **$HOME\\training-az204\\Labs\\02\\Starter**, select the **settings.json** file, and then select **Open** |
     | **Overwrite if files already exist** check box | Ensure that this check box is selected |
 
       > **Note**: Wait for the blob to upload before you continue with this lab.
@@ -29,10 +29,10 @@
 ### Task 2: Create an HTTP-triggered function
 
 1. On the taskbar, select the **Windows Terminal** icon.
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. From the command prompt, run the following command to use the **Azure Functions Core Tools** to create a new function named **GetSettingInfo**, using the **HTTP trigger** template:
@@ -48,7 +48,7 @@
 
 1. On the **Start** screen, select the **Visual Studio Code** tile.
 1. On the **File** menu, select **Open Folder**.
-1. In the **File Explorer** window that opens, browse to **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
+1. In the **File Explorer** window that opens, browse to **$HOME\\training-az204\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
 1. On the **Explorer** pane of the **Visual Studio Code** window, open the **GetSettingInfo.cs** file.
 1. In the code editor, observe the example implementation:
 
@@ -184,10 +184,10 @@
 ### Task 4: Register Azure Storage Blob extensions
 
 1. On the taskbar, select the **Windows Terminal** icon.
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. From the command prompt, run the following command to register the [Microsoft.Azure.WebJobs.Extensions.Storage](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.Storage/) extension:
@@ -207,10 +207,10 @@
 ### Task 5: Test the function by using httprepl
 
 1. On the taskbar, select the **Windows Terminal** icon.
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. From the command prompt, run the following command to run the function app project:

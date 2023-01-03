@@ -3,10 +3,10 @@
 ### Task 1: Deploy using the Azure Functions Core Tools
 
 1. On the taskbar, select the **Windows Terminal** icon.
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. From command prompt, run the following command to login to the Azure Command-Line Interface (CLI):

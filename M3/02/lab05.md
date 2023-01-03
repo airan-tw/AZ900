@@ -16,7 +16,7 @@
 
      > **Note**: The command runs asynchronously (as determined by the *--no-wait* parameter), so while you'll be able to run another Azure CLI command immediately afterwards within the same Bash session, it'll take a few minutes before the resource groups are actually removed.
 
-1. Close the **Cloud Shell** pane in the portal.
+2. Close the **Cloud Shell** pane in the portal.
 
 ### Task 3: Close the active application
 

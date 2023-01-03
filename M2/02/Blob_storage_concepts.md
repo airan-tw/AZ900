@@ -139,7 +139,7 @@ In this exercise you will create a block blob storage account by using the Azure
   
 ### Prerequisites
 
- * **Azure Account** (https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit)
+- **[Azure Account](https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit)** 
 
 ### Create account in the Azure portal
 
@@ -162,12 +162,12 @@ To create a block blob storage account in the Azure portal, follow these steps:
 6. In the Location field, select a location for the storage account, or use the default location.
 
 7. For the rest of the settings, configure the following:
-  
-|**Field** | **Value** |
-| -------- | --------- |
-|**Value**	| Select **Premium**.|
-|**Premium account type**	| Select **Block blobs**. |
-|**Replication**	|Leave the default setting of **Locally-redundant storage (LRS)**. |
+
+  |**Field** | **Value** |
+  | -------- | --------- |
+  |**Value**	| Select **Premium**.|
+  |**Premium account type**	| Select **Block blobs**. |
+  |**Replication**	|Leave the default setting of **Locally-redundant storage (LRS)**. |
 
 8. Select **Review + create** to review the storage account settings.
 
@@ -177,30 +177,29 @@ To create a block blob storage account in the Azure portal, follow these steps:
 
 1. Login to the [Azure Portal](https://portal.azure.com/) and open the Cloud Shell.
 
-![alt text](images/cloud_shell.png)
+    ![alt text](images/cloud_shell.png)
 
 2. After the shell opens be sure to select the Bash environment.
 
-![alt text](images/cloud_bash.png)
+  ![alt text](images/cloud_bash.png)
 
 3. Create a new resource group.
 
-```azurecli-interactive
-az group create --name az204-blob-rg --location eastus
-```
+  ```azurecli-interactive
+  az group create --name az204-blob-rg --location eastus
+  ```
 
 4. Create the block blob storage account. See Step 5 in the Create account in the Azure portal instructions above for the storage account name requirements. 
 
-```azurecli-interactive
-az storage account create --resource-group az204-blob-rg --name \
-<myStorageAcct> --location eastus \ 
---kind BlockBlobStorage --sku Premium_LRS
-```
+  ```azurecli-interactive
+  az storage account create --resource-group az204-blob-rg --name \
+  <myStorageAcct> --location eastus \ 
+  --kind BlockBlobStorage --sku Premium_LRS
+  ```
 
 ### Clean up resources
 
 When you no longer need the resources in this walkthrough use the following command to delete the resource group and associated resources.
-
 
 ```azurecli-interactive
 az group delete --name az204-blob-rg --no-wait

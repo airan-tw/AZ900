@@ -62,8 +62,6 @@ Multi-container groups are useful in cases where you want to divide a single fun
    * An application container and a monitoring container. The monitoring container periodically makes a request to the application to ensure that it's running and responding correctly, and raises an alert if it's not.
    * A front-end container and a back-end container. The front end might serve a web application, with the back end running a service to retrieve data.
 
-<br>
-
 ## Exercise: Deploy a container instance by using the Azure CLI
 
 ![alt text](images/run_container_02.png)
@@ -82,17 +80,17 @@ In this exercise you'll learn how to perform the following actions:
 ### Login to Azure and start the Cloud Shell
 1. Login to the [Azure Portal](https://portal.azure.com/) and open the Cloud Shell.
 
-![alt text](images/provision_vm_05.png)
+   ![alt text](images/provision_vm_05.png)
 
 2. After the shell opens be sure to select the Bash environment.
 
-![alt text](images/provision_vm_06.png)
+   ![alt text](images/provision_vm_06.png)
 
 3. Create a new resource group with the name **az204-aci-rg** so that it will be easier to clean up these resources when you are finished with the module. 
 
-```azurecli-interactive
-az group create --name az204-aci-rg --location eastus
-```
+   ```azurecli-interactive
+   az group create --name az204-aci-rg --location eastus
+   ```
 
 ### Create a container
 
@@ -100,19 +98,19 @@ You create a container by providing a name, a Docker image, and an Azure resourc
 
 1. Create a DNS name to expose your container to the Internet. Your DNS name must be unique, run this command from Cloud Shell to create a variable that holds a unique name.
 
-```azurecli-interactive
-DNS_NAME_LABEL=aci-example-$RANDOM
-```
+   ```azurecli-interactive
+   DNS_NAME_LABEL=aci-example-$RANDOM
+   ```
 
 2. Run the following `az container create` command to start a container instance. It will take a few minutes for the operation to complete.
 
-```azurecli-interactive
-az container create --resource-group az204-aci-rg \
-    --name mycontainer \
-    --image mcr.microsoft.com/azuredocs/aci-helloworld \
-    --ports 80 \
-    --dns-name-label $DNS_NAME_LABEL --location eastus \
-```
+   ```azurecli-interactive
+   az container create --resource-group az204-aci-rg \
+       --name mycontainer \
+       --image mcr.microsoft.com/azuredocs/aci-helloworld \
+       --ports 80 \
+       --dns-name-label $DNS_NAME_LABEL --location eastus \
+   ```
 
 In the commands above, `$DNS_NAME_LABEL` specifies your DNS name. The image name, `mcr.microsoft.com/azuredocs/aci-helloworld`, refers to a Docker image that runs a basic Node.js web application.
 
@@ -120,23 +118,23 @@ In the commands above, `$DNS_NAME_LABEL` specifies your DNS name. The image name
 
 1. When the az container create command completes, run az container show to check its status.
 
-```azurecli-interactive
-az container show --resource-group az204-aci-rg \
-    --name mycontainer \
-    --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" \
-    --out table \
-```
-
-You see your container's fully qualified domain name (FQDN) and its provisioning state. Here's an example.
-
-```azurecli-interactive
-FQDN                                    ProvisioningState
---------------------------------------  -------------------
-aci-wt.eastus.azurecontainer.io         Succeeded
-```
-
-> **Note**: If your container is in the **Creating** state, wait a few moments and run the command again until you see the **Succeeded** state.
-
+   ```azurecli-interactive
+   az container show --resource-group az204-aci-rg \
+       --name mycontainer \
+       --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" \
+       --out table \
+   ```
+   
+   You see your container's fully qualified domain name (FQDN) and its provisioning state. Here's an example.
+   
+   ```azurecli-interactive
+   FQDN                                    ProvisioningState
+   --------------------------------------  -------------------
+   aci-wt.eastus.azurecontainer.io         Succeeded
+   ```
+   
+   > **Note**: If your container is in the **Creating** state, wait a few moments and run the command again until you see the **Succeeded** state.
+   
 2. From a browser, navigate to your container's FQDN to see it running. You may get a warning that the site isn't safe.
 
 ### Clean up resources

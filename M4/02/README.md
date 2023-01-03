@@ -6,9 +6,7 @@ Learn how to instrument apps to enable Application Insights to monitor performan
 
 ## Modules in this learning path:
 
-* [Monitor app performance](https://github.com/airan-tw/azure_training/blob/main/M4/Instrument%20solutions%20to%20support%20monitoring%20and%20logging/Monitor_app.md)
-
-<br>
+* [Monitor app performance](/M4/02/Monitor_app.md)
 
 ## Hands-on Labs 
 
@@ -16,10 +14,8 @@ Learn how to instrument apps to enable Application Insights to monitor performan
 
 ![alt text](images/Lab11-Diagram.png)
 
-<br>
-
-* [Lab 01: Create and configure Azure resources](https://github.com/airan-tw/azure_training/blob/main/M4/Instrument%20solutions%20to%20support%20monitoring%20and%20logging/lab01.md)
-* [Lab 02: Monitor a local web API by using Application Insights](https://github.com/airan-tw/azure_training/blob/main/M4/Instrument%20solutions%20to%20support%20monitoring%20and%20logging/lab02.md)
-* [Lab 03: Monitor a web API using Application Insights](https://github.com/airan-tw/azure_training/blob/main/M4/Instrument%20solutions%20to%20support%20monitoring%20and%20logging/lab03.md)
-* [Lab 04: Application Insights logging with .NET](https://github.com/airan-tw/azure_training/blob/main/M4/Instrument%20solutions%20to%20support%20monitoring%20and%20logging/lab04.md)
-* [Lab 05: Clean up your subscription](https://github.com/airan-tw/azure_training/blob/main/M4/Instrument%20solutions%20to%20support%20monitoring%20and%20logging/lab05.md)
+* [Lab 01: Create and configure Azure resources](/M4/02/lab01.md)
+* [Lab 02: Monitor a local web API by using Application Insights](/M4/02/lab02.md)
+* [Lab 03: Monitor a web API using Application Insights](/M4/02/lab03.md)
+* [Lab 04: Application Insights logging with .NET](/M4/02/lab04.md)
+* [Lab 05: Clean up your subscription](/M4/02/lab05.md)

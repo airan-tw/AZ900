@@ -70,7 +70,6 @@ Redis has a command-line tool for interacting with an Azure Cache for Redis as a
 
 Redis supports a set of known commands. A command is typically issued as `COMMAND parameter1 parameter2 parameter3`.
 
-
 |**Command** | **Description** |
 | -------- | --------- |
 |`ping`	| Ping the server. Returns "PONG".|

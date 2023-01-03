@@ -30,8 +30,6 @@ Grouped in a repository, each image is a read-only snapshot of a Docker-compatib
 Use Azure Container Registry Tasks (ACR Tasks) to streamline building, testing, pushing, and deploying images in Azure. Configure build tasks to automate your container OS and framework patching pipeline, and build images automatically when your team commits code to source control.
 Windows VMs have extensions which give your VM additional capabilities through post deployment configuration and automated tasks.
 
-<br>
-
 ## Explore storage capabilities
 
 Every Basic, Standard, and Premium Azure container registry benefits from advanced Azure storage features like encryption-at-rest for image data security and geo-redundancy for image data protection.
@@ -45,8 +43,6 @@ If a regional outage occurs, the registry data may become unavailable and is not
    * **Scalable storage:** Azure Container Registry allows you to create as many repositories, images, layers, or tags as you need, up to the registry storage limit.
 
 Very high numbers of repositories and tags can impact the performance of your registry. Periodically delete unused repositories, tags, and images as part of your registry maintenance routine. Deleted registry resources like repositories, images, and tags cannot be recovered after deletion.
-
-<br>
 
 ## Build and manage containers with tasks
 
@@ -66,8 +62,6 @@ ACR Tasks supports several scenarios to build and maintain container images and 
   * **Multi-step task** - Extend the single image build-and-push capability of ACR Tasks with multi-step, multi-container-based workflows.
 
 Each ACR Task has an associated source code context - the location of a set of source files used to build a container image or other artifact. Example contexts include a Git repository or a local filesystem.
-
-<br>
 
 ## Explore elements of a Dockerfile
 
@@ -118,8 +112,6 @@ Each of these steps creates a cached container image as we build the final conta
 
 Finally, notice the last step, step 8. The `ENTRYPOINT` in the file indicates which process will execute once we run a container from an image.
 
-<br>
-
 ## Exercise: Build and run a container image by using Azure Container Registry Tasks
 
 ![alt text](images/manage_container_01.png)
@@ -131,36 +123,33 @@ In this exercise you will use ACR Tasks to perform the following actions:
    * Verify the results
    * Run the image in the ACR
 
-
 ### Prerequisites
 
   * An Azure account with an active subscription. If you don't already have one, [follow this instructions](https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit#heading=h.c96x7dxoz6ej).
    
-
 ### Login to Azure and start the Cloud Shell
 1. Login to the [Azure Portal](https://portal.azure.com/) and open the Cloud Shell.
 
-![alt text](images/provision_vm_05.png)
+   ![alt text](images/provision_vm_05.png)
 
 2. After the shell opens be sure to select the Bash environment.
 
-![alt text](images/provision_vm_06.png)
-
+   ![alt text](images/provision_vm_06.png)
 
 ### Create an Azure Container Registry
 
 1. Create a resource group for the registry. 
 
-```azurecli-interactive
-az group create --name az204-acr-rg --location eastus
-```
+   ```azurecli-interactive
+   az group create --name az204-acr-rg --location eastus
+   ```
 
 2. Create a basic container registry. The registry name must be unique within Azure, and contain 5-50 alphanumeric characters. Replace <myContainerRegistry> in the command below with a unique value.
 
-```azurecli-interactive
-az acr create --resource-group az204-acr-rg \
-    --name <myContainerRegistry> --sku Basic
-```
+   ```azurecli-interactive
+   az acr create --resource-group az204-acr-rg \
+       --name <myContainerRegistry> --sku Basic
+   ```
 
   > **Note**: The command above creates a Basic registry, a cost-optimized option for developers learning about Azure Container Registry.
 
@@ -170,17 +159,17 @@ Now use Azure Container Registry to build and push an image based on a local Doc
 
 1. Create, or navigate, to a local directory and then use the command below to create the Dockerfile. The Dockerfile will contain a single line that references the `hello-world` image hosted at the Microsoft Container Registry.
 
-```azurecli-interactive
-echo FROM mcr.microsoft.com/hello-world > Dockerfile
-```
+   ```azurecli-interactive
+   echo FROM mcr.microsoft.com/hello-world > Dockerfile
+   ```
 
 2. Run the az acr build command, which builds the image and, after the image is successfully built, pushes it to your registry. Replace <myContainerRegistry> with the name you used earlier.
 
-```azurecli-interactive
-az acr build --image sample/hello-world:v1  \
-    --registry <myContainerRegistry> \
-    --file Dockerfile .
-```
+   ```azurecli-interactive
+   az acr build --image sample/hello-world:v1  \
+       --registry <myContainerRegistry> \
+       --file Dockerfile .
+   ```
   
 The command above will generate a lot of output, below is shortened sample of that output showing the last few lines with the final results. You can see in the `repository` field the `sample/hello-word` image is listed.
 
@@ -205,32 +194,32 @@ Run ID: cf1 was successful after 11s
 
 1. Use the `az acr repository list` command to list the repositories in your registry. Replace `<myContainerRegistry>` with the name you used earlier.
 
-```azurecli-interactive
-az acr repository list --name <myContainerRegistry> --output table
-```
+   ```azurecli-interactive
+   az acr repository list --name <myContainerRegistry> --output table
+   ```
 
-Output:
+   Output:
   
-```azurecli-interactive
-Result
-----------------
-sample/hello-world
-```
+   ```azurecli-interactive
+   Result
+   ----------------
+   sample/hello-world
+   ```
   
 2. Use the `az acr repository show-tags` command to list the tags on the sample/hello-world repository. Replace `<myContainerRegistry>` with the name you used earlier.
 
-```azurecli-interactive
-az acr repository show-tags --name <myContainerRegistry> \
-    --repository sample/hello-world --output table
-```
+   ```azurecli-interactive
+   az acr repository show-tags --name <myContainerRegistry> \
+      --repository sample/hello-world --output table
+   ```
 
-Output:   
+   Output:   
 
-```azurecli-interactive
-Result
---------
-v1
-```
+   ```azurecli-interactive
+   Result
+   --------
+   v1
+   ```
 
 ### Run the image in the ACR
 

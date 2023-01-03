@@ -4,13 +4,13 @@
 
 1. On the taskbar, select the **Windows Terminal** icon.
 
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** empty directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** empty directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
-    > **Note**: In Windows Explorer remove the **Read-only** attribute from **F:\\Allfiles\\Labs\\02\\Starter\\func\\.gitignore** file.
+    > **Note**: In Windows Explorer remove the **Read-only** attribute from **$HOME\\training-az204\\Labs\\02\\Starter\\func\\.gitignore** file.
 
 1. Run the following command to use the **Azure Functions Core Tools** to create a new local Azure Functions project in the current directory using the **dotnet** runtime:
 
@@ -26,7 +26,7 @@
 
 1. On the **Start** screen, select the **Visual Studio Code** tile.
 1. On the **File** menu, select **Open Folder**.
-1. In the **File Explorer** window that opens, browse to **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
+1. In the **File Explorer** window that opens, browse to **$HOME\\training-az204\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
 1. On the **Explorer** pane of the **Visual Studio Code** window, open the **local.settings.json** file.
 1. Observe the current value of the **AzureWebJobsStorage** setting:
 
@@ -40,10 +40,10 @@
 ### Task 3: Build and validate a project
 
 1. On the taskbar, select the **Windows Terminal** icon.
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. Run the following command to **build** the .NET Core 3.1 project:

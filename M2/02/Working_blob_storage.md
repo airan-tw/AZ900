@@ -30,7 +30,7 @@ This exercise uses the Azure Blob storage client library to show you how to perf
 
 ### Prerequisites
 
- * **Azure Account** (https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit)
+ * **[Azure Account](https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit)** 
  * [Visual Studio Code](https://code.visualstudio.com/) on one of the supported platforms.
  * [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0) is the target framework for the steps below.
  * The [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.
@@ -43,25 +43,25 @@ Perform the following actions to prepare Azure, and your local environment, for 
 
 2. Login to Azure by using the command below. A browser window should open letting you choose which account to login with.
 
-```azurecli-interactive
-az login
-```
+  ```azurecli-interactive
+  az login
+  ```
 
 3. Create a resource group for the resources needed for this exercise. 
 
-```azurecli-interactive
-az group create --location eastus --name az204-blob-rg
-```
+  ```azurecli-interactive
+  az group create --location eastus --name az204-blob-rg
+  ```
 
 4. Create a storage account. We need a storage account created to use in the application. Replace <myStorageAcct> with a unique name.
- 
-```azurecli-interactive
-az storage account create --resource-group az204-blob-rg --name <myStorageAcct> --location eastus --sku Standard_LRS
-```
   
-> **Note**: 
-> Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. Your storage account name must be unique within Azure. No two storage accounts can have the same name.
- 
+  ```azurecli-interactive
+  az storage account create --resource-group az204-blob-rg --name <myStorageAcct> --location eastus --sku Standard_LRS
+  ```
+
+  > **Note**: 
+  > Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. Your storage account name must be unique within Azure. No   two storage accounts can have the same name.
+  
 5. Get credentials for the storage account.
   
   * Navigate to the [Azure portal](https://portal.azure.com/).
@@ -78,61 +78,59 @@ In this section we'll create project named az204-blob and install the Azure Blob
 
 2. In the terminal, use the `dotnet new` command to create a new console app. This command creates a simple "Hello World" C# project with a single source file: Program.cs.
 
-```azurecli-interactive
-dotnet new console -n az204-blob
-```
+  ```azurecli-interactive
+  dotnet new console -n az204-blob
+  ```
 
 3. Use the following commands to switch to the newly created az204-blob folder and build the app to verify that all is well.
-  
-```azurecli-interactive
-cd az204-blob
-dotnet build
-```  
+
+  ```azurecli-interactive
+  cd az204-blob
+  dotnet build
+  ```  
 
 4. Inside the az204-blob folder, create another folder named data. This is where the blob data files will be created and stored.
 
-```azurecli-interactive
-mkdir data
-```  
+  ```azurecli-interactive
+  mkdir data
+  ```  
 
 5. While still in the application directory, install the Azure Blob Storage client library for .NET package by using the `dotnet add package` command.
 
-```azurecli-interactive
-dotnet add package Azure.Storage.Blobs
-```  
+  ```azurecli-interactive
+  dotnet add package Azure.Storage.Blobs
+  ```  
 
-> **Tip**: 
-> Leave the console window open so you can use it to build and run the app later in the exercise.
-
-
+  > **Tip**: 
+  > Leave the console window open so you can use it to build and run the app later in the exercise.
 
 6. Open the Program.cs file in your editor, and replace the contents with the following code.
-
-```azurecli-interactive
-using Azure.Storage.Blobs;
-using Azure.Storage.Blobs.Models;
-
-Console.WriteLine("Azure Blob Storage exercise\n");
-
-// Run the examples asynchronously, wait for the results before proceeding
-ProcessAsync().GetAwaiter().GetResult();
-
-Console.WriteLine("Press enter to exit the sample application.");
-Console.ReadLine();
-
-static async Task ProcessAsync()
-{
-    // Copy the connection string from the portal in the variable below.
-    string storageConnectionString = "CONNECTION STRING";
-
-    // Create a client that can authenticate with a connection string
-    BlobServiceClient blobServiceClient = new BlobServiceClient(storageConnectionString);
-
-    // COPY EXAMPLE CODE BELOW HERE
-
-}
-```  
   
+  ```azurecli-interactive
+  using Azure.Storage.Blobs;
+  using Azure.Storage.Blobs.Models;
+  
+  Console.WriteLine("Azure Blob Storage exercise\n");
+  
+  // Run the examples asynchronously, wait for the results before proceeding
+  ProcessAsync().GetAwaiter().GetResult();
+  
+  Console.WriteLine("Press enter to exit the sample application.");
+  Console.ReadLine();
+  
+  static async Task ProcessAsync()
+  {
+      // Copy the connection string from the portal in the variable below.
+      string storageConnectionString = "CONNECTION STRING";
+  
+      // Create a client that can authenticate with a connection string
+      BlobServiceClient blobServiceClient = new BlobServiceClient(storageConnectionString);
+  
+      // COPY EXAMPLE CODE BELOW HERE
+  
+  }
+  ```  
+    
 7. Set the `storageConnectionString` variable to the value you copied from the portal.
 
 ## Build the full app
@@ -247,7 +245,7 @@ File.Delete(downloadFilePath);
 
 Console.WriteLine("Finished cleaning up.");
 ```
-  
+
 ### Run the code
 
 Now that the app is complete it's time to build and run it. Ensure you are in your application directory and run the following commands:

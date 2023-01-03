@@ -1,0 +1,1899 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>5.1. Explore Azure Blob storage · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Blob_storage_lifecycle.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    AZURE JOURNEY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Develop Azure Compute Solutions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../M1/01/">
+            
+                <a href="../../M1/01/">
+            
+                    
+                    1. Implement IaaS solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../M1/01/Provision_vm.html">
+            
+                <a href="../../M1/01/Provision_vm.html">
+            
+                    
+                    1.1. Provision virtual machines in Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../M1/01/Create_arm.html">
+            
+                <a href="../../M1/01/Create_arm.html">
+            
+                    
+                    1.2. Create and deploy Azure Resource Manager templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../M1/01/Manage_container.html">
+            
+                <a href="../../M1/01/Manage_container.html">
+            
+                    
+                    1.3. Manage container images in Azure Container Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../M1/01/Run_container.html">
+            
+                <a href="../../M1/01/Run_container.html">
+            
+                    
+                    1.4 Run container images in Azure Container Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on LABS</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../M1/01/lab01.html">
+            
+                <a href="../../M1/01/lab01.html">
+            
+                    
+                    Lab 1 - Create a VM by using the Azure Command-Line Interface (CLI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../M1/01/lab02.html">
+            
+                <a href="../../M1/01/lab02.html">
+            
+                    
+                    Lab 2 - Create a Docker container image and deploy it to Azure Container Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../M1/01/lab03.html">
+            
+                <a href="../../M1/01/lab03.html">
+            
+                    
+                    Lab 3 - Deploy an Azure container instance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../M1/02/">
+            
+                <a href="../../M1/02/">
+            
+                    
+                    2. Create Azure App Service Web Apps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../M1/02/Azure_app_service.html">
+            
+                <a href="../../M1/02/Azure_app_service.html">
+            
+                    
+                    2.1. Explore Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../M1/02/Config_app_service.html">
+            
+                <a href="../../M1/02/Config_app_service.html">
+            
+                    
+                    2.2. Configure web app settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../M1/02/Scaling_app_service.html">
+            
+                <a href="../../M1/02/Scaling_app_service.html">
+            
+                    
+                    2.3. Scale apps in Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../M1/02/Azure_app_service_deploy.html">
+            
+                <a href="../../M1/02/Azure_app_service_deploy.html">
+            
+                    
+                    2.4. Explore Azure App Service deployment slots
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../M1/02/lab01.html">
+            
+                <a href="../../M1/02/lab01.html">
+            
+                    
+                    LAB 1 - Build a backend API by using Azure Storage and the Web Apps feature of Azure App Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../M1/02/lab02.html">
+            
+                <a href="../../M1/02/lab02.html">
+            
+                    
+                    LAB 2 - Build a front-end web application by using Azure Web Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../M1/02/lab03.html">
+            
+                <a href="../../M1/02/lab03.html">
+            
+                    
+                    LAB 3 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../M1/03/">
+            
+                <a href="../../M1/03/">
+            
+                    
+                    3. Implemente Azure functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../M1/03/Azure_functions.html">
+            
+                <a href="../../M1/03/Azure_functions.html">
+            
+                    
+                    3.1. Explore Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../M1/03/Develop_azure_functions.html">
+            
+                <a href="../../M1/03/Develop_azure_functions.html">
+            
+                    
+                    3.2. Develop Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../M1/03/Implement_functions.html">
+            
+                <a href="../../M1/03/Implement_functions.html">
+            
+                    
+                    3.3. Implement Durable Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../M1/03/lab01.html">
+            
+                <a href="../../M1/03/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../M1/03/lab02.html">
+            
+                <a href="../../M1/03/lab02.html">
+            
+                    
+                    LAB 2 - Configure a local Azure Functions project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../../M1/03/lab03.html">
+            
+                <a href="../../M1/03/lab03.html">
+            
+                    
+                    LAB 3 - Create a function that’s triggered by an HTTP request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../../M1/03/lab04.html">
+            
+                <a href="../../M1/03/lab04.html">
+            
+                    
+                    LAB 4 - Create a function that triggers on a schedule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../../M1/03/lab05.html">
+            
+                <a href="../../M1/03/lab05.html">
+            
+                    
+                    LAB 5 - Create a function that integrates with other services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../../M1/03/lab06.html">
+            
+                <a href="../../M1/03/lab06.html">
+            
+                    
+                    LAB 6 - Deploy a local function project to an Azure Functions app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../../M1/03/lab07.html">
+            
+                <a href="../../M1/03/lab07.html">
+            
+                    
+                    LAB 7 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Develop for Azure storage</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../01/">
+            
+                <a href="../01/">
+            
+                    
+                    4. Develop solutions that use Cosmos DB storage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../01/Cosmosdb_overview.html">
+            
+                <a href="../01/Cosmosdb_overview.html">
+            
+                    
+                    4.1. Explore Azure Cosmos DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../01/Cosmosdb_structure.html">
+            
+                <a href="../01/Cosmosdb_structure.html">
+            
+                    
+                    4.2. Implement partitioning in Azure Cosmos DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../01/Working_cosmosdb.html">
+            
+                <a href="../01/Working_cosmosdb.html">
+            
+                    
+                    4.3. Work with Azure Cosmos DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../01/lab01.html">
+            
+                <a href="../01/lab01.html">
+            
+                    
+                    LAB 1 - Creating data store resources in Azure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../01/lab02.html">
+            
+                <a href="../01/lab02.html">
+            
+                    
+                    LAB 2 - Review and upload data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../01/lab03.html">
+            
+                <a href="../01/lab03.html">
+            
+                    
+                    LAB 3 - Configure a .NET web application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../01/lab04.html">
+            
+                <a href="../01/lab04.html">
+            
+                    
+                    LAB 4 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    5. Develop solutions that use blob storage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="10.1.1" data-path="Blob_storage_concepts.html">
+            
+                <a href="Blob_storage_concepts.html">
+            
+                    
+                    5.1. Explore Azure Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="Blob_storage_lifecycle.html">
+            
+                <a href="Blob_storage_lifecycle.html">
+            
+                    
+                    5.2. Manage the Azure Blob storage lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="Working_blob_storage.html">
+            
+                <a href="Working_blob_storage.html">
+            
+                    
+                    5.3. Work with Azure Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="lab01.html">
+            
+                <a href="lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="lab02.html">
+            
+                <a href="lab02.html">
+            
+                    
+                    LAB 2 - Upload a blob into a container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="lab03.html">
+            
+                <a href="lab03.html">
+            
+                    
+                    LAB 3 - Access containers by using the .NET SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="lab04.html">
+            
+                <a href="lab04.html">
+            
+                    
+                    LAB 4 - Retrieve blob Uniform Resource Identifiers (URIs) by using the .NET SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.5" data-path="lab05.html">
+            
+                <a href="lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Implement Azure security</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../M3/01/">
+            
+                <a href="../../M3/01/">
+            
+                    
+                    6. Implement use authentication and authorization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="../../M3/01/Implement_auth.html">
+            
+                <a href="../../M3/01/Implement_auth.html">
+            
+                    
+                    6.1. Explore the Microsoft identity platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.2" data-path="../../M3/01/Microsoft_id_platform.html">
+            
+                <a href="../../M3/01/Microsoft_id_platform.html">
+            
+                    
+                    6.2. Implement authentication by using the Microsoft Authentication Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.3" data-path="../../M3/01/Implement_shared_access.html">
+            
+                <a href="../../M3/01/Implement_shared_access.html">
+            
+                    
+                    6.3. Implement shared access signatures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.4" data-path="../../M3/01/Microsoft_graph.html">
+            
+                <a href="../../M3/01/Microsoft_graph.html">
+            
+                    
+                    6.4. Explore Microsoft Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../../M3/01/lab01.html">
+            
+                <a href="../../M3/01/lab01.html">
+            
+                    
+                    LAB 1 - Configure a single-tenant Azure AD environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../../M3/01/lab02.html">
+            
+                <a href="../../M3/01/lab02.html">
+            
+                    
+                    LAB 2 - Create a single-tenant ASP.NET web app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../../M3/01/lab03.html">
+            
+                <a href="../../M3/01/lab03.html">
+            
+                    
+                    LAB 3 - Clean up your lab environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../../M3/02/">
+            
+                <a href="../../M3/02/">
+            
+                    
+                    7. Implement secure cloud solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1.1" data-path="../../M3/02/Implement_key_vault.html">
+            
+                <a href="../../M3/02/Implement_key_vault.html">
+            
+                    
+                    7.1. Implement Azure Key Vault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.2" data-path="../../M3/02/Implement_identities.html">
+            
+                <a href="../../M3/02/Implement_identities.html">
+            
+                    
+                    7.2. Implement managed identities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.1.3" data-path="../../M3/02/Implement_app_config.html">
+            
+                <a href="../../M3/02/Implement_app_config.html">
+            
+                    
+                    7.3. Implement Azure App Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../../M3/02/lab01.html">
+            
+                <a href="../../M3/02/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="../../M3/02/lab02.html">
+            
+                <a href="../../M3/02/lab02.html">
+            
+                    
+                    LAB 2 - Configure secrets and identities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.3" data-path="../../M3/02/lab03.html">
+            
+                <a href="../../M3/02/lab03.html">
+            
+                    
+                    LAB 3 - Build an Azure Functions app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.4" data-path="../../M3/02/lab04.html">
+            
+                <a href="../../M3/02/lab04.html">
+            
+                    
+                    LAB 4 - Access Azure Blob Storage data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="15.5" data-path="../../M3/02/lab05.html">
+            
+                <a href="../../M3/02/lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Monitor, troubleshoot, and optimize Azure solutions</li>
+        
+        
+    
+        <li class="chapter " data-level="16.1" data-path="../../M4/01/">
+            
+                <a href="../../M4/01/">
+            
+                    
+                    8. Integrate caching and content delivery within solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.1.1" data-path="../../M4/01/Develop_cache_redis.html">
+            
+                <a href="../../M4/01/Develop_cache_redis.html">
+            
+                    
+                    8.1. Develop for Azure Cache for Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="16.1.2" data-path="../../M4/01/Develop_storage_cdn.html">
+            
+                <a href="../../M4/01/Develop_storage_cdn.html">
+            
+                    
+                    8.2. Develop for storage on CDNs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="17.1" data-path="../../M4/01/lab01.html">
+            
+                <a href="../../M4/01/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.2" data-path="../../M4/01/lab02.html">
+            
+                <a href="../../M4/01/lab02.html">
+            
+                    
+                    LAB 2 - Configure Content Delivery Network and endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.3" data-path="../../M4/01/lab03.html">
+            
+                <a href="../../M4/01/lab03.html">
+            
+                    
+                    LAB 3 - Upload and configure static web content
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.4" data-path="../../M4/01/lab04.html">
+            
+                <a href="../../M4/01/lab04.html">
+            
+                    
+                    LAB 4 - Use Content Delivery Network endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="17.5" data-path="../../M4/01/lab05.html">
+            
+                <a href="../../M4/01/lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="18.1" data-path="../../M4/02/">
+            
+                <a href="../../M4/02/">
+            
+                    
+                    9. Instrument solutions to support monitoring and logging
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="18.1.1" data-path="../../M4/02/Monitor_app.html">
+            
+                <a href="../../M4/02/Monitor_app.html">
+            
+                    
+                    9.1. Monitor app performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="19.1" data-path="../../M4/02/lab01.html">
+            
+                <a href="../../M4/02/lab01.html">
+            
+                    
+                    LAB 1 - Create and configure Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.2" data-path="../../M4/02/lab02.html">
+            
+                <a href="../../M4/02/lab02.html">
+            
+                    
+                    LAB 2 - Monitor a local web API by using Application Insights
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.3" data-path="../../M4/02/lab03.html">
+            
+                <a href="../../M4/02/lab03.html">
+            
+                    
+                    LAB 3 - Monitor a web API using Application Insights
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.4" data-path="../../M4/02/lab04.html">
+            
+                <a href="../../M4/02/lab04.html">
+            
+                    
+                    LAB 4 - Application Insights logging with .NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="19.5" data-path="../../M4/02/lab05.html">
+            
+                <a href="../../M4/02/lab05.html">
+            
+                    
+                    LAB 5 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Connect to and consume Azure services and third-party services</li>
+        
+        
+    
+        <li class="chapter " data-level="20.1" data-path="../../M5/02/">
+            
+                <a href="../../M5/02/">
+            
+                    
+                    10. Implement API Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="20.1.1" data-path="../../M5/02/API_Management.html">
+            
+                <a href="../../M5/02/API_Management.html">
+            
+                    
+                    10.1. Explore API Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="21.1" data-path="../../M5/02/lab01.html">
+            
+                <a href="../../M5/02/lab01.html">
+            
+                    
+                    LAB 1 - Create an Azure App Service resource by using a Docker container image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="21.2" data-path="../../M5/02/lab02.html">
+            
+                <a href="../../M5/02/lab02.html">
+            
+                    
+                    LAB 2 - Build an API proxy tier by using Azure API Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="21.3" data-path="../../M5/02/lab03.html">
+            
+                <a href="../../M5/02/lab03.html">
+            
+                    
+                    LAB 3 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="22.1" data-path="../../M5/03/">
+            
+                <a href="../../M5/03/">
+            
+                    
+                    11. Develop event-based solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="22.1.1" data-path="../../M5/03/Event_grid.html">
+            
+                <a href="../../M5/03/Event_grid.html">
+            
+                    
+                    11.1. Explore Azure Event Grid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="22.1.2" data-path="../../M5/03/Event_hubs.html">
+            
+                <a href="../../M5/03/Event_hubs.html">
+            
+                    
+                    11.2. Explore Azure Event Hubs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="23.1" data-path="../../M5/03/lab01.html">
+            
+                <a href="../../M5/03/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="23.2" data-path="../../M5/03/lab02.html">
+            
+                <a href="../../M5/03/lab02.html">
+            
+                    
+                    LAB 2 - Create an Event Grid subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="23.3" data-path="../../M5/03/lab03.html">
+            
+                <a href="../../M5/03/lab03.html">
+            
+                    
+                    LAB 3 - Publish Event Grid events from .NET
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="23.4" data-path="../../M5/03/lab04.html">
+            
+                <a href="../../M5/03/lab04.html">
+            
+                    
+                    LAB 4 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="24.1" data-path="../../M5/04/">
+            
+                <a href="../../M5/04/">
+            
+                    
+                    12. Develop message-based solutions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="24.1.1" data-path="../../M5/04/Message_queues.html">
+            
+                <a href="../../M5/04/Message_queues.html">
+            
+                    
+                    12.1. Discover Azure message queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="25.1" data-path="../../M5/04/lab01.html">
+            
+                <a href="../../M5/04/lab01.html">
+            
+                    
+                    LAB 1 - Create Azure resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="25.2" data-path="../../M5/04/lab0.md">
+            
+                <span>
+            
+                    
+                    LAB 2 - Create a .NET Core project to publish messages to a Service Bus queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="25.3" data-path="../../M5/04/lab03.html">
+            
+                <a href="../../M5/04/lab03.html">
+            
+                    
+                    LAB 3 - Create a .NET Core project to read messages from a Service Bus queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="25.4" data-path="../../M5/04/lab04.html">
+            
+                <a href="../../M5/04/lab04.html">
+            
+                    
+                    LAB 4 - Clean up your subscription
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >5.1. Explore Azure Blob storage</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="azure-blob-storage">Azure Blob storage</h2>
+<p>Azure Blob storage is Microsoft&apos;s object storage solution for the cloud. Blob storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that does not adhere to a particular data model or definition, such as text or binary data.</p>
+<p>Blob storage is designed for:</p>
+<ul>
+<li>Serving images or documents directly to a browser.</li>
+<li>Storing files for distributed access.</li>
+<li>Streaming video and audio.</li>
+<li>Writing to log files.</li>
+<li>Storing data for backup and restore, disaster recovery, and archiving.</li>
+<li>Storing data for analysis by an on-premises or Azure-hosted service.</li>
+</ul>
+<p>An Azure storage account contains all of your Azure Storage data objects: blobs, files, queues, tables, and disks. The storage account provides a unique namespace for your Azure Storage data that is accessible from anywhere in the world over HTTP or HTTPS. Data in your Azure storage account is durable and highly available, secure, and massively scalable.</p>
+<p><img src="images/blob_storage_01.png" alt="alt text"></p>
+<h3 id="types-of-storage-accounts">Types of storage accounts</h3>
+<p>Azure Storage offers two performance levels of storage accounts, standard and premium. Each performance level supports different features and has its own pricing model.</p>
+<ul>
+<li>Standard: This is the standard general-purpose v2 account and is recommended for most scenarios using Azure Storage.</li>
+<li>Premium: Premium accounts offer higher performance by using solid-state drives. If you create a premium account you can choose between three account types, block blobs, page blobs, or file shares.</li>
+</ul>
+<p>The following table describes the types of storage accounts recommended by Microsoft for most scenarios using Blob storage.</p>
+<p><img src="images/blob_storage_02.png" alt="alt text"></p>
+<h3 id="access-tiers-for-block-blob-data">Access tiers for block blob data</h3>
+<p>Azure Storage provides different options for accessing block blob data based on usage patterns. Each access tier in Azure Storage is optimized for a particular pattern of data usage. By selecting the right access tier for your needs, you can store your block blob data in the most cost-effective manner.</p>
+<p>The available access tiers are:</p>
+<ul>
+<li>The Hot access tier, which is optimized for frequent access of objects in the storage account. The Hot tier has the highest storage costs, but the lowest access costs. New storage accounts are created in the hot tier by default.</li>
+<li>The Cool access tier, which is optimized for storing large amounts of data that is infrequently accessed and stored for at least 30 days. The Cool tier has lower storage costs and higher access costs compared to the Hot tier.</li>
+<li>The Archive tier, which is available only for individual block blobs. The archive tier is optimized for data that can tolerate several hours of retrieval latency and will remain in the Archive tier for at least 180 days. The archive tier is the most cost-effective option for storing data, but accessing that data is more expensive than accessing data in the hot or cool tiers.</li>
+</ul>
+<p>If there is a change in the usage pattern of your data, you can switch between these access tiers at any time.</p>
+<h2 id="discover-azure-blob-storage-resource-types">Discover Azure Blob storage resource types</h2>
+<p>Blob storage offers three types of resources:</p>
+<ul>
+<li>The storage account.</li>
+<li>A container in the storage account</li>
+<li>A blob in a container</li>
+</ul>
+<p><img src="images/blob_storage_03.png" alt="alt text"></p>
+<h3 id="storage-accounts">Storage accounts</h3>
+<p>A storage account provides a unique namespace in Azure for your data. Every object that you store in Azure Storage has an address that includes your unique account name. The combination of the account name and the Azure Storage blob endpoint forms the base address for the objects in your storage account.</p>
+<p>For example, if your storage account is named mystorageaccount, then the default endpoint for Blob storage is:</p>
+<pre><code class="lang-azurecli-interactive">http://mystorageaccount.blob.core.windows.net
+</code></pre>
+<h3 id="containers">Containers</h3>
+<p>A container organizes a set of blobs, similar to a directory in a file system. A storage account can include an unlimited number of containers, and a container can store an unlimited number of blobs. The container name must be lowercase.</p>
+<h3 id="blobs">Blobs</h3>
+<p>Azure Storage supports three types of blobs:</p>
+<ul>
+<li><strong>Block blobs</strong> store text and binary data, up to about 190.7 TB. Block blobs are made up of blocks of data that can be managed individually.</li>
+<li><strong>Append blobs</strong> are made up of blocks like block blobs, but are optimized for append operations. Append blobs are ideal for scenarios such as logging data from virtual machines.</li>
+<li><strong>Page blobs</strong> store random access files up to 8 TB in size. Page blobs store virtual hard drive (VHD) files and serve as disks for Azure virtual machines.</li>
+</ul>
+<h2 id="azure-storage-security-features">Azure Storage security features</h2>
+<p>Azure Storage provides a comprehensive set of security capabilities that together enable developers to build secure applications:</p>
+<ul>
+<li>All data (including metadata) written to Azure Storage is automatically encrypted using Storage Service Encryption (SSE).</li>
+<li>Azure Active Directory (Azure AD) and Role-Based Access Control (RBAC) are supported for Azure Storage for both resource management operations and data operations, as follows:<ul>
+<li>You can assign RBAC roles scoped to the storage account to security principals and use Azure AD to authorize resource management operations such as key management.</li>
+<li>Azure AD integration is supported for blob and queue data operations. You can assign RBAC roles scoped to a subscription, resource group, storage account, or an individual container or queue to a security principal or a managed identity for Azure resources.</li>
+</ul>
+</li>
+<li>Data can be secured in transit between an application and Azure by using Client-Side Encryption, HTTPS, or SMB 3.0.</li>
+<li>OS and data disks used by Azure virtual machines can be encrypted using Azure Disk Encryption.</li>
+<li>Delegated access to the data objects in Azure Storage can be granted using a shared access signature.</li>
+</ul>
+<h3 id="azure-storage-encryption-for-data-at-rest">Azure Storage encryption for data at rest</h3>
+<p>Azure Storage automatically encrypts your data when persisting it to the cloud. Encryption protects your data and helps you meet your organizational security and compliance commitments. Data in Azure Storage is encrypted and decrypted transparently using 256-bit AES encryption, one of the strongest block ciphers available, and is FIPS 140-2 compliant. Azure Storage encryption is similar to BitLocker encryption on Windows.</p>
+<p>Azure Storage encryption is enabled for all new and existing storage accounts and cannot be disabled. Because your data is secured by default, you don&apos;t need to modify your code or applications to take advantage of Azure Storage encryption.</p>
+<p>Storage accounts are encrypted regardless of their performance tier (standard or premium) or deployment model (Azure Resource Manager or classic). All Azure Storage redundancy options support encryption, and all copies of a storage account are encrypted. All Azure Storage resources are encrypted, including blobs, disks, files, queues, and tables. All object metadata is also encrypted.</p>
+<p>Encryption does not affect Azure Storage performance. There is no additional cost for Azure Storage encryption.</p>
+<h3 id="encryption-key-management">Encryption key management</h3>
+<p>You can rely on Microsoft-managed keys for the encryption of your storage account, or you can manage encryption with your own keys. If you choose to manage encryption with your own keys, you have two options:</p>
+<ul>
+<li>You can specify a customer-managed key to use for encrypting and decrypting all data in the storage account. A customer-managed key is used to encrypt all data in all services in your storage account.</li>
+<li>You can specify a customer-provided key on Blob storage operations. A client making a read or write request against Blob storage can include an encryption key on the request for granular control over how blob data is encrypted and decrypted.</li>
+</ul>
+<p>The following table compares key management options for Azure Storage encryption.</p>
+<p><img src="images/blob_storage_04.png" alt="alt text"></p>
+<h2 id="azure-storage-redundancy-options">Azure Storage redundancy options</h2>
+<p>Azure Storage always stores multiple copies of your data so that it is protected from planned and unplanned events, including transient hardware failures, network or power outages, and massive natural disasters. Redundancy ensures that your storage account meets its availability and durability targets even in the face of failures.</p>
+<p>When deciding which redundancy option is best for your scenario, consider the tradeoffs between lower costs and higher availability. The factors that help determine which redundancy option you should choose include:</p>
+<ul>
+<li>How your data is replicated in the primary region</li>
+<li>Whether your data is replicated to a second region that is geographically distant to the primary region, to protect against regional disasters</li>
+<li>Whether your application requires read access to the replicated data in the secondary region if the primary region becomes unavailable for any reason</li>
+</ul>
+<p>An Azure Storage account always replicates your data to help ensure durability and high availability. Azure Storage copies data so that it’s protected from planned and unplanned events, including transient hardware failures, network or power outages, and natural disasters.</p>
+<p>You can replicate data within the same datacenter, across zonal datacenters within the same region, or across geographically separated regions.</p>
+<ul>
+<li><strong>Locally redundant storage (LRS)</strong> replicates data three times within a single datacenter. LRS provides at least 99.999999999 (11 nines) percent durability of objects over a given year. LRS is the lowest-cost replication option, and it offers the least durability compared to other options.</li>
+<li><strong>Zone-redundant storage (ZRS)</strong> replicates data synchronously across three storage clusters in a single region. Each storage cluster is physically separated from the others and is in its own availability zone (AZ).</li>
+<li><strong>Geo-redundant storage (GRS)</strong> is designed to provide at least 99.99999999999999 (16 nines) percent durability of objects over a given year by replicating data to a secondary region that’s hundreds of miles away from the primary region.</li>
+<li><strong>Read-access geo-redundant storage (RA-GRS)</strong> is based on GRS. RA-GRS replicates data to another datacenter in a secondary region, and it also provides the option to read from the secondary region.</li>
+</ul>
+<p><img src="images/blob_storage_05.png" alt="alt text"></p>
+<ul>
+<li><strong>Geographically zone-redundant storage (GZRS)</strong> combines the high availability of ZRS with the protection from regional outages that GRS provides. A GZRS storage account replicates data across three Azure AZs in the primary region, and to a secondary geographic region for protection from regional disasters.</li>
+<li>Optionally, you can enable read access to data in the secondary region with <strong>Read-access geographically zone-redundant storage (RA-GZRS)</strong> if your applications must read data in the event of a disaster in the primary region.</li>
+</ul>
+<p><img src="images/blob_storage_06.png" alt="alt text"></p>
+<h2 id="exercise-create-a-block-blob-storage-account">Exercise: Create a block blob storage account</h2>
+<p><img src="images/blob_storage_07.png" alt="alt text"></p>
+<p>The block blob storage account type lets you create block blobs with premium performance characteristics. This type of storage account is optimized for workloads with high transactions rates or that require very fast access times.</p>
+<p>In this exercise you will create a block blob storage account by using the Azure portal, and in the Cloud Shell using the Azure CLI.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><strong><a href="https://docs.google.com/document/d/1XEkiGWUC4_AzngZQLQnVt8yWCb3dft1HzXglUnJcJzM/edit" target="_blank">Azure Account</a></strong> </li>
+</ul>
+<h3 id="create-account-in-the-azure-portal">Create account in the Azure portal</h3>
+<p>To create a block blob storage account in the Azure portal, follow these steps:</p>
+<ol>
+<li><p>In the Azure portal, select <strong>All services</strong> &gt; the <strong>Storage</strong> category &gt; <strong>Storage accounts</strong>.</p>
+</li>
+<li><p>Under <strong>Storage accounts</strong>, select + <strong>Create</strong>.</p>
+</li>
+<li><p>In the <strong>Subscription</strong> field, select the subscription in which to create the storage account.</p>
+</li>
+<li><p>In the <strong>Resource group</strong> field, select <strong>Create new</strong> and enter az204-blob-rg as the name for the new resource group.</p>
+</li>
+<li><p>In the <strong>Storage account name</strong> field, enter a name for the account. Note the following guidelines:</p>
+<ul>
+<li>The name must be unique across Azure.</li>
+<li>The name must be between three and 24 characters long.</li>
+<li>The name can include only numbers and lowercase letters.</li>
+</ul>
+</li>
+<li><p>In the Location field, select a location for the storage account, or use the default location.</p>
+</li>
+<li><p>For the rest of the settings, configure the following:</p>
+<p>|<strong>Field</strong> | <strong>Value</strong> |
+| -------- | --------- |
+|<strong>Value</strong>    | Select <strong>Premium</strong>.|
+|<strong>Premium account type</strong>    | Select <strong>Block blobs</strong>. |
+|<strong>Replication</strong>    |Leave the default setting of <strong>Locally-redundant storage (LRS)</strong>. |</p>
+</li>
+<li><p>Select <strong>Review + create</strong> to review the storage account settings.</p>
+</li>
+<li><p>Select <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3 id="create-account-by-using-azure-cloud-shell">Create account by using Azure Cloud Shell</h3>
+<ol>
+<li><p>Login to the <a href="https://portal.azure.com/" target="_blank">Azure Portal</a> and open the Cloud Shell.</p>
+<p> <img src="images/cloud_shell.png" alt="alt text"></p>
+</li>
+<li><p>After the shell opens be sure to select the Bash environment.</p>
+<p><img src="images/cloud_bash.png" alt="alt text"></p>
+</li>
+<li><p>Create a new resource group.</p>
+<pre><code class="lang-azurecli-interactive">az group create --name az204-blob-rg --location eastus
+</code></pre>
+</li>
+<li><p>Create the block blob storage account. See Step 5 in the Create account in the Azure portal instructions above for the storage account name requirements. </p>
+<pre><code class="lang-azurecli-interactive">az storage account create --resource-group az204-blob-rg --name \
+&lt;myStorageAcct&gt; --location eastus \ 
+--kind BlockBlobStorage --sku Premium_LRS
+</code></pre>
+</li>
+</ol>
+<h3 id="clean-up-resources">Clean up resources</h3>
+<p>When you no longer need the resources in this walkthrough use the following command to delete the resource group and associated resources.</p>
+<pre><code class="lang-azurecli-interactive">az group delete --name az204-blob-rg --no-wait
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 5. Develop solutions that use blob storage">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Blob_storage_lifecycle.html" class="navigation navigation-next " aria-label="Next page: 5.2. Manage the Azure Blob storage lifecycle">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.1. Explore Azure Blob storage","level":"10.1.1","depth":2,"next":{"title":"5.2. Manage the Azure Blob storage lifecycle","level":"10.1.2","depth":2,"path":"M2/02/Blob_storage_lifecycle.md","ref":"M2/02/Blob_storage_lifecycle.md","articles":[]},"previous":{"title":"5. Develop solutions that use blob storage","level":"10.1","depth":1,"path":"M2/02/README.md","ref":"M2/02/README.md","articles":[{"title":"5.1. Explore Azure Blob storage","level":"10.1.1","depth":2,"path":"M2/02/Blob_storage_concepts.md","ref":"M2/02/Blob_storage_concepts.md","articles":[]},{"title":"5.2. Manage the Azure Blob storage lifecycle","level":"10.1.2","depth":2,"path":"M2/02/Blob_storage_lifecycle.md","ref":"M2/02/Blob_storage_lifecycle.md","articles":[]},{"title":"5.3. Work with Azure Blob storage","level":"10.1.3","depth":2,"path":"M2/02/Working_blob_storage.md","ref":"M2/02/Working_blob_storage.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"M2/02/Blob_storage_concepts.md","mtime":"2022-12-23T20:50:40.616Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2022-12-23T21:00:22.927Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -3,10 +3,10 @@
 ### Task 1: Create a schedule-triggered function
 
 1. On the taskbar, select the **Windows Terminal** icon.
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. From the command prompt, run the following command to use the **Azure Functions Core Tools** to create a new function named **Recurring**, using the **Timer trigger** template:
@@ -23,7 +23,7 @@
 
 1. On the **Start** screen, select the **Visual Studio Code** tile.
 1. On the **File** menu, select **Open Folder**.
-1. In the **File Explorer** window that opens, browse to **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
+1. In the **File Explorer** window that opens, browse to **$HOME\\training-az204\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
 1. On the **Explorer** pane of the **Visual Studio Code** window, open the **Recurring.cs** file.
 1. In the code editor, observe the implementation:
 
@@ -48,10 +48,10 @@
 ### Task 3: Observe function runs
 
 1. On the taskbar, select the **Windows Terminal** icon.
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. From the command prompt, run the following command to run the function app project:
@@ -68,7 +68,7 @@
 
 1. On the **Start** screen, select the **Visual Studio Code** tile.
 1. On the **File** menu, select **Open Folder**.
-1. In the **File Explorer** window that opens, browse to **Allfiles (F):\\Allfiles\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
+1. In the **File Explorer** window that opens, browse to **$HOME\\training-az204\\Labs\\02\\Starter\\func**, and then select **Select Folder**.
 1. On the **Explorer** pane of the **Visual Studio Code** window, open the **Recurring.cs** file.
 1. In the code editor, observe the existing **Run** method signature:
 
@@ -90,10 +90,10 @@
 
 1. On the taskbar, select the **Windows Terminal** icon.
 
-1. Run the following command to change the current directory to the **Allfiles (F):\\Allfiles\\Labs\\02\    \Starter\\func** directory:
+1. Run the following command to change the current directory to the **$HOME\\training-az204\\Labs\\02\\Starter\\func** directory:
 
     ```powershell
-    cd F:\Allfiles\Labs\02\Starter\func
+    cd $HOME\training-az204\Labs\02\Starter\func
     ```
 
 1. 1. From the command prompt, run the following command to run the function app project:

@@ -8,7 +8,6 @@ The benefits of using Azure CDN to deliver web site assets include:
   * Large scaling to better handle instantaneous high loads, such as the start of a product launch event.
   * Distribution of user requests and serving of content directly from edge servers so that less traffic is sent to the origin
 
-
 ### How Azure Content Delivery Network works
 
 ![alt text](images/storage_cdn_01.png)

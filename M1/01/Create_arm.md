@@ -32,7 +32,6 @@ The template has the following sections:
    * Resources- Specify the resources to deploy.
    * Outputs - Return values from the deployed resources.
 
-
 ### Parameters
 
 Parameters in a templates define the configuration. These parameters are used in run time or during deployment. In a parameter, we need to define the name, type, values and properties. We can also set some allowed values and default values to the parameters, so when a value is not passed during deployment, then the default or allowed values will be used. Below is an example of parameters that defines the type and the default value of username and password for the VM (Virtual Machine).
@@ -130,8 +129,6 @@ Output defines the result that you want to see when a template runs. In simple w
 }
 ```
 
-<br>
-
 ## Deploy multi-tiered solutions
 
 With Resource Manager, you can create a template (in JSON format) that defines the infrastructure and configuration of your Azure solution. By using a template, you can repeatedly deploy your solution throughout its lifecycle and have confidence your resources are deployed in a consistent state.
@@ -207,8 +204,6 @@ After creating your template, you may wish to share it with other users in your 
 
 This approach means you can safely share templates that meet your organization's standards.
 
-<br>
-
 ## Exercise: Create and deploy Azure Resource Manager templates by using Visual Studio Code
 
 ![alt text](images/create_arm_09.png)
@@ -221,7 +216,6 @@ In this exercise you will learn how to use Visual Studio Code, and the Azure Res
  * Create a parameter file
  * Deploy the template
  * Clean up resources
-
 
 ### Prerequisites
 
@@ -261,8 +255,6 @@ Place the cursor in the template `resources` block, type in `storage`, and selec
 ![alt text](images/create_arm_06.png)
 
 The `resources` block should look similar to the example below.
-
-
 
 ```azurecli-interactive
 "resources": [{
@@ -369,27 +361,27 @@ It's time to deploy the template. Follow the steps below, in the VS Code termina
 
 1. Connect to Azure by using the `az login` command.
 
-```azurecli-interactive
-az login
-```
+  ```azurecli-interactive
+  az login
+  ```
    
 2. Create a resource group to contain the new resource. 
  
-```azurecli-interactive
-az group create --name az204-arm-rg --location eastus
-```
+  ```azurecli-interactive
+  az group create --name az204-arm-rg --location eastus
+  ```
 
 3. Use the `az deployment group create` command to deploy your template. The deployment will take a few minutes to complete, progress will be shown in the terminal.
  
-```azurecli-interactive
-az deployment group create --resource-group az204-arm-rg --template-file azuredeploy.json --parameters azuredeploy.parameters.json
-```
+  ```azurecli-interactive
+  az deployment group create --resource-group az204-arm-rg --template-file azuredeploy.json --parameters azuredeploy.parameters.json
+  ```
 
-4. You can verify the deployment by running the command below. Replace `<myStorageAccount>` with the name you used earlier.
+5. You can verify the deployment by running the command below. Replace `<myStorageAccount>` with the name you used earlier.
  
-```azurecli-interactive
-az storage account show --resource-group az204-arm-rg --name <myStorageAccount>
-```
+  ```azurecli-interactive
+  az storage account show --resource-group az204-arm-rg --name <myStorageAccount>
+  ```
 
 ### Clean up resources
 

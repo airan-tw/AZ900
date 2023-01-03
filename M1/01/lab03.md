@@ -1,26 +1,26 @@
-## Lab 03: Deploy an Azure container instance
+## Lab 3: Deploy an Azure container instance
 
 ### Task 1: Enable the admin user in Container Registry
 
 1.  On the Azure portal's **navigation** pane, select the **Resource groups** link.
 
-1.  On the **Resource groups** blade, select the **ContainerCompute** resource group that you created previously in this lab.
+2.  On the **Resource groups** blade, select the **ContainerCompute** resource group that you created previously in this lab.
 
-1.  On the **ContainerCompute** blade, select the container registry that you created previously in this lab, and then select **Update**.
+3.  On the **ContainerCompute** blade, select the container registry that you created previously in this lab, and then select **Update**.
 
-1.  On the **Update container registry** blade, in the **Admin user** section, select **Enable**.
+4.  On the **Update container registry** blade, in the **Admin user** section, select **Enable**.
 
-1.  Select **Save**, and then close the **Update container registry** blade.
+5.  Select **Save**, and then close the **Update container registry** blade.
 
 ### Task 2: Automatically deploy a container image to an Azure container instance
 
 1.  On the **Container Registry** blade, in the **Services** section, select the **Repositories** link.
 
-1.  In the **Repositories** section, select the **ipcheck** container image repository.
+2.  In the **Repositories** section, select the **ipcheck** container image repository.
 
-1.  On the **Repository** blade, select the ellipsis menu associated with the **latest** tag entry, and then select **Run instance**.
+3.  On the **Repository** blade, select the ellipsis menu associated with the **latest** tag entry, and then select **Run instance**.
 
-1.  On the **Create container instance** blade, perform the following actions, and then select **Create**:
+4.  On the **Create container instance** blade, perform the following actions, and then select **Create**:
 
     | Setting | Action |
     | -- | -- |
@@ -44,13 +44,13 @@
 
 1.  On the Azure portal's **navigation** pane, select the **Create a resource** link.
 
-1.  On the **Create a resource** blade, in the **Search services and marketplace** text box, enter **container instances**, and then select Enter.
+2.  On the **Create a resource** blade, in the **Search services and marketplace** text box, enter **container instances**, and then select Enter.
 
-1.  On the **Marketplace** search results blade, select the **Container Instances** result.
+3.  On the **Marketplace** search results blade, select the **Container Instances** result.
 
-1.  On the **Container Instances** blade, select **Create**.
+4.  On the **Container Instances** blade, select **Create**.
 
-1.  On the **Create Container Instance** blade, on the **Basics** tab, perform the following actions, and then select **Review + create**:
+5.  On the **Create Container Instance** blade, on the **Basics** tab, perform the following actions, and then select **Review + create**:
 
        | Setting | Action |
        | -- | -- |
@@ -67,9 +67,9 @@
 
      ![alt text](images/l05_create_container_instance_manual.png)
  
-1.  From the **Review + create** tab, review the selected options.
+6.  From the **Review + create** tab, review the selected options.
 
-1.  Select **Create** to create the container instance by using your specified configuration.  
+7.  Select **Create** to create the container instance by using your specified configuration.  
 
     > **Note**: Wait for the container instance to be created before you continue with this lab.
 
@@ -77,15 +77,15 @@
 
 1.  On the Azure portal's navigation pane, select the **Resource groups** link.
 
-1.  On the **Resource groups** blade, select the **ContainerCompute** resource group that you created previously in this lab.
+2.  On the **Resource groups** blade, select the **ContainerCompute** resource group that you created previously in this lab.
 
-1.  On the **ContainerCompute** blade, select the **manualcompute** container instance that you created previously in this lab.
+3.  On the **ContainerCompute** blade, select the **manualcompute** container instance that you created previously in this lab.
 
-1.  On the **Container Instances** blade, in the **Settings** section, select the **Containers** link.
+4.  On the **Container Instances** blade, in the **Settings** section, select the **Containers** link.
 
-1.  In the **Containers** section, review the list of **Events**.
+5.  In the **Containers** section, review the list of **Events**.
 
-1.  Select the **Logs** tab, and then review the text logs from the container instance.
+6.  Select the **Logs** tab, and then review the text logs from the container instance.
 
 > **Note**: You can also optionally find the **Events** and **Logs** from the **managedcompute** container instance.
 
@@ -96,8 +96,6 @@
 ## Review
 
 In this exercise, you used multiple methods to deploy a container image to an Azure container instance. By using the manual method, you were able to customize the deployment further and to run task-based applications as part of a container run.
-
-<br>
 
 ## Exercise 4: Clean up your subscription
 
@@ -117,7 +115,7 @@ In this exercise, you used multiple methods to deploy a container image to an Az
 
    > **Note**: The command executes asynchronously (as determined by the *--no-wait* parameter), so while you'll be able to run another Azure CLI command immediately afterwards within the same Bash session, it'll take a few minutes before the resource groups are actually removed.
 
-1. Close the **Cloud Shell** pane in the portal.
+2. Close the **Cloud Shell** pane in the portal.
 
 ### Task 3: Close the active applications
 
