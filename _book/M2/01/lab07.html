@@ -1,0 +1,868 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>LAB 7 - Implement Azure Functions · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lab08.html" />
+    
+    
+    <link rel="prev" href="lab06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    AZURE JOURNEY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe cloud concepts</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../M1/01/">
+            
+                <a href="../../M1/01/">
+            
+                    
+                    1. Cloud Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../M1/01/cloud_computinf.html">
+            
+                <a href="../../M1/01/cloud_computinf.html">
+            
+                    
+                    1.1. Cloud computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../M1/01/benefits_cloud.html">
+            
+                <a href="../../M1/01/benefits_cloud.html">
+            
+                    
+                    1.2. Benefits of cloud services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../M1/01/cloud_types.html">
+            
+                <a href="../../M1/01/cloud_types.html">
+            
+                    
+                    1.3. Cloud service types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure architecture and services</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. Azure architecture and services
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="core_components.html">
+            
+                <a href="core_components.html">
+            
+                    
+                    2.1. Core Azure architectural components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="networking_services.html">
+            
+                <a href="networking_services.html">
+            
+                    
+                    2.2. Azure compute and networking services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="storage_services.html">
+            
+                <a href="storage_services.html">
+            
+                    
+                    2.3. Azure storage services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="cloud_security.html">
+            
+                <a href="cloud_security.html">
+            
+                    
+                    2.4. Azure identity, access, and security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="lab01.html">
+            
+                <a href="lab01.html">
+            
+                    
+                    LAB 1 - Create a virtual machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="lab02.html">
+            
+                <a href="lab02.html">
+            
+                    
+                    LAB 2 - Create a VM with a Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="lab03.html">
+            
+                <a href="lab03.html">
+            
+                    
+                    LAB 3 - Create a VM with PowerShell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="lab04.html">
+            
+                <a href="lab04.html">
+            
+                    
+                    LAB 4 - Create a VM with the CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="lab05.html">
+            
+                <a href="lab05.html">
+            
+                    
+                    LAB 5 - Create a Web App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="lab06.html">
+            
+                <a href="lab06.html">
+            
+                    
+                    LAB 6 - Deploy Azure Container Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7" data-path="lab07.html">
+            
+                <a href="lab07.html">
+            
+                    
+                    LAB 7 - Implement Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="lab08.html">
+            
+                <a href="lab08.html">
+            
+                    
+                    LAB 8 - Create a virtual network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="lab09.html">
+            
+                <a href="lab09.html">
+            
+                    
+                    LAB 9 - Secure network traffic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="lab10.html">
+            
+                <a href="lab10.html">
+            
+                    
+                    LAB 10 - Create Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="lab11.html">
+            
+                <a href="lab11.html">
+            
+                    
+                    LAB 11 - Create a SQL database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="lab12.html">
+            
+                <a href="lab12.html">
+            
+                    
+                    LAB 12 - Manage access with RBAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="lab13.html">
+            
+                <a href="lab13.html">
+            
+                    
+                    LAB 13 - Implement Azure Key Vault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.14" data-path="lab14.html">
+            
+                <a href="lab14.html">
+            
+                    
+                    LAB 14 - Implement the Azure IoT Hub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure management and governance</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../M3/01/">
+            
+                <a href="../../M3/01/">
+            
+                    
+                    3. Azure management and governance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../M3/01/cost_management.html">
+            
+                <a href="../../M3/01/cost_management.html">
+            
+                    
+                    3.1. Cost management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../M3/01/gov_compliance.html">
+            
+                <a href="../../M3/01/gov_compliance.html">
+            
+                    
+                    3.2. Governance and compliance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../M3/01/man_deploy_resources.html">
+            
+                <a href="../../M3/01/man_deploy_resources.html">
+            
+                    
+                    3.3. Managing and deploying resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../M3/01/monitoring_tools.html">
+            
+                <a href="../../M3/01/monitoring_tools.html">
+            
+                    
+                    3.4. Azure monitoring tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../M3/01/lab01.html">
+            
+                <a href="../../M3/01/lab01.html">
+            
+                    
+                    LAB 1 - Use the Azure Pricing Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../M3/01/lab02.html">
+            
+                <a href="../../M3/01/lab02.html">
+            
+                    
+                    LAB 2 - Use the Azure TCO Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../M3/01/lab03.html">
+            
+                <a href="../../M3/01/lab03.html">
+            
+                    
+                    LAB 3 - Implement resource tagging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../M3/01/lab04.html">
+            
+                <a href="../../M3/01/lab04.html">
+            
+                    
+                    LAB 4 - Manage resource locks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../M3/01/lab05.html">
+            
+                <a href="../../M3/01/lab05.html">
+            
+                    
+                    LAB 5 - Create an Azure Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../M3/01/lab06.html">
+            
+                <a href="../../M3/01/lab06.html">
+            
+                    
+                    LAB 6 - Explore the Trust Center
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../M3/01/lab07.html">
+            
+                <a href="../../M3/01/lab07.html">
+            
+                    
+                    LAB 7 - Calculate Composite SLAs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../../M3/01/lab08.html">
+            
+                <a href="../../M3/01/lab08.html">
+            
+                    
+                    LAB 8 - Open a Support Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >LAB 7 - Implement Azure Functions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="lab-7-implement-azure-functions-5-min">Lab 7: Implement Azure Functions (5 min)</h2>
+<p>In this Lab, we will create a Function App to display a Hello message when there is an HTTP request.</p>
+<h3 id="task-1-create-a-function-app">Task 1: Create a Function app</h3>
+<p>In this task, we will create a Function app.</p>
+<p>1 - Sign-in to the <a href="https://portal.azure.com/" target="_blank">Azure Portal</a>. </p>
+<p>2 - In the <strong>Search</strong> bar at the top of the portal, search for and select <strong>Function App</strong> and then, from the <strong>Function App</strong> blade, click <strong>+ Add</strong>, <strong>+ Create</strong>, <strong>+ New</strong>.</p>
+<p>3 - On the <strong>Basic</strong> tab of the <strong>Function App</strong> blade, specify the following settings (replace <strong>xxxx</strong> in the name of the function with letters and digits such that the name is globally unique and leave all other settings with their default values):</p>
+<table>
+<thead>
+<tr>
+<th><strong>Setting</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscription</td>
+<td><strong><em>Keep default supplied</em></strong></td>
+</tr>
+<tr>
+<td>Resource group</td>
+<td><strong>Create new resource group</strong></td>
+</tr>
+<tr>
+<td>Function App name</td>
+<td><strong>function-xxxx</strong></td>
+</tr>
+<tr>
+<td>Publish</td>
+<td><strong>Code</strong></td>
+</tr>
+<tr>
+<td>Runtime stack</td>
+<td><strong>.NET</strong></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><strong>3.1</strong></td>
+</tr>
+<tr>
+<td>Region</td>
+<td><strong>East US</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Remember to change the <strong>xxxx</strong> so that it makes a unique <strong>Function App name</strong>.</p>
+<p>4 - Click <strong>Review + Create</strong> and after successful validation, click <strong>Create</strong> to begin provisioning and deploying your new Azure Function App.</p>
+<p>5 - Wait for the notification that the resource has been created.</p>
+<p>6 - When the deployment has completed, click Go to resource from the deployment blade. Alternatively, navigate back to the <strong>Function App</strong> blade, click <strong>Refresh</strong> and verify that the newly created function app has the <strong>Running</strong> status.</p>
+<p><img src="images/0701.png" alt="alt text"></p>
+<h3 id="task-2-create-a-http-triggered-function-and-test">Task 2: Create a HTTP triggered function and test</h3>
+<p>In this task, we will use the Webhook + API function to display a message when there is an HTTP request.</p>
+<p>1 - On the <strong>Function App</strong> blade, click the newly created function app.</p>
+<p>2 - On the function app blade, in the <strong>Functions</strong> section, click <strong>Functions</strong> and then click <strong>+ Add</strong>, <strong>+ Create</strong>, <strong>+ New</strong>.</p>
+<p><img src="images/0702.png" alt="alt text"></p>
+<p>3 - An <strong>Add function</strong> pop-up window will appear on the right. In the <strong>Select a template</strong> section click <strong>HTTP trigger</strong>. Click <strong>Add</strong>.</p>
+<p><img src="images/0702a.png" alt="alt text"></p>
+<p>4 - On the <strong>HttpTrigger1</strong> blade, in the <strong>Developer</strong> section, click <strong>Code + Test</strong>.</p>
+<p>5 - On the <strong>Code + Test</strong> blade, review the auto-generated code and note that the code is designed to run an HTTP request and log information. Also, notice the function returns a Hello message with a name.</p>
+<p><img src="images/0704.png" alt="alt text"></p>
+<p>6 - Click <strong>Get function URL</strong> from the top section of function editor.</p>
+<p>7 - Ensure that the value in the <strong>Key</strong> drop-down list is set to <strong>default</strong> and click <strong>Copy</strong> to copy the function URL.</p>
+<p><img src="images/0705.png" alt="alt text"></p>
+<p>8 - Open a new browser tab and paste the copied function URL into your web browser&apos;s address bar. When the page is requested the function will run. Notice the returned message stating that the function requires a name in the request body.</p>
+<p><img src="images/0706.png" alt="alt text"></p>
+<p>9 - Append <strong>&amp;name=yourname</strong> to the end of the URL.</p>
+<p><strong>Note:</strong> For example, if your name is Cindy, the final URL will resemble the following: <code>https://azfuncxxx.azurewebsites.net/api/HttpTrigger1?code=X9xx9999xXXXXX9x9xxxXX==&amp;name=cindy</code></p>
+<p><img src="images/0707.png" alt="alt text"></p>
+<p>10 - When you hit enter, your function runs and every invocation is traced. To view the traces, return to the Portal <strong>HttpTrigger1 | Code + Test</strong> blade and click <strong>Monitor</strong>. You can configure Application Insights by selecting the timestamp and click <strong>Run query in Application Insights</strong>.</p>
+<p><img src="images/0709.png" alt="alt text"> </p>
+<p><strong>Congratulations!</strong> You have created a Function App to display a Hello message when there is an HTTP request.</p>
+<p><strong>Note:</strong> To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <strong>Delete resource group</strong>. Verify the name of the resource group and then click <strong>Delete</strong>.
+Monitor the <strong>Notifications</strong> to see how the delete is proceeding.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lab06.html" class="navigation navigation-prev " aria-label="Previous page: LAB 6 - Deploy Azure Container Instances">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lab08.html" class="navigation navigation-next " aria-label="Next page: LAB 8 - Create a virtual network">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"wts":{"title":"08 – Implement Azure Functions (5 min)","module":"Module 03: Describe core solutions and management tools"},"title":"LAB 7 - Implement Azure Functions","level":"4.7","depth":1,"next":{"title":"LAB 8 - Create a virtual network","level":"4.8","depth":1,"path":"M2/01/lab08.md","ref":"M2/01/lab08.md","articles":[]},"previous":{"title":"LAB 6 - Deploy Azure Container Instances","level":"4.6","depth":1,"path":"M2/01/lab06.md","ref":"M2/01/lab06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"M2/01/lab07.md","mtime":"2023-01-16T20:20:54.930Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2023-01-18T02:41:50.876Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

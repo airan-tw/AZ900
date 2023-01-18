@@ -2,9 +2,11 @@
 
 ## Welcome
 
-This repository is for training developers based on the content of the course AZ-204: Developing solutions for Microsoft Azure.
+This Bootcamp is for training IT personnel based on the content of the course AZ-900: Azure Fundamentals.
 
-The objective of this course is to teach developers how to create end-to-end solutions in Microsoft Azure. Students will learn how to implement Azure compute solutions, create Azure Functions, implement and manage web apps, develop solutions utilizing Azure storage, implement authentication and authorization, and secure their solutions by using KeyVault and Managed Identities. Students will also learn how to connect to and consume Azure services and third-party services, and include event- and message-based models in their solutions. The course also covers monitoring, troubleshooting, and optimizing Azure solutions.
+This bootcamp is suitable for IT personnel who are just beginning to work with Azure.
+
+This audience wants to learn about our offerings and get hands-on experience with the product. This bootcamp primarily uses the Azure portal and command line interface to create resources and does not require scripting skills. Students in this course will gain confidence to take other role-based courses and certifications, such as Azure Developers. This course combines lecture, demonstrations, and hands-on labs. This course will also help prepare someone for the AZ-900 exam.
 
 ## Requirements
 
@@ -13,129 +15,133 @@ The objective of this course is to teach developers how to create end-to-end sol
 - **Hands-on Labs**
 
   - Install Homebrew
+
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-  - Create a workspace for the course:
-```azurecli-interactive
-sudo mkdir $HOME/training-az204 && cd $HOME/training-az204
-```
-  - Download the content into the workspace directory 
-```azurecli-interactive
-sudo curl -L -o $HOME/training-az204/allfiles.zip https://github.com/MicrosoftLearning/AZ-204-DevelopingSolutionsforMicrosoftAzure/releases/download/v20210630.01/allfiles-v20210630.01.zip
-```
-  - Unzip
-```azurecli-interactive
-unzip $HOME/training-az204/allfiles.zip
-```
 
 - **Install VS Code**
+
 ```azurecli-interactive
 brew install xcodegen
 xcode-select --install
 ```
 
 - **Install Powershell**
+
 ```azurecli-interactive
 brew install --cask powershell
 ```
 
 - **Install Azure CLI**
+
 ```azurecli-interactive
 brew update && brew install azure-cli
 ```
 
-## About the AZ-204 Course
+## About the AZ-900 BOOTCAMP
 
-This course should help you understand what to expect on the exam and includes a summary of the topics the exam might cover and links to additional resources.
+This bootcamp should help you understand what to expect on the exam and includes a summary of the topics the exam might cover and links to additional resources.
 
-Exam AZ-204: Microsoft Azure Developer Associate – Skills Measured
+Exam AZ-900: Microsoft Azure Fundamentals – Skills Measured
 
-![alt text](images/az204_skills.png)
+| STUDY AREAS | WEIGHTS|
+| --- | --- |
+| Describe cloud concepts | 25-30% |
+| Describe Azure architecture and services | 35-40% |
+| Describe Azure management and governance | 30-35% | 
 
-## Develop Azure compute solutions (25-30%)
+## Describe cloud concepts (25–30%)
 
-### [Implement IaaS solutions](M1/01/README.md)
+### [Describe cloud computing](M1/01/README.md)
 
-  * Provision virtual machines in Azure
-  * Create and deploy Azure Resource Manager templates
-  * Manage container images in Azure Container Registry
-  * Run container images in Azure Container Instances
+  * Define cloud computing
+  * Describe the shared responsibility model
+  * Define cloud models, including public, private, and hybrid
+  * Identify appropriate use cases for each cloud model
+  * Describe the consumption-based model
+  * Compare cloud pricing models
 
-### [Create Azure App Service Web Apps](M1/02/README.md)
+### [Describe the benefits of using cloud services](M1/02/README.md)
 
-  * Create an Azure App Service Web App
-  * Enable diagnostics logging
-  * Configure web app settings
-  * Implement autoscaling rules (schedule, operational/system metrics)
+  * Describe the benefits of high availability and scalability in the cloud
+  * Describe the benefits of reliability and predictability in the cloud
+  * Describe the benefits of security and governance in the cloud
+  * Describe the benefits of manageability in the cloud
 
-### [Implemente Azure functions](M1/03/README.md)
+### [Describe cloud service types](M1/03/README.md)
 
-  * Implement input and output bindings for a function
-  * Implement function triggers by using data operations, timers, and webhooks
-  * Implement Azure Durable Functions
+  * Describe infrastructure as a service (IaaS)
+  * Describe platform as a service (PaaS)
+  * Describe software as a service (SaaS)
+  * Identify appropriate use cases for each cloud service (IaaS, PaaS, SaaS)
 
-## Develop for Azure storage (10-15%)
+## Describe Azure architecture and services (35–40%)
 
-### [Develop solutions that use Cosmos DB storage](M2/01/README.md)
+### [Describe the core architectural components of Azure](M2/01/README.md)
 
-  * Select the appropriate API for your solution
-  * Implement partitioning schemes
-  * Interact with data using the appropriate SDK
-  * Set the appropriate consistency level for operations
-  * Create Cosmos DB containers
+  * Describe Azure regions, region pairs, and sovereign regions
+  * Describe availability zones
+  * Describe Azure datacenters
+  * Describe Azure resources and resource groups
+  * Describe subscriptions
+  * Describe management groups
+  * Describe the hierarchy of resource groups, subscriptions, and management groups
 
-### [Develop solutions that use blob storage](M2/02/README.md)
+### [Describe Azure compute and networking services](M2/02/README.md)
 
-  * Move items in Blob storage between storage accounts or containers
-  * Set and retrieve properties and metadata
-  * Interact with data using the appropriate SDK
-  * Implement data archiving and retention
+  * Compare compute types, including container instances, virtual machines (VMs), and functions
+  * Describe VM options, including Azure Virtual Machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
+  * Describe resources required for virtual machines
+  * Describe application hosting options, including the Web Apps feature of Azure App Service, containers, and virtual machines
+  * Describe virtual networking, including the purpose of Azure Virtual Networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and Azure ExpressRoute
+  * Define public and private endpoints
 
-## Implement Azure security (15-20%)
+### [Describe Azure storage services](M2/03/README.md)
 
-### [Implement use authentication and authorization](M3/01/README.md)
+  * Compare Azure storage services
+  * Describe storage tiers
+  * Describe redundancy options
+  * Describe storage account options and storage types
+  * Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
+  * Describe migration options, including Azure Migrate and Azure Data Box
 
-  * Implement OAuth2 authentication
-  * Create and implement shared access signatures
-  * Register apps and use Azure Active Directory to authenticate users
+### [Describe Azure identity, access, and security](M2/04/README.md)
 
-### [Implement secure cloud solutions](M3/02/README.md)
+  * Describe directory services in Azure, including Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra and Azure Active Directory Domain Services (Azure AD DS)
+  * Describe authentication methods in Azure, including single sign-on (SSO), multifactor authentication, and passwordless
+  * Describe external identities and guest access in Azure
+  * Describe Conditional Access in Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra
+  * Describe Azure role-based access control (RBAC)
+  * Describe the concept of Zero Trust
+  * Describe the purpose of the defense in depth model
+  * Describe the purpose of Microsoft Defender for Cloud
 
-  * Secure app configuration data by using the App Configuration and KeyVault API
-  * Manage keys, secrets, and certificates by using the KeyVault API
-  * Implement Managed Identities for Azure resources
+## Describe Azure management and governance (30–35%)
 
-## Monitor, troubleshoot, and optimize Azure solutions (10-15%)
+### [Describe cost management in Azure](M3/01/README.md)
 
-### [Integrate caching and content delivery within solutions](M4/01/README.md)
+  * Describe factors that can affect costs in Azure
+  * Compare the Pricing calculator and the Total Cost of Ownership (TCO) calculator
+  * Describe the Azure Cost Management and Billing tool
+  * Describe the purpose of tags
 
-  * Develop code to implement CDN’s in solutions
-  * Configure cache and expiration policies
-  * Store and retrieve data in Azure Redis cache
+### [Describe features and tools in Azure for governance and compliance](M3/02/README.md)
 
-### [Instrument solutions to support monitoring and logging](M4/02/README.md)
+  * Describe the purpose of Azure Blueprints
+  * Describe the purpose of Azure Policy
+  * Describe the purpose of resource locks
+  * Describe the purpose of the Service Trust Portal
 
-  * Configure instrumentation in an app or service by using Application Insights
-  * Analyze and troubleshoot solutions by using Azure Monitor
-  * Implement Application Insights Web Test and Alerts
-  * Implement code that handles transient faults
+### [Describe features and tools for managing and deploying Azure resources](M3/03/README.md)
 
-## Connect to and consume Azure services and third-party services (25-30%)
+  * Describe the Azure portal
+  * Describe Azure Cloud Shell, including Azure CLI and Azure PowerShell
+  * Describe the purpose of Azure Arc
+  * Describe Azure Resource Manager and Azure Resource Manager templates (ARM templates)
 
-### [Implement API Management](M5/02/README.md)
+### [Describe monitoring tools in Azure](M3/04/README.md)
 
-  * Create an APIM instance
-  * Configure authentication for APIs
-  * Define policies for APIs
-
-### [Develop event-based solutions](M5/03/README.md)
-
-  * Implement solutions that use Azure Event Grid
-  * Implement solutions that use Azure Notification Hubs
-  * Implement solutions that use Azure Event Hub
-
-### [Develop message-based solutions](M5/04/README.md)
-
-  * Implement solutions that use Azure Service Bus
-  * Implement solutions that use Azure Queue Storage queues
+  * Describe the purpose of Azure Advisor
+  * Describe Azure Service Health
+  * Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights

@@ -1,0 +1,857 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>LAB 14 - Implement the Azure IoT Hub · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../M3/01/" />
+    
+    
+    <link rel="prev" href="lab13.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    AZURE JOURNEY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe cloud concepts</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../M1/01/">
+            
+                <a href="../../M1/01/">
+            
+                    
+                    1. Cloud Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../M1/01/cloud_computinf.html">
+            
+                <a href="../../M1/01/cloud_computinf.html">
+            
+                    
+                    1.1. Cloud computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../M1/01/benefits_cloud.html">
+            
+                <a href="../../M1/01/benefits_cloud.html">
+            
+                    
+                    1.2. Benefits of cloud services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../M1/01/cloud_types.html">
+            
+                <a href="../../M1/01/cloud_types.html">
+            
+                    
+                    1.3. Cloud service types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure architecture and services</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. Azure architecture and services
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="core_components.html">
+            
+                <a href="core_components.html">
+            
+                    
+                    2.1. Core Azure architectural components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="networking_services.html">
+            
+                <a href="networking_services.html">
+            
+                    
+                    2.2. Azure compute and networking services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="storage_services.html">
+            
+                <a href="storage_services.html">
+            
+                    
+                    2.3. Azure storage services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="cloud_security.html">
+            
+                <a href="cloud_security.html">
+            
+                    
+                    2.4. Azure identity, access, and security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="lab01.html">
+            
+                <a href="lab01.html">
+            
+                    
+                    LAB 1 - Create a virtual machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="lab02.html">
+            
+                <a href="lab02.html">
+            
+                    
+                    LAB 2 - Create a VM with a Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="lab03.html">
+            
+                <a href="lab03.html">
+            
+                    
+                    LAB 3 - Create a VM with PowerShell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="lab04.html">
+            
+                <a href="lab04.html">
+            
+                    
+                    LAB 4 - Create a VM with the CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="lab05.html">
+            
+                <a href="lab05.html">
+            
+                    
+                    LAB 5 - Create a Web App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="lab06.html">
+            
+                <a href="lab06.html">
+            
+                    
+                    LAB 6 - Deploy Azure Container Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="lab07.html">
+            
+                <a href="lab07.html">
+            
+                    
+                    LAB 7 - Implement Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="lab08.html">
+            
+                <a href="lab08.html">
+            
+                    
+                    LAB 8 - Create a virtual network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="lab09.html">
+            
+                <a href="lab09.html">
+            
+                    
+                    LAB 9 - Secure network traffic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="lab10.html">
+            
+                <a href="lab10.html">
+            
+                    
+                    LAB 10 - Create Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="lab11.html">
+            
+                <a href="lab11.html">
+            
+                    
+                    LAB 11 - Create a SQL database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="lab12.html">
+            
+                <a href="lab12.html">
+            
+                    
+                    LAB 12 - Manage access with RBAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="lab13.html">
+            
+                <a href="lab13.html">
+            
+                    
+                    LAB 13 - Implement Azure Key Vault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.14" data-path="lab14.html">
+            
+                <a href="lab14.html">
+            
+                    
+                    LAB 14 - Implement the Azure IoT Hub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure management and governance</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../M3/01/">
+            
+                <a href="../../M3/01/">
+            
+                    
+                    3. Azure management and governance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../M3/01/cost_management.html">
+            
+                <a href="../../M3/01/cost_management.html">
+            
+                    
+                    3.1. Cost management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../M3/01/gov_compliance.html">
+            
+                <a href="../../M3/01/gov_compliance.html">
+            
+                    
+                    3.2. Governance and compliance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../M3/01/man_deploy_resources.html">
+            
+                <a href="../../M3/01/man_deploy_resources.html">
+            
+                    
+                    3.3. Managing and deploying resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../M3/01/monitoring_tools.html">
+            
+                <a href="../../M3/01/monitoring_tools.html">
+            
+                    
+                    3.4. Azure monitoring tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../M3/01/lab01.html">
+            
+                <a href="../../M3/01/lab01.html">
+            
+                    
+                    LAB 1 - Use the Azure Pricing Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../M3/01/lab02.html">
+            
+                <a href="../../M3/01/lab02.html">
+            
+                    
+                    LAB 2 - Use the Azure TCO Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../M3/01/lab03.html">
+            
+                <a href="../../M3/01/lab03.html">
+            
+                    
+                    LAB 3 - Implement resource tagging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../M3/01/lab04.html">
+            
+                <a href="../../M3/01/lab04.html">
+            
+                    
+                    LAB 4 - Manage resource locks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../M3/01/lab05.html">
+            
+                <a href="../../M3/01/lab05.html">
+            
+                    
+                    LAB 5 - Create an Azure Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../M3/01/lab06.html">
+            
+                <a href="../../M3/01/lab06.html">
+            
+                    
+                    LAB 6 - Explore the Trust Center
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../M3/01/lab07.html">
+            
+                <a href="../../M3/01/lab07.html">
+            
+                    
+                    LAB 7 - Calculate Composite SLAs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../../M3/01/lab08.html">
+            
+                <a href="../../M3/01/lab08.html">
+            
+                    
+                    LAB 8 - Open a Support Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >LAB 14 - Implement the Azure IoT Hub</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="lab-14-implement-an-azure-iot-hub-10-min">Lab 14: Implement an Azure IoT Hub (10 min)</h2>
+<p>In this Lab, we will configure a new Azure IoT Hub in Azure Portal, and then authenticate a connection to an IoT device using the online Raspberry Pi device simulator. Sensor data and messages are passed from the Raspberry Pi simulator to your Azure IoT Hub, and you view metrics for the messaging activity in Azure Portal.</p>
+<h3 id="task-1-create-an-iot-hub">Task 1: Create an IoT hub</h3>
+<p>In this task, we will create an IoT hub.</p>
+<p>1 - Sign-in to the <a href="https://portal.azure.com/" target="_blank">Azure Portal</a>. </p>
+<p>2 - From the <strong>All services</strong> blade, search for and select <strong>IoT Hub</strong> and then click <strong>+ Add</strong>, <strong>+ Create</strong>, <strong>+ New</strong>.</p>
+<p>3 - On the Basics tab of the IoT hub blade, fill in the fields with the following details (replace xxxx in the name of the storage account with letters and digits such that the name is globally unique):</p>
+<table>
+<thead>
+<tr>
+<th><strong>Setting</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscription</td>
+<td><strong><em>Keep default supplied</em></strong></td>
+</tr>
+<tr>
+<td>Resource Group</td>
+<td><strong>Create new resource group</strong></td>
+</tr>
+<tr>
+<td>IoT Hub Name</td>
+<td><strong>my-hub-groupxxxxx</strong></td>
+</tr>
+<tr>
+<td>Region</td>
+<td><strong>East US</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Remember to change the <strong>xxxxx</strong> so that it makes a unique <strong>IoT Hub Name</strong>.</p>
+<p>4 - Go to the <strong>Management</strong> tab, and use the dropdown to set the <strong>Pricing and scale tier</strong> to <strong>S1: Standard tier</strong>.</p>
+<p>5 - Click the <strong>Review + Create</strong> button.</p>
+<p>6 - Click the <strong>Create</strong> button to begin creating your new Azure IoT Hub instance.</p>
+<p>7 - Wait until the Azure IoT Hub instance is deployed.</p>
+<h3 id="task-2-add-an-iot-device">Task 2: Add an IoT device</h3>
+<p>In this task, we will add an IoT device to the IoT hub.</p>
+<p>1 - When the deployment has completed, click <strong>Go to resource</strong> from the deployment blade. Alternatively, from the <strong>All services</strong> blade, search for and select <strong>IoT Hub</strong> and locate your new IoT Hub instance</p>
+<p><img src="images/0601.png" alt="alt text"></p>
+<p>2 - To add a new IoT device, scroll down to the <strong>Device management</strong> section and click <strong>Devices</strong>. Then, click <strong>+ Add Device</strong>.</p>
+<p><img src="images/0602.png" alt="alt text"></p>
+<p>3 - Provide a name for your new IoT device, <strong>myRaspberryPi</strong>, and click the <strong>Save</strong> button. This will create a new IoT device identity in your Azure IoT Hub.</p>
+<p>4 - If you do not see your new device, <strong>Refresh</strong> the IoT Devices page.</p>
+<p>5  Select <strong>myRaspberryPi</strong> and copy the <strong>Primary Connection String</strong> value. You will use this key in the next task to authenticate a connection to the Raspberry Pi simulator.</p>
+<p><img src="images/0603.png" alt="alt text"></p>
+<h3 id="task-3-test-the-device-using-a-raspberry-pi-simulator">Task 3: Test the device using a Raspberry Pi Simulator</h3>
+<p>In this task, we will test our device using the Raspberry Pi Simulator.</p>
+<p>1 - Open a new tab in the web browser and type this shortcut link <a href="https://aka.ms/RaspPi" target="_blank">https://aka.ms/RaspPi</a>. It will take you to a Raspberry Pi Simulator site. If you have time, read about the Raspberry Pi simulator. When done select <strong>&quot;X&quot;</strong> to close the pop-up window.</p>
+<p>2 - In the code area on the right side, locate the line with &apos;const connectionString =&apos;. Replace it with the connection string you copied from the Azure portal. Note that the connection sting includes the DeviceId (<strong>myRaspberryPi</strong>) and SharedAccessKey entries.</p>
+<p><img src="images/0604.png" alt="alt text"></p>
+<p>3 - Click <strong>Run</strong> (below the code area) to run the application. The console output should show the sensor data and messages that are sent from the Raspberry Pi simulator to your Azure IoT Hub. Data and messages are sent each time the Raspberry Pi simulator LED flashes.</p>
+<p><img src="images/0605.png" alt="alt text"></p>
+<p>4 - Click <strong>Stop</strong> to stop sending data.</p>
+<p>5 - Return to the Azure portal.</p>
+<p>6 - Switch the IoT Hub <strong>Overview</strong> blade and scroll down to the <strong>IoT Hub Usage</strong> information to view usage. Change your timeframe in the <strong>show data for last</strong> to see data in the last hour.</p>
+<p><img src="images/0606.png" alt="alt text"></p>
+<p><strong>Congratulations!</strong> You have set up Azure IoT Hub to collect sensor data from an IoT device.</p>
+<p><strong>Note:</strong> To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <strong>Delete resource group</strong>. Verify the name of the resource group and then click <strong>Delete</strong>.
+Monitor the <strong>Notifications</strong> to see how the delete is proceeding.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lab13.html" class="navigation navigation-prev " aria-label="Previous page: LAB 13 - Implement Azure Key Vault">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../M3/01/" class="navigation navigation-next " aria-label="Next page: 3. Azure management and governance">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"wts":{"title":"07 – Implement an Azure IoT Hub (10 min)","module":"Module 03: Describe core solutions and management tools"},"title":"LAB 14 - Implement the Azure IoT Hub","level":"4.14","depth":1,"next":{"title":"3. Azure management and governance","level":"5.1","depth":1,"path":"M3/01/README.md","ref":"M3/01/README.md","articles":[{"title":"3.1. Cost management","level":"5.1.1","depth":2,"path":"M3/01/cost_management.md","ref":"M3/01/cost_management.md","articles":[]},{"title":"3.2. Governance and compliance","level":"5.1.2","depth":2,"path":"M3/01/gov_compliance.md","ref":"M3/01/gov_compliance.md","articles":[]},{"title":"3.3. Managing and deploying resources","level":"5.1.3","depth":2,"path":"M3/01/man_deploy_resources.md","ref":"M3/01/man_deploy_resources.md","articles":[]},{"title":"3.4. Azure monitoring tools","level":"5.1.4","depth":2,"path":"M3/01/monitoring_tools.md","ref":"M3/01/monitoring_tools.md","articles":[]}]},"previous":{"title":"LAB 13 - Implement Azure Key Vault","level":"4.13","depth":1,"path":"M2/01/lab13.md","ref":"M2/01/lab13.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"M2/01/lab14.md","mtime":"2023-01-17T05:30:57.513Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2023-01-18T02:41:50.876Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

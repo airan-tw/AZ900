@@ -1,263 +1,129 @@
-## Lab 3: Configure a .NET web application
+---
+wts:
+  title: 10 – Create a VM with PowerShell (10 min)
+  module: 'Module 03: Describe core solutions and management tools'
+---
+## Lab 3: Create a VM with PowerShell (10 min)
 
-### Task 1: Update references to data stores and build the web application
+In this Lab, we will configure the Cloud Shell, use Azure PowerShell module to create a resource group and virtual machine, and review Azure Advisor recommendations. 
 
-1.  In the **Explorer** pane of the **Visual Studio Code** window, expand the **AdventureWorks.Web** project.
+### Task 1: Configure the Cloud Shell
 
-1.  Open the **appsettings.json** file.
+In this task, we will configure Cloud Shell. 
 
-1.  In the JSON object on line 3, find the **ConnectionStrings.AdventureWorksCosmosContext** path. Note that the current value is empty:
+1 - Sign in to the [Azure portal](https://portal.azure.com).
 
-    ```json
-    "ConnectionStrings": {
-        "AdventureWorksCosmosContext": "",
-    },
-    ```
+2 - From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon
+in the top right of the Azure Portal.
 
-1.  Update the value of the **AdventureWorksCosmosContext** property by setting its value to the **PRIMARY CONNECTION STRING** of the Azure Cosmos DB account that you recorded earlier in this lab.
+![alt text](/M2/01/images/1002.png)
 
-1.  In the JSON object on line 6, find the **Settings.BlobContainerUrl** path. Note that the current value is empty:
+3 - When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    ```json
-    "Settings": {
-        "BlobContainerUrl": "",
-        ...
-    }
-    ```
+4 - On the **You have no storage mounted screen**, select **Show advanced settings** then fill in the information below:
 
-1.  Update the **BlobContainerUrl** property by setting its value to the **URL** property of the Azure Storage blob container named **images** that you recorded earlier in this lab.
+ | **Setting** | **Value** |
+ | --- | --- |
+ | Resource Group | **Create new resource group** |
+ | Storage account (Create a new account a use a globally unique name (ex.: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
+ | File share (create new) | **shellstorage** |
 
-1.  Save the **appsettings.json** file and close it.
+5. Select **Create Storage**.
 
-    > **Note**: Select **Overwrite** if you received a prompt that the file is read-only.
+### Task 2: Create a resource group and virtual machine
 
-1.  In the **Visual Studio Code** window, select **AdventureWorks.Context**, activate the shortcut menu, and then select **Open in Integrated Terminal**.
+In this task, we will use PowerShell to create a resource group and a virtual
+machine.  
 
-    > **Note**:Before you perform the next step, open Windows Explorer and remove the Read-only attribute from the file **$HOME\training-az204\Labs\04\Starter\AdventureWorks\AdventureWorks.Context\AdventureWorks.Context.csproj**
+1 - Ensure **PowerShell** is selected in the upper-left drop-down menu of the Cloud Shell pane.
 
-1.  From the terminal prompt, verify that the current directory is set to **AdventureWorks.Context** (or change it to that if it's not), and then run the following command to import **Microsoft.Azure.Cosmos** from NuGet:
+2 - Verify your new resource group by running the following command in the Powershell window. Press **Enter** to run the command.
 
-    ```
-    dotnet add package Microsoft.Azure.Cosmos --version 3.28.0
-    ```
+```
+Get-AzResourceGroup | Format-Table
+```
 
-1.  From the terminal prompt, run the following command to build the .NET web application:
+3 - Create a virtual machine by pasting the following command into the
+terminal window.
 
-    ```
-    dotnet build
-    ```
+```
+ New-AzVm `
+ -ResourceGroupName "myRGPS" `
+ -Name "myVMPS" `
+ -Location "East US" `
+ -VirtualNetworkName "myVnetPS" `
+ -SubnetName "mySubnetPS" `
+ -SecurityGroupName "myNSGPS" `
+ -PublicIpAddressName "myPublicIpPS"
+```
+4 - When prompted provide the username (**azureuser**) and the password (**Pa$$w0rd1234**) that will be configured as the local Administrator account on that
+virtual machines.azureadmin
 
-1.  Observe the results of the build printed in the terminal. The build should complete successfully with no errors or warning messages.
+5 - Once VM is created, close the PowerShell session Cloud Shell pane.
 
-### Task 2: Configure connectivity to Azure Cosmos DB
+6 - In the Azure portal, search for **Virtual machines** and verify the **myVMPS** is
+running. This may take a few minutes.
 
-1.  In the **Explorer** pane of the **Visual Studio Code** window, expand the **AdventureWorks.Context** project.
+![alt text](/M2/01/images/1001.png)
 
-1.  From the shortcut menu of the **AdventureWorks.Context** folder node, select **New File**.
+7. Access the new virtual machine and review the Overview and Networking
+settings to verify your information was correctly deployed. 
 
-1.  At the new file prompt, enter **AdventureWorksCosmosContext.cs**.
+### Task 3: Execute commands in the Cloud Shell
 
-1.  From the code editor tab for the **AdventureWorksCosmosContext.cs** file, add the following lines of code to import the **AdventureWorks.Models** namespace from the referenced **AdventureWorks.Models** project:
+In this task, we will practice executing PowerShell commands from the Cloud Shell. 
 
-    ```csharp
-    using AdventureWorks.Models;
-    ```
+1 - From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon
+in the top right of the Azure Portal.
 
-1.  Add the following lines of code to import the **Microsoft.Azure.Cosmos** and **Microsoft.Azure.Cosmos.Linq** namespaces from the **Microsoft.Azure.Cosmos** package imported from NuGet:
+2 - Ensure **PowerShell** is selected in the upper-left drop-down menu of the
+Cloud Shell pane.
 
-    ```csharp
-    using Microsoft.Azure.Cosmos;
-    using Microsoft.Azure.Cosmos.Linq;
-    ```
+3 - Retrieve information about your virtual machine including name, resource group, location, and status. Notice the PowerState is **running**.
 
-1.  Add the following lines of code to include **using** directives for the built-in namespaces that this file will use:
+```
+Get-AzVM -name myVMPS -status | Format-Table -autosize
+```
 
-    ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    ```
+4 - Stop the virtual machine using the following command:
 
-1.  Enter the following code to add an **AdventureWorks.Context** namespace block:
+```
+Stop-AzVM -ResourceGroupName myRGPS -Name myVMPS
+```
 
-    ```csharp
-    namespace AdventureWorks.Context
-    {
-    }
-    ```
+5 - When prompted confirm (Yes) to the action. Wait for **Succeeded** status.
 
-1.  Within the **AdventureWorks.Context** namespace, enter the following code to create a new **AdventureWorksCosmosContext** class:
+6 - Verify your virtual machine state. The PowerState should now be **deallocated**. You can also verify the virtual machine status in the portal. Close Cloudshell.
 
-    ```csharp
-    public class AdventureWorksCosmosContext
-    {
-    }
-    ```
+```
+Get-AzVM -name myVMPS -status | Format-Table -autosize
+```
 
-1.  Update the declaration of the **AdventureWorksCosmosContext** class by adding a specification indicating that this class will implement the **IAdventureWorksProductContext** interface:
+### Task 4: Review Azure Advisor Recommendations
 
-    ```csharp
-    public class AdventureWorksCosmosContext : IAdventureWorksProductContext
-    {
-    }
-    ```
-
-1.  Within the **AdventureWorksCosmosContext** class, enter the following code to create a new read-only *Container* variable named **_container**:
-
-    ```csharp
-    private readonly Container _container;
-    ```
-
-1.  Within the **AdventureWorksCosmosContext** class, add a new constructor with the following signature:
-
-    ```csharp
-    public AdventureWorksCosmosContext(string connectionString, string database = "Retail", string container = "Online")
-    {
-    }
-    ```
-
-1.  Within the constructor, add the following block of code to create a new instance of the **CosmosClient** class, and then obtain both a **Database** and **Container** instance from the client:
-
-    ```csharp
-    _container = new CosmosClient(connectionString)
-        .GetDatabase(database)
-        .GetContainer(container);
-    ```
-
-1.  Within the **AdventureWorksCosmosContext** class, add a new **FindModelAsync** method with the following signature:
-
-    ```csharp
-    public async Task<Model> FindModelAsync(Guid id)
-    {
-    }
-    ```
-
-1.  Within the **FindModelAsync** method, add the following blocks of code to create a LINQ query, transform it into an iterator, iterate over the result set, and then return the single item in the result set:
-
-    ```csharp
-    var iterator = _container.GetItemLinqQueryable<Model>()
-        .Where(m => m.id == id)
-        .ToFeedIterator<Model>();
-    List<Model> matches = new List<Model>();
-    while (iterator.HasMoreResults)
-    {
-        var next = await iterator.ReadNextAsync();
-        matches.AddRange(next);
-    }
-    return matches.SingleOrDefault();
-    ```
-
-1.  Within the **AdventureWorksCosmosContext** class, add a new **GetModelsAsync** method with the following signature:
-
-    ```csharp
-    public async Task<List<Model>> GetModelsAsync()
-    {
-    }
-    ```
+**Note:** This same task is in the Create a VM with Azure CLI lab. 
 
-1.  Within the **GetModelsAsync** method, add the following blocks of code to run an SQL query, get the query result iterator, iterate over the result set, and then return the union of all results:
+In this task, we will review Azure Advisor recommendations for our virtual machine. 
 
-    ```csharp
-    string query = $@"SELECT * FROM items";
-    var iterator = _container.GetItemQueryIterator<Model>(query);
-    List<Model> matches = new List<Model>();
-    while (iterator.HasMoreResults)
-    {
-        var next = await iterator.ReadNextAsync();
-        matches.AddRange(next);
-    }
-    return matches;
-    ```
+1 - From the **All services** blade, search for and select **Advisor**.
 
-1.  Within the **AdventureWorksCosmosContext** class, add a new **FindProductAsync** method with the following signature:
+2 - On the **Advisor** blade, select **Overview**. Notice recommendations are grouped by Reliability, Security, Performance, and Cost.
 
-    ```csharp
-    public async Task<Product> FindProductAsync(Guid id)
-    {
-    }
-    ```
+![alt text](/M2/01/images/1003.png)
 
-1.  Within the **FindProductAsync** method, add the following blocks of code to run an SQL query, get the query result iterator, iterate over the result set, and then return the single item in the result set:
+3 - Select **All recommendations** and take time to view each recommendation and suggested actions.
 
-    ```csharp
-    string query = $@"SELECT VALUE products
-                        FROM models
-                        JOIN products in models.Products
-                        WHERE products.id = '{id}'";
-    var iterator = _container.GetItemQueryIterator<Product>(query);
-    List<Product> matches = new List<Product>();
-    while (iterator.HasMoreResults)
-    {
-        var next = await iterator.ReadNextAsync();
-        matches.AddRange(next);
-    }
-    return matches.SingleOrDefault();
-    ```
+**Note:** Depending on your resources, your recommendations will be different. 
 
-1.  Save and close the **AdventureWorksCosmosContext.cs** file.
-   
-1.  From the terminal prompt, with the current directory set to **AdventureWorks.Context**, run the following command to build the .NET web application:
+![alt text](/M2/01/images/1004.png)
 
-    ```
-    dotnet build
-    ```
+4 - Notice that you can download the recommendations as a CSV or PDF file.
 
-    > **Note**: If there are any build errors, review the **AdventureWorksCosmosContext.cs** file in the **$HOME\\training-az204\\Labs\\04\\Solution\\AdventureWorks\\AdventureWorks.Context** folder.
+5 - Notice that you can create alerts.
 
-### Task 3: Review the .NET application startup logic
+6 - If you have time, continue to experiment with Azure PowerShell.
 
-1.  In the **Explorer** pane of the **Visual Studio Code** window, expand the **AdventureWorks.Web** project.
+**Congratulations!** You have configured Cloud Shell, created a virtual machine using PowerShell, practiced with PowerShell commands, and viewed Advisor recommendations.
 
-1.  Open the **Startup.cs** file.
-
-1.  In the **Startup** class, note the existing **ConfigureProductService** method:
-
-    ```csharp
-    public void ConfigureProductService(IServiceCollection services)
-    {
-        services.AddScoped<IAdventureWorksProductContext, AdventureWorksCosmosContext>(provider =>
-            new AdventureWorksCosmosContext(
-                _configuration.GetConnectionString(nameof(AdventureWorksCosmosContext))
-            )
-        );
-    }
-    ```
-
-    > **Note**: The product service uses Cosmos DB as its database.
-
-1.  Close the **Startup.cs** file without making any modifications.
-
-### Task 4: Validate that the .NET application successfully connects to data stores
-
-1.  In Visual Studio Code, from the terminal prompt, run the following command to switch your terminal context to the **AdventureWorks.Web** folder:
-
-    ```
-    cd ..\AdventureWorks.Web\
-    ```
-
-1.  From the terminal prompt, run the following command to run the ASP.NET web application:
-
-    ```
-    dotnet run
-    ```
-
-    > **Note**: The **dotnet run** command will automatically build any changes to the project and then start the web application without a debugger attached. The command will output the URL of the running application and any assigned ports.
-
-1.  On the taskbar, select the **Microsoft Edge** icon.
-
-1.  In the open browser window, browse to the currently running web application (<http://localhost:5000>).
-
-1.  In the web application, observe the list of models displayed from the front page.
-
-1.  Find the **Touring-1000** model, and then select **View Details**.
-
-1.  On the **Touring-1000** product detail page, review the listing of options.
-
-1.  Close the browser window displaying your web application.
-
-1.  Switch to the **Visual Studio Code** window, and then select **Kill Terminal** (the **Recycle Bin** icon) to close the currently open terminal and any associated processes.
-
-## Review
-
-In this exercise, you wrote C# code to query an Azure Cosmos DB collection by using the .NET SDK.
+**Note:** To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click **Delete resource group**. Verify the name of the resource group and then click **Delete**.
+Monitor the **Notifications** to see how the delete is proceeding.

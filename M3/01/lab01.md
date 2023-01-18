@@ -1,107 +1,100 @@
-## Lab 1: Configure a single-tenant Azure AD environment
+---
+wts:
+  title: 19 – Use the Pricing Calculator (10 min)
+  module: 'Module 06: Describe Azure cost management and service level agreements'
+---
+## Lab 1: Use the Pricing Calculator (10 min)
 
-### Task 1: Open the Azure portal
+In this Lab, we will use the Azure Pricing Calculator to generate a cost estimate for an Azure virtual machine and related network resources.
 
-1.  On the taskbar, select the **Microsoft Edge** icon.
+### Task 1: Configure the pricing calculator
 
-2.  In the open browser window, browse to the Azure portal ([portal.azure.com](https://portal.azure.com)), and then sign in with the account you'll use for this lab.
+In this task, we will estimate the cost of a sample infrastructure by using the Azure Pricing Calculator.
 
-    > **Note**: If this is your first time signing in to the Azure portal, you'll be offered a tour of the portal. Select **Get Started** to skip the tour and begin using the portal.
+**Note:** To create an Azure Pricing Calculator estimate, this Lab provides example configurations for the VM and related resources. Use this example configurations or provide the Azure Pricing Calculator with details of your actual resource requirements instead.
 
-### Task 2: Register an application in Azure AD
+1 - In a browser, navigate to the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) webpage. 
 
-1.  In the Azure portal, use the **Search resources, services, and docs** text box to search for **Azure Active Directory** and, in the list of results, select **Azure Active Directory**.
+2 - To add details of your VM configuration, click **Virtual Machines** on the **Products** tab. Scroll down to view the virtual machine details.
 
-    > **Note**: This redirects your browser session to the blade of the Azure Active Directory (Azure AD) tenant associated with your Azure subscription.
+3 - Replace **Your Estimate and Virtual Machines** text with more descriptive names for your Azure Pricing Calculator estimate and your VM configuration. This Lab example uses **My Pricing Calculator Estimate** for the estimate, and **Windows VM** for the VM configuration.
 
-2.  On the **Azure Active Directory** blade, select **App registrations** in the **Manage** section.
+![alt text](/M3/01/images/1901.png)
 
-3.  In the **App registrations** section, select **+ New registration**.
+4 - Modify the default VM configuration.
 
-4.  In the **Register an application** section, perform the following actions, and then select **Register**:
-    
-    | Setting | Action |
-    | -- | -- |
-    | **Name** text box | Enter **webappoidc** |
-    | **Supported account types** list | Select **Accounts in this organizational directory only (Default Directory only - Single tenant)** |
+ | **Setting** | **Value** | 
+ | --- | --- |
+ | Region | **North Europe** |
+ | Operating System | **Windows** |
+ | Type | **(OS only)** |
+ | Tier | **Standard** |  
+ | Instance | **A2: 2 Core(s), 3.5 GB RAM, 135 GB Temporary storage** |
 
-    > **Note**: The name of the tenant might differ depending on your Azure subscription.
-   
-    The following screenshot displays the configured settings in the **Register an application** section.
-          
-     ![Screenshot displaying the options configured to register an application.](images/l06_aad_register_st_webapp.png)
+![alt text](/M3/01/images/1902.png)
 
-### Task 3: Record unique identifiers
+**Note:** The VM instance specifications and pricing may differ from those in this example. Follow this Lab by choosing an instance that matches the example as closely as possible. To view details about the different VM product options, choose **Product details** from the **More info** menu on the right.
 
-1.  On the **webappoidc** application registration blade, select **Overview**.
+5 - Set the **Billing Option** to **Pay as you go**.
 
-2.  In the **Overview** section, find and record the value of the **Application (client) ID** text box. You'll use this value later in the lab.
+![alt text](/M3/01/images/1903.png)
 
-3.  In the **Overview** section, find and record the value of the **Directory (tenant) ID** text box. You'll use this value later in the lab.
+6 - In Azure, a month is defined as 730 hours. If your VM needs to be available 100 percent of the time each month, you set the hours-per-month value to `730`. This Lab example requires one VM to be available 50 percent of the time each month.
 
-### Task 4: Configure the application authentication settings
+Leave the number of VMs set at `1`, and change the hours-per-month value to `365`.
 
-1.  On the **webappoidc** application registration blade, select **Authentication** in the **Manage** section.
+![alt text](/M3/01/images/1904.png)
 
-2.  In the **Authentication** section, perform the following actions, and select **Configure**:
+7 - In the Managed OS Disks pane, modify the default VM storage configuration.
 
-    | Setting | Action |
-    | -- | -- |
-    | **Platform configurations** section | Select **+ Add a platform** |
-    | **Configure platforms** blade | Select **Web** |
-    | **Redirect URIs** text box | Enter `https://localhost:5001/` |
-    | **Front-channel logout URL** text box | Enter `https://localhost:5001/signout-oidc` |
-        
-3. Back in the **Platform configurations** section, select **Add URI**, and then enter `https://localhost:5001/signin-oidc`.
+ | Tier | Disk size | Nº. of disks | Snapshot | Storage transactions |
+ | ---- | --------- | --------------- | -------- | -------------------- |
+ | Standard HDD | S30: 1024 GiB | 1 | Off | 10.000 |
 
-4. In the **Implicit grant and hybrid flows** section, select **ID tokens (used for implicit and hybrid  flows)**. 
+![alt text](/M3/01/images/1905.png)
 
-5. Select **Save**.
+8 - To add networking bandwidth to your estimate, go to the top of the Azure Pricing Calculator webpage. Click **Networking** in the product menu on the left, then click the **Bandwidth** tile. In the **Bandwidth** added message dialog, click **View**.
 
-    The following screenshot displays the configured settings on the **Authentication** blade.
-          
-     ![Screenshot displaying the options configured on the Authentication blade.](images/l06_aad_autentication_webapp.png)
+![alt text](/M3/01/images/1906.png)
 
-### Task 5: Create an Azure AD user
+9 - Add a name for your VM bandwidth configuration. This Lab example uses the name **Bandwidth: Windows VM**. Modify the default bandwidth configuration by adding the following details.
 
-1.  In the Azure portal, select the **Cloud Shell** icon ![Cloud Shell icon](images/az204_lab_CloudShell.png) to open a new PowerShell session. If Cloud Shell defaults to a Bash session, select **Bash** and then, in the drop down menu, select **PowerShell**.
+    | Region | Zone 1 Outbound Data Transfer Amount |
+    | ------ | -------------------------------------- |
+    | North Europe | 50 GB |
 
-     > **Note**: If this is the first time you're starting **Cloud Shell**, when prompted to select either **Bash** or **PowerShell**, select **PowerShell**. When the **You have no storage mounted** message appears, select the subscription you're using in this lab, and then select **Create storage**.
+![alt text](/M3/01/images/1907.png)
 
-2.  In the **Cloud Shell** pane, run the following command to sign in to the Azure AD tenant associated with your Azure subscription:
+10 - To add an Application Gateway, return to the top of the Azure Pricing Calculator webpage. In the Networking product menu, click the Application Gateway tile. In the Application Gateway message dialog, click View.
 
-      ```powershell
-       Connect-AzureAD
-      ```
+![alt text](/M3/01/images/1908.png)
 
-3.  Run the following command to retrieve and display the primary Domain Name System (DNS) domain name of the Azure AD tenant:
+11 - Add a name for your Application Gateway configuration. This Lab uses the name **App Gateway: Windows VM**. Modify the default Application Gateway configuration by adding the following details.
 
-       ```powershell
-       $aadDomainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
-       $aadDomainName
-       ```
+ | **Setting** | **Value** | 
+ | --- | --- |
+ | Region | **North Europe** |
+ | Tier | **Basic** |
+ | Size | **Small** |
+ | Instances | **1** |  
+ | Hours | **365** |
+ | Data Processed | **50 GB** |
+ | Zone 1: North America,Europe | **50 GB**|
 
-    > **Note**: Record the value of the DNS domain name. You'll use this value later in the lab.
+![alt text](/M3/01/images/1909.png)
 
-4.  Run the following commands to create Azure AD users that you'll use to test Azure AD authentication:
+### Task 2: Review the pricing estimate
 
-       ```powershell
-       $passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
-       $passwordProfile.Password = 'Pa55w.rd1234'
-       $passwordProfile.ForceChangePasswordNextLogin = $false
-       New-AzureADUser -AccountEnabled $true -DisplayName 'aad_lab_user1' -PasswordProfile $passwordProfile -MailNickName 'aad_lab_user1' -UserPrincipalName "aad_lab_user1@$aadDomainName" 
-       ```
+In this task, we will review the results of the Azure Pricing Calculator.
 
-5.  Run the following command to identify the user principal name (UPN) of the newly created Azure AD user:
+1 - Scroll to the bottom of the Azure Pricing Calculator webpage to view total **Estimated monthly cost**.
 
-       ```powershell
-       (Get-AzureADUser -Filter "MailNickName eq 'aad_lab_user1'").UserPrincipalName
-       ```
+**Note:** Explore the various options available within the Azure Pricing Calculator. For example, this Lab requires you to update the currency to Euro.
 
-    > **Note**: Record the UPN. You'll use this value later in the lab.
+2 - Change the currency to Euro, then select **Export** to download a copy of the estimate for offline viewing in Microsoft Excel (`.xlsx`) format.
 
-6.  Close the Cloud Shell pane.
+![alt text](/M3/01/images/1910.png)
 
-## Review
+![alt text](/M3/01/images/1911.png)
 
-In this exercise, you registered a single-tenant Azure AD application and created an Azure AD user account.
+**Congratulations!** You downloaded an estimate from the Azure Pricing Calculator.
