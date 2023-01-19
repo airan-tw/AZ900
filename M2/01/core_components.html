@@ -1,0 +1,837 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>2.1. Core Azure architectural components · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="networking_services.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    AZURE JOURNEY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe cloud concepts</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../M1/01/">
+            
+                <a href="../../M1/01/">
+            
+                    
+                    1. Cloud Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../M1/01/cloud_computinf.md">
+            
+                <span>
+            
+                    
+                    1.1. Cloud computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../M1/01/benefits_cloud.html">
+            
+                <a href="../../M1/01/benefits_cloud.html">
+            
+                    
+                    1.2. Benefits of cloud services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../M1/01/cloud_types.html">
+            
+                <a href="../../M1/01/cloud_types.html">
+            
+                    
+                    1.3. Cloud service types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure architecture and services</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. Azure architecture and services
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.1.1" data-path="core_components.html">
+            
+                <a href="core_components.html">
+            
+                    
+                    2.1. Core Azure architectural components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="networking_services.html">
+            
+                <a href="networking_services.html">
+            
+                    
+                    2.2. Azure compute and networking services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="storage_services.html">
+            
+                <a href="storage_services.html">
+            
+                    
+                    2.3. Azure storage services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="cloud_security.html">
+            
+                <a href="cloud_security.html">
+            
+                    
+                    2.4. Azure identity, access, and security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="lab01.html">
+            
+                <a href="lab01.html">
+            
+                    
+                    LAB 1 - Create a virtual machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="lab02.html">
+            
+                <a href="lab02.html">
+            
+                    
+                    LAB 2 - Create a VM with a Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="lab03.html">
+            
+                <a href="lab03.html">
+            
+                    
+                    LAB 3 - Create a VM with PowerShell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="lab04.html">
+            
+                <a href="lab04.html">
+            
+                    
+                    LAB 4 - Create a VM with the CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="lab05.html">
+            
+                <a href="lab05.html">
+            
+                    
+                    LAB 5 - Create a Web App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="lab06.html">
+            
+                <a href="lab06.html">
+            
+                    
+                    LAB 6 - Deploy Azure Container Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="lab07.html">
+            
+                <a href="lab07.html">
+            
+                    
+                    LAB 7 - Implement Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="lab08.html">
+            
+                <a href="lab08.html">
+            
+                    
+                    LAB 8 - Create a virtual network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="lab09.html">
+            
+                <a href="lab09.html">
+            
+                    
+                    LAB 9 - Secure network traffic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="lab10.html">
+            
+                <a href="lab10.html">
+            
+                    
+                    LAB 10 - Create Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="lab11.html">
+            
+                <a href="lab11.html">
+            
+                    
+                    LAB 11 - Create a SQL database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="lab12.html">
+            
+                <a href="lab12.html">
+            
+                    
+                    LAB 12 - Manage access with RBAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="lab13.html">
+            
+                <a href="lab13.html">
+            
+                    
+                    LAB 13 - Implement Azure Key Vault
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure management and governance</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../M3/01/">
+            
+                <a href="../../M3/01/">
+            
+                    
+                    3. Azure management and governance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../M3/01/cost_management.html">
+            
+                <a href="../../M3/01/cost_management.html">
+            
+                    
+                    3.1. Cost management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../M3/01/gov_compliance.html">
+            
+                <a href="../../M3/01/gov_compliance.html">
+            
+                    
+                    3.2. Governance and compliance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../M3/01/man_deploy_resources.html">
+            
+                <a href="../../M3/01/man_deploy_resources.html">
+            
+                    
+                    3.3. Managing and deploying resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../M3/01/monitoring_tools.html">
+            
+                <a href="../../M3/01/monitoring_tools.html">
+            
+                    
+                    3.4. Azure monitoring tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../M3/01/lab01.html">
+            
+                <a href="../../M3/01/lab01.html">
+            
+                    
+                    LAB 1 - Use the Azure Pricing Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../M3/01/lab02.html">
+            
+                <a href="../../M3/01/lab02.html">
+            
+                    
+                    LAB 2 - Use the Azure TCO Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../M3/01/lab03.html">
+            
+                <a href="../../M3/01/lab03.html">
+            
+                    
+                    LAB 3 - Implement resource tagging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../M3/01/lab04.html">
+            
+                <a href="../../M3/01/lab04.html">
+            
+                    
+                    LAB 4 - Manage resource locks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../M3/01/lab05.html">
+            
+                <a href="../../M3/01/lab05.html">
+            
+                    
+                    LAB 5 - Create an Azure Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../M3/01/lab06.html">
+            
+                <a href="../../M3/01/lab06.html">
+            
+                    
+                    LAB 6 - Explore the Trust Center
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../../M3/01/lab07.html">
+            
+                <a href="../../M3/01/lab07.html">
+            
+                    
+                    LAB 7 - Calculate Composite SLAs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../../M3/01/lab08.html">
+            
+                <a href="../../M3/01/lab08.html">
+            
+                    
+                    LAB 8 - Open a Support Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2.1. Core Azure architectural components</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="partitioning-in-azure-cosmos-db">Partitioning in Azure Cosmos DB</h2>
+<p>Azure Cosmos DB uses partitioning to scale individual containers in a database to meet the performance needs of your application.</p>
+<h2 id="partitions">Partitions</h2>
+<p>In partitioning, the items in a container are divided into distinct subsets called logical partitions. Logical partitions are formed based on the value of a partition key that is associated with each item in a container. All the items in a logical partition have the same partition key value.</p>
+<p>For example, a container holds items. Each item has a unique value for the <code>UserID</code> property. If <code>UserID</code> serves as the partition key for the items in the container and there are 1,000 unique <code>UserID</code> values, 1,000 logical partitions are created for the container.</p>
+<p>In addition to a partition key that determines the item&apos;s logical partition, each item in a container has an item ID which is unique within a logical partition. Combining the partition key and the item ID creates the item&apos;s index, which uniquely identifies the item. Choosing a partition key is an important decision that will affect your application&apos;s performance.</p>
+<h3 id="logical-partitions">Logical partitions</h3>
+<p>A logical partition consists of a set of items that have the same partition key. For example, in a container that contains data about food nutrition, all items contain a <code>foodGroup</code> property. You can use <code>foodGroup</code> as the partition key for the container. Groups of items that have specific values for <code>foodGroup</code>, such as <code>Beef Products</code>, <code>Baked Products</code>, and <code>Sausages and Luncheon Meats</code>, form distinct logical partitions.</p>
+<p>A logical partition also defines the scope of database transactions. You can update items within a logical partition by using a transaction with snapshot isolation. When new items are added to a container, new logical partitions are transparently created by the system. You don&apos;t have to worry about deleting a logical partition when the underlying data is deleted.</p>
+<h3 id="physical-partitions">Physical partitions</h3>
+<p>A container is scaled by distributing data and throughput across physical partitions. Internally, one or more logical partitions are mapped to a single physical partition. Typically smaller containers have many logical partitions but they only require a single physical partition. Unlike logical partitions, physical partitions are an internal implementation of the system and they are entirely managed by Azure Cosmos DB.</p>
+<p>The number of physical partitions in your container depends on the following:</p>
+<ul>
+<li><p>The number of throughput provisioned (each individual physical partition can provide a throughput of up to 10,000 request units per second). The 10,000 RU/s limit for physical partitions implies that logical partitions also have a 10,000 RU/s limit, as each logical partition is only mapped to one physical partition.</p>
+</li>
+<li><p>The total data storage (each individual physical partition can store up to 50GB data).</p>
+</li>
+</ul>
+<p>Throughput provisioned for a container is divided evenly among physical partitions. A partition key design that doesn&apos;t distribute requests evenly might result in too many requests directed to a small subset of partitions that become &quot;hot.&quot; Hot partitions lead to inefficient use of provisioned throughput, which might result in rate-limiting and higher costs.</p>
+<p><img src="images/cosmosdb_structure_01.png" alt="alt text"></p>
+<h2 id="choose-a-partition-key">Choose a partition key</h2>
+<p>A partition key has two components: <strong>partition key path</strong> and the <strong>partition key value</strong>. For example, consider an item <code>{ &quot;userId&quot; : &quot;Andrew&quot;, &quot;worksFor&quot;: &quot;Microsoft&quot; }</code> if you choose &quot;userId&quot; as the partition key, the following are the two partition key components:</p>
+<ul>
+<li>The partition key path (for example: &quot;/userId&quot;). The partition key path accepts alphanumeric and underscore(_) characters. You can also use nested objects by using the standard path notation(/).</li>
+<li>The partition key value (for example: &quot;Andrew&quot;). The partition key value can be of string or numeric types.</li>
+</ul>
+<p>Selecting your partition key is a simple but important design choice in Azure Cosmos DB. Once you select your partition key, it is not possible to change it in-place. If you need to change your partition key, you should move your data to a new container with your new desired partition key.</p>
+<p>For <strong>all</strong> containers, your partition key should:</p>
+<ul>
+<li>Be a property that has a value which does not change. If a property is your partition key, you can&apos;t update that property&apos;s value.</li>
+<li>Have a high cardinality. In other words, the property should have a wide range of possible values.</li>
+<li>Spread request unit (RU) consumption and data storage evenly across all logical partitions. This ensures even RU consumption and storage distribution across your physical partitions.</li>
+</ul>
+<p><img src="images/cosmosdb_structure_02.png" alt="alt text"></p>
+<h2 id="create-a-synthetic-partition-key">Create a synthetic partition key</h2>
+<p>It&apos;s the best practice to have a partition key with many distinct values, such as hundreds or thousands. The goal is to distribute your data and workload evenly across the items associated with these partition key values. If such a property doesn’t exist in your data, you can construct a synthetic partition key. This unit describes several basic techniques for generating a synthetic partition key for your Cosmos container.</p>
+<p><img src="images/cosmosdb_structure_03.png" alt="alt text"></p>
+<h3 id="concatenate-multiple-properties-of-an-item">Concatenate multiple properties of an item</h3>
+<p>You can form a partition key by concatenating multiple property values into a single artificial <code>partitionKey</code> property. These keys are referred to as synthetic keys. For example, consider the following example document:</p>
+<pre><code class="lang-azurecli-interactive">{
+&quot;deviceId&quot;: &quot;abc-123&quot;,
+&quot;date&quot;: 2018
+}
+</code></pre>
+<p>For the previous document, one option is to set /deviceId or /date as the partition key. Use this option, if you want to partition your container based on either device ID or date. Another option is to concatenate these two values into a synthetic partitionKey property that&apos;s used as the partition key.</p>
+<pre><code class="lang-azurecli-interactive">{
+&quot;deviceId&quot;: &quot;abc-123&quot;,
+&quot;date&quot;: 2018,
+&quot;partitionKey&quot;: &quot;abc-123-2018&quot;
+}
+</code></pre>
+<p>In real-time scenarios, you can have thousands of items in a database. Instead of adding the synthetic key manually, define client-side logic to concatenate values and insert the synthetic key into the items in your Cosmos containers.</p>
+<h3 id="use-a-partition-key-with-a-random-suffix">Use a partition key with a random suffix</h3>
+<p>Another possible strategy to distribute the workload more evenly is to append a random number at the end of the partition key value. When you distribute items in this way, you can perform parallel write operations across partitions.</p>
+<p>An example is if a partition key represents a date. You might choose a random number between 1 and 400 and concatenate it as a suffix to the date. This method results in partition key values like <code>2018-08-09.1,2018-08-09.2</code>, and so on, through <code>2018-08-09.400</code>. Because you randomize the partition key, the write operations on the container on each day are spread evenly across multiple partitions. This method results in better parallelism and overall higher throughput.</p>
+<h3 id="use-a-partition-key-with-pre-calculated-suffixes">Use a partition key with pre-calculated suffixes</h3>
+<p>The random suffix strategy can greatly improve write throughput, but it&apos;s difficult to read a specific item. You don&apos;t know the suffix value that was used when you wrote the item. To make it easier to read individual items, use the pre-calculated suffixes strategy. Instead of using a random number to distribute the items among the partitions, use a number that is calculated based on something that you want to query.</p>
+<p>Consider the previous example, where a container uses a date as the partition key. Now suppose that each item has a <code>Vehicle-Identification-Number</code> (<code>VIN</code>) attribute that we want to access. Further, suppose that you often run queries to find items by the <code>VIN</code>, in addition to date. Before your application writes the item to the container, it can calculate a hash suffix based on the VIN and append it to the partition key date. The calculation might generate a number between 1 and 400 that is evenly distributed. This result is similar to the results produced by the random suffix strategy method. The partition key value is then the date concatenated with the calculated result.</p>
+<p>With this strategy, the writes are evenly spread across the partition key values, and across the partitions. You can easily read a particular item and date, because you can calculate the partition key value for a specific <code>Vehicle-Identification-Number</code>. The benefit of this method is that you can avoid creating a single hot partition key, i.e., a partition key that takes all the workload.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 2. Azure architecture and services">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="networking_services.html" class="navigation navigation-next " aria-label="Next page: 2.2. Azure compute and networking services">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.1. Core Azure architectural components","level":"3.1.1","depth":2,"next":{"title":"2.2. Azure compute and networking services","level":"3.1.2","depth":2,"path":"M2/01/networking_services.md","ref":"M2/01/networking_services.md","articles":[]},"previous":{"title":"2. Azure architecture and services","level":"3.1","depth":1,"path":"M2/01/README.md","ref":"M2/01/README.md","articles":[{"title":"2.1. Core Azure architectural components","level":"3.1.1","depth":2,"path":"M2/01/core_components.md","ref":"M2/01/core_components.md","articles":[]},{"title":"2.2. Azure compute and networking services","level":"3.1.2","depth":2,"path":"M2/01/networking_services.md","ref":"M2/01/networking_services.md","articles":[]},{"title":"2.3. Azure storage services","level":"3.1.3","depth":2,"path":"M2/01/storage_services.md","ref":"M2/01/storage_services.md","articles":[]},{"title":"2.4. Azure identity, access, and security","level":"3.1.4","depth":2,"path":"M2/01/cloud_security.md","ref":"M2/01/cloud_security.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"M2/01/core_components.md","mtime":"2022-12-21T22:39:46.623Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2023-01-19T00:23:46.571Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

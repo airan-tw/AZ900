@@ -1,0 +1,801 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>LAB 7 - Calculate Composite SLAs · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lab08.html" />
+    
+    
+    <link rel="prev" href="lab06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    AZURE JOURNEY
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe cloud concepts</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../M1/01/">
+            
+                <a href="../../M1/01/">
+            
+                    
+                    1. Cloud Concepts
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../M1/01/cloud_computinf.md">
+            
+                <span>
+            
+                    
+                    1.1. Cloud computing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../M1/01/benefits_cloud.html">
+            
+                <a href="../../M1/01/benefits_cloud.html">
+            
+                    
+                    1.2. Benefits of cloud services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../M1/01/cloud_types.html">
+            
+                <a href="../../M1/01/cloud_types.html">
+            
+                    
+                    1.3. Cloud service types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure architecture and services</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../M2/01/">
+            
+                <a href="../../M2/01/">
+            
+                    
+                    2. Azure architecture and services
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../M2/01/core_components.html">
+            
+                <a href="../../M2/01/core_components.html">
+            
+                    
+                    2.1. Core Azure architectural components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../M2/01/networking_services.html">
+            
+                <a href="../../M2/01/networking_services.html">
+            
+                    
+                    2.2. Azure compute and networking services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../M2/01/storage_services.html">
+            
+                <a href="../../M2/01/storage_services.html">
+            
+                    
+                    2.3. Azure storage services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../M2/01/cloud_security.html">
+            
+                <a href="../../M2/01/cloud_security.html">
+            
+                    
+                    2.4. Azure identity, access, and security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../M2/01/lab01.html">
+            
+                <a href="../../M2/01/lab01.html">
+            
+                    
+                    LAB 1 - Create a virtual machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../M2/01/lab02.html">
+            
+                <a href="../../M2/01/lab02.html">
+            
+                    
+                    LAB 2 - Create a VM with a Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../M2/01/lab03.html">
+            
+                <a href="../../M2/01/lab03.html">
+            
+                    
+                    LAB 3 - Create a VM with PowerShell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../M2/01/lab04.html">
+            
+                <a href="../../M2/01/lab04.html">
+            
+                    
+                    LAB 4 - Create a VM with the CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../../M2/01/lab05.html">
+            
+                <a href="../../M2/01/lab05.html">
+            
+                    
+                    LAB 5 - Create a Web App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../M2/01/lab06.html">
+            
+                <a href="../../M2/01/lab06.html">
+            
+                    
+                    LAB 6 - Deploy Azure Container Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../../M2/01/lab07.html">
+            
+                <a href="../../M2/01/lab07.html">
+            
+                    
+                    LAB 7 - Implement Azure Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../../M2/01/lab08.html">
+            
+                <a href="../../M2/01/lab08.html">
+            
+                    
+                    LAB 8 - Create a virtual network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../../M2/01/lab09.html">
+            
+                <a href="../../M2/01/lab09.html">
+            
+                    
+                    LAB 9 - Secure network traffic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../../M2/01/lab10.html">
+            
+                <a href="../../M2/01/lab10.html">
+            
+                    
+                    LAB 10 - Create Blob storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../../M2/01/lab11.html">
+            
+                <a href="../../M2/01/lab11.html">
+            
+                    
+                    LAB 11 - Create a SQL database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="../../M2/01/lab12.html">
+            
+                <a href="../../M2/01/lab12.html">
+            
+                    
+                    LAB 12 - Manage access with RBAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="../../M2/01/lab13.html">
+            
+                <a href="../../M2/01/lab13.html">
+            
+                    
+                    LAB 13 - Implement Azure Key Vault
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Describe Azure management and governance</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3. Azure management and governance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="cost_management.html">
+            
+                <a href="cost_management.html">
+            
+                    
+                    3.1. Cost management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="gov_compliance.html">
+            
+                <a href="gov_compliance.html">
+            
+                    
+                    3.2. Governance and compliance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="man_deploy_resources.html">
+            
+                <a href="man_deploy_resources.html">
+            
+                    
+                    3.3. Managing and deploying resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="monitoring_tools.html">
+            
+                <a href="monitoring_tools.html">
+            
+                    
+                    3.4. Azure monitoring tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hands-on Labs</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="lab01.html">
+            
+                <a href="lab01.html">
+            
+                    
+                    LAB 1 - Use the Azure Pricing Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="lab02.html">
+            
+                <a href="lab02.html">
+            
+                    
+                    LAB 2 - Use the Azure TCO Calculator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="lab03.html">
+            
+                <a href="lab03.html">
+            
+                    
+                    LAB 3 - Implement resource tagging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="lab04.html">
+            
+                <a href="lab04.html">
+            
+                    
+                    LAB 4 - Manage resource locks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="lab05.html">
+            
+                <a href="lab05.html">
+            
+                    
+                    LAB 5 - Create an Azure Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="lab06.html">
+            
+                <a href="lab06.html">
+            
+                    
+                    LAB 6 - Explore the Trust Center
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.7" data-path="lab07.html">
+            
+                <a href="lab07.html">
+            
+                    
+                    LAB 7 - Calculate Composite SLAs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="lab08.html">
+            
+                <a href="lab08.html">
+            
+                    
+                    LAB 8 - Open a Support Request
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >LAB 7 - Calculate Composite SLAs</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="lab-7-calculate-composite-slas-5-min">Lab 7: Calculate Composite SLAs (5 min)</h2>
+<p>In this Lab, we will determine availability SLA of Azure services and then calculate application composite SLA-based expected availability.</p>
+<p>Our example application consists of these Azure services. We will not go in to deep architectural configuration and considerations, the intention here is to give a high level example.</p>
+<ul>
+<li><strong>App service:</strong> To host the application.</li>
+<li><strong>Azure AD B2C:</strong> To authenticate user logins and manage profiles.</li>
+<li><strong>Application Gateway:</strong> To manage application access, and scaling.</li>
+<li><strong>Azure SQL Database:</strong> To store application data.</li>
+</ul>
+<h3 id="task-1-determine-the-sla-uptime-percentage-values-for-our-application">Task 1: Determine the SLA uptime percentage values for our application</h3>
+<p>1 - In a browser, go to the <a href="https://azure.microsoft.com/en-us/support/legal/sla/summary/" target="_blank">SLA summary for Azure services</a> page.</p>
+<p>2 - Locate the <strong>App Service</strong> SLA uptime value, <strong>99.95%</strong>. Click <strong>View full details</strong>, and then expand <strong>SLA details</strong>. Notice the <strong>Monthly uptime percentages</strong> and <strong>Service Credits</strong>.</p>
+<p>3 - Return to the SLA webpage and locate the <strong>Azure Active Directory B2C</strong> service and determine the SLA uptime value, <strong>99.9%</strong>.</p>
+<p>4 - Locate the <strong>Application Gateway</strong> SLA uptime value, <strong>99.95%</strong>.</p>
+<p>5 - The Azure SQL database uses Premium tiers but is not configured for Zone Redundant Deployments. Locate the <strong>Azure SQL Database</strong> SLA uptime value, <strong>99.99%</strong>.</p>
+<p><strong>Note:</strong> There are different uptime values for different configurations and deployments of Azure SQL Database. It is important you are clear on your required uptime values, when planning and costing your deployment and configuration. Small changes in uptime can have impact on service costs as well as potentially increase complexity in configuration. Some other services that may be of interest on the Azure SLA summary web page would include <strong>Virtual Machines, Storage Accounts and Cosmos DB</strong>.</p>
+<h3 id="task-2-calculate-the-application-composite-sla-percentage-uptime">Task 2: Calculate the Application Composite SLA percentage uptime</h3>
+<p>1 - If any of the services that comprises our application are not available our application will not be available for users to sign in to and use. As such the total uptime for our application consists of the following:</p>
+<p><strong>App Service % uptime</strong> X <strong>Azure AD B2C % uptime</strong> X <strong>Azure Application Gateway % uptime</strong> X <strong>Azure SQL Database % uptime</strong> =  <strong>Total % Uptime</strong></p>
+<p>which in percentage term is as follows:</p>
+<p><strong>99,95%</strong> X <strong>99,9%</strong> X <strong>99,95%</strong> X <strong>99,99%</strong>  = <strong>99,79%</strong></p>
+<p>This is the SLA-based expected availability of our application with the current services and architecture.</p>
+<p><strong>Congratulations!</strong> You have determined the SLA-based uptime for each of the services in our sample application and then calculated the composite SLA-based expected availability for the application.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lab06.html" class="navigation navigation-prev " aria-label="Previous page: LAB 6 - Explore the Trust Center">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lab08.html" class="navigation navigation-next " aria-label="Next page: LAB 8 - Open a Support Request">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"wts":{"title":"21 – Calculate Composite SLAs (5 min)","module":"Module 06: Describe Azure cost management and service level agreements"},"title":"LAB 7 - Calculate Composite SLAs","level":"6.7","depth":1,"next":{"title":"LAB 8 - Open a Support Request","level":"6.8","depth":1,"path":"M3/01/lab08.md","ref":"M3/01/lab08.md","articles":[]},"previous":{"title":"LAB 6 - Explore the Trust Center","level":"6.6","depth":1,"path":"M3/01/lab06.md","ref":"M3/01/lab06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"M3/01/lab07.md","mtime":"2023-01-18T01:52:54.678Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2023-01-19T00:23:46.571Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
